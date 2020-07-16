@@ -1,0 +1,139 @@
+@media (max-width: $screen-sm-max) {
+	.panel-settings{
+		margin-top: 0;
+		padding-top: 15px;
+		&--centered{
+			.form-group_flex {
+				align-items: flex-start !important;
+			}
+		}
+		&__header {
+			.menu-icon{
+				display: block;
+			}
+		}
+	}
+	.settings-image{
+		display: none;
+	}
+
+	.settings-menu {
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: -240px;
+		height: 100%;
+		margin: 0;
+		border-radius: 0;
+		transition: all .3s ease;
+		width: 220px;
+		padding: 0;
+		&.opened {
+			left: 0;
+			transition: all .3s ease;
+			.panel-white{
+				height: 100%;
+				border-radius: 0;
+			}
+		}
+	}
+
+	.settings-footer{
+		padding: 0 30px;
+		&__list{
+			margin-right: 0;
+			justify-content: space-between;
+		}
+		&__item{
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+			&:last-child{
+				margin-left: 0;
+			}
+		}
+	}
+
+	.powered-by{
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.panel-settings{
+		margin-top: 0;
+		padding: 15px;
+		&__header {
+			padding-bottom: 0;
+			&:after{
+				display: none;
+			}
+			.title{
+				font-size: 18px;
+			}
+		}
+
+		&__body{
+			.become-educator-info{
+				padding-bottom: 0;
+				.form-group_flex{
+					&--top{
+						margin-bottom: 20px;
+					}
+				}
+				.btn-wrap{
+					display: none;
+				}
+			}
+			.user-block-list{
+				display: flex;
+				.user-mini-card{
+					width: 100%;
+					margin-bottom: 13px;
+					&:nth-child(odd){
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		&__footer{
+			padding-left: 0;
+			text-align: center;
+		}
+
+		.form-group_flex{
+			//flex-direction: column;
+			//margin-bottom: 15px;
+			& > * {
+				//&:first-child {
+				//	flex: 0;
+				//	margin-right: 0;
+				//	font-size: 14px;
+				//	font-weight: 500;
+				//	line-height: normal;
+				//}
+				&:last-child {
+					flex: 1 1 auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.few-input {
+		.input-wrapper {
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	#radio_group{
+		label{
+			margin-right: 15px;
+		}
+	}
+}
+

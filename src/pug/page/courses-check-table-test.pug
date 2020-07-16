@@ -1,0 +1,118 @@
+extends ../layout/layout
+
+block title
+    | Курсы (тесты таблица)
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li.active
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade#myCreatedCourses
+                            .tab-pane.fade.in.active#checkTest
+                                .check-test-table.courses-inner-container
+                                    .switch
+                                        a(href="javascript:void(0);").active Не проверенные
+                                        a(href="javascript:void(0);") Все
+                                    .custom-table.custom-table--bordered.table-test
+                                        .custom-table-row.custom-table-thead
+                                            .custom-table-cell Подписчик
+                                            .custom-table-cell Тест
+                                            .custom-table-cell Дата
+                                            .custom-table-cell
+                                        .custom-table-row.hidden-xs
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                            .custom-table-cell
+                                                ul.breadcrumbs
+                                                    li
+                                                        a(href="javascript:void(0)") Курс 1
+                                                    li
+                                                        a(href="javascript:void(0)") Урок 1
+                                                    li
+                                                        span Тест 1 (попытка 1)
+                                            .custom-table-cell 18:58 21.11.2019
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").btn-invite Проверить
+                                        .custom-table-row.hidden-sm.hidden-md.hidden-lg
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                                a(href="javascript:void(0)").btn-invite Проверить
+                                        .custom-table-row.hidden-sm.hidden-md.hidden-lg
+                                            .custom-table-cell.column
+                                                ul.breadcrumbs
+                                                    li
+                                                        a(href="javascript:void(0)") Курс 1
+                                                    li
+                                                        a(href="javascript:void(0)") Урок 1
+                                                    li
+                                                        span Тест 1 (попытка 1)
+                                                span.date 18:58 21.11.2019
+                                        .custom-table-row.hidden-xs
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                            .custom-table-cell
+                                                ul.breadcrumbs
+                                                    li
+                                                        a(href="javascript:void(0)") Курс 1
+                                                    li
+                                                        a(href="javascript:void(0)") Урок 1
+                                                    li
+                                                        span Тест 1 (попытка 1)
+                                            .custom-table-cell 18:58 21.11.2019
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").btn-invite Проверить
+                                        .custom-table-row.hidden-sm.hidden-md.hidden-lg
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                                a(href="javascript:void(0)").btn-invite Проверить
+                                        .custom-table-row.hidden-sm.hidden-md.hidden-lg
+                                            .custom-table-cell.column
+                                                ul.breadcrumbs
+                                                    li
+                                                        a(href="javascript:void(0)") Курс 1
+                                                    li
+                                                        a(href="javascript:void(0)") Урок 1
+                                                    li
+                                                        span Тест 1 (попытка 1)
+                                                span.date 18:58 21.11.2019

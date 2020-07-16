@@ -1,0 +1,81 @@
+.header-container{
+  &__nav{
+    background-color: $mainColor;
+    box-shadow: 0 6px 35px -10px rgba(0,0,0,0.50);
+    border: none;
+    min-height: 45px;
+  }
+
+  &__brand {
+    margin-right: 25px;
+    .mobile-logo{
+      display: none;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__menu {
+
+    & > li > a {
+      color: #fff !important;
+      display: block;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .notifications-dropdown {
+      max-width: 400px;
+      overflow: auto;
+      max-height: 310px;
+      padding: 0;
+      li{
+        color: #777;
+        padding: 10px;
+      }
+      .turn-off-sound{
+        border-bottom: 1px solid #f9f9f9;
+        span{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .text-shadow-font{
+      text-shadow: 0 2px 3px #111;
+    }
+
+    .user-avatar img{
+      margin-top: -4px;
+      width: 23px;
+      border: 1px solid rgba(255,255,255,.8);
+      margin-right: 5px;
+    }
+
+    .caret{
+      margin: 0 0 0 -13px;
+      opacity: 0;
+    }
+  }
+
+  .navbar-nav > li > a:hover{
+    transform: scale(1.08);
+  }
+
+  .glyphicon{
+    color: #fff;
+    top: auto;
+  }
+
+  .container-fluid{
+    height: 45px;
+  }
+
+}
+
+#header-chat-mobile{
+  display: none;
+}

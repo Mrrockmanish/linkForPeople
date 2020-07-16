@@ -1,0 +1,115 @@
+<header class="header-container">
+    <nav class="header-container__nav navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="header-container__brand brand header-brand" href="/">
+                    <span style="color:#fff; font-size: 30px; font-family: RobotoLight" class="desktop-logo">Link <span style="color: #f20505;">for</span> People</span>
+                    <span style="color:#fff; font-size: 30px; font-family: RobotoLight" class="mobile-logo">L<span style="color: #f20505;">f</span>P</span>
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav hidden-xs">
+                <li class="dropdown search-container">
+                    <form class="navbar-form navbar-left col-lg-12 form-group" data-toggle="dropdown" role="button" id="navbar-searchbox">
+                        <div class="form-group inner-addon left-addon ">
+                            <i class="glyphicon fa fa-search main-color progress-icon" data-icon="search"></i>
+                            <input class="form-control search-input" placeholder="Search" dir="auto" type="text">
+                        </div>
+                    </form>
+                    <ul class="dropdown-menu search-dropdown-container" style="margin-left:7px;" role="menu">
+                        <div class="search-container__dropdown">
+                            <!--<li>-->
+<!--<span class="user-popover" data-id="85" data-type="user">-->
+<!--<a href="https://linkforpeople.com/timeline&amp;u=Пррммм?ref=se" data-ajax="?link1=timeline&amp;u=Пррммм&amp;ref=se">-->
+  <!--<div class="search-user-avatar pull-left">-->
+     <!--<img src="https://linkforpeople.com/upload/photos/d-avatar.jpg" alt="Иар-_&amp;:: Мпр Profile Picture">-->
+  <!--</div>-->
+  <!--<span class="search-user-name">-->
+  <!--Иар-_&amp;:: Мпр         -->
+              <!--</span>-->
+<!--</a>-->
+<!--</span>-->
+                                <!--<div class="user-lastseen">-->
+                                    <!--<span class="small-last-seen">Был(а): 5 дн. назад</span>   </div>-->
+                                <!--<div class="clear"></div>-->
+                            <!--</li>-->
+                        </div>
+                        <li>
+                          <span class="search-advanced-container">
+                            <a href="javascript:void(0)" class="search-advanced-link" data-ajax="javascript:void(0)">Расширенный поиск</a>
+                          </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="header-container__menu flex cols nav navbar-nav navbar-right pull-right">
+                <li class="dropdown">
+                    <a class="text-shadow-font" href="javascript:void(0);" data-ajax="javascript:void(0);">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="text-shadow-font" href="javascript:void(0);" data-ajax="javascript:void(0);" onclick="HideChatsOnMobile();">
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li onclick="AllChatsToggle(this.id);" id="header-chat-toggle">
+                    <a class="text-shadow-font" href="#" onclick="return false;">
+                        <i class="fa fa-comments text-muted" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="dropdown notification-container">
+                    <span class="new-update-alert hidden" style="display: none;"></span>
+                    <a href="#" class="dropdown-toggle text-shadow-font" data-toggle="dropdown" role="button" aria-expanded="true">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu clearfix notifications-dropdown" role="menu">
+                        <li class="turn-off-sound text-left" onclick="muteNotifications(this.className);">
+                            <span>
+                                 <i class="fa fa-volume-off progress-icon" data-icon="volume-off"></i>
+                                Включите звук уведомления
+                            </span>
+                        </li>
+                        <li id="notification-list"><span class="center-text">Нет новых уведомлений</span></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle user-avatar-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <div class="user-avatar pull-left">
+                            <img src="./assets/img/default-avatar.png" alt="">
+                        </div><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="javascript:void(0)" data-ajax="javascript:void(0)">Пункт меню 1</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-ajax="javascript:void(0)">Пункт меню 2</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-ajax="javascript:void(0)">Пункт меню 2</a>
+                        </li>
+                        <li><hr></li>
+
+                        <li>
+                            <a href="javascript:void(0)" data-ajax="javascript:void(0)">Пункт меню 1</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-ajax="javascript:void(0)">Пункт меню 2</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-ajax="javascript:void(0)">Пункт меню 2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--<script>-->
+        <!--function AllChatsToggle() {-->
+            <!---->
+        <!--}-->
+    <!--</script>-->
+    <script src="./assets/js/app.js"></script>
+</header>

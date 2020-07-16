@@ -1,0 +1,64 @@
+extends ../layout/layout-personal-message
+
+block title
+    | Сообщения
+
+block content
+    .container
+        .content
+            .row
+                .chat-go-bottom
+                    i.fa.fa-arrow-alt-circle-down
+                .mobile-chat.personal-chat.chat#chat_1
+                    .chat__header
+                        .chat__header-actions
+                            a(href="messages.html").pointer.window-icon
+                                i.fa.fa-long-arrow-alt-left
+                        .avatar-circle_sm.user-avatar.clearfix
+                            img(src="./assets/img/default-avatar.png").pull-left
+                            .user-info.pull-left
+                                span.name Тестовый пользователь
+
+                    .chat__body
+                        .chat__message-wrapper.clearfix
+                            .chat__message.outgoing
+                                p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                        .chat__message-wrapper.clearfix
+                            .chat__message.incoming
+                                p Есть много вариантов Lorem Ipsum
+                        .chat__message-wrapper.clearfix
+                            .chat__message.outgoing
+                                p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                        .chat__message-wrapper.clearfix
+                            .chat__message.incoming
+                                p Есть много вариантов Lorem Ipsum
+                        .chat__message-wrapper.clearfix
+                            .chat__message.outgoing
+                                p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                        .chat__message-wrapper.clearfix
+                            .chat__message.incoming
+                                p Есть много вариантов Lorem Ipsum
+                        .chat__message-wrapper.clearfix
+                            .chat__message.incoming
+                                p Есть много вариантов Lorem Ipsum
+                        .chat__message-wrapper.clearfix
+                            .chat__message.incoming
+                                p Есть много вариантов Lorem Ipsum
+                        .chat__message-wrapper.clearfix
+                            .chat__message.outgoing
+                                p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                    .chat__footer
+                        .form.input-icon(onclick="openCommentBottom(this);")
+                            textarea.form-control.message-textarea(placeholder="Введите сообщение..." rows="1" data-emojiable="true")
+                            .input-icon__list.hide
+                                .left-icons
+                                    li.input-icon__item.pointer.icon-grey
+                                        //smile there
+                                    li.input-icon__item.pointer.icon-grey
+                                        i.far.fa-paperclip
+                                        input(type="file")
+                                    li.input-icon__item.pointer.icon-grey
+                                        i.far.fa-microphone
+                                        input(type="file")
+                                .right-btn
+                                    button(type="submit").btn-white Отправить

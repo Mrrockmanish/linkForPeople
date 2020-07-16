@@ -1,0 +1,127 @@
+//
+   Created by asus on 22.07.2018.
+.all-chats.hide
+
+    .common-chat.chat
+        .chat__header
+            .avatar-circle_sm
+                img(src="./assets/img/default-avatar.png" alt="")
+            ul.chat__navigation
+                li.active
+                    a(href="javascript:void(0)" data-target="#chat-contacts" data-toggle="tab") Контакты
+                li
+                    a(href="javascript:void(0)" data-target="#chat-group" data-toggle="tab") Чаты
+
+        .chat__body
+            .tab-content
+                .tab-pane.fade.in.active#chat-contacts
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_1');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_2');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_3');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_4');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_5');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_5');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                    .chat__item.pointer.clearfix(onclick="register_popup('chat_5');")
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-activity Был(а): 10 часов назад
+                .tab-pane.fade.in#chat-group
+                    .chat__item.add-new-chat.clearfix
+                        a(href="javascript:void(0)" data-target="#CreateChatModal" data-toggle="modal")
+                            i.fa.fa-user-plus
+                            span Создать групповой чат
+                    .chat__item.pointer.clearfix
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь Тестовый Пользователь
+                        .last-message Привет
+                    .chat__item.pointer.clearfix
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-message Привет
+                    .chat__item.pointer.clearfix
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-message Привет
+                    .chat__item.pointer.clearfix
+                        .user-avatar.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .user-name Тестовый Пользователь
+                        .last-message Привет
+
+
+    .personal-chat.chat
+        .chat__header
+            .avatar-circle_sm.user-avatar
+                img(src="./assets/img/default-avatar.png")
+                span.name Тестовый пользователь
+            .chat__header-actions
+                span.pointer.settings-icon
+                    i.fa.fa-times(onclick="close_popup(this.id);")
+
+        .chat__body
+            .chat__message-wrapper.clearfix
+                .chat__message.outgoing
+                    p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                    i.fas.fa-check
+            .chat__message-wrapper.clearfix
+                .chat__message.incoming
+                    p Есть много вариантов Lorem Ipsum
+            .chat__message-wrapper.clearfix
+                .chat__message.outgoing
+                    p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                    i.fa.fa-check-double
+            .chat__message-wrapper.clearfix
+                .chat__message.incoming
+                    p Есть много вариантов Lorem Ipsum
+            .chat__message-wrapper.clearfix
+                .chat__message.outgoing
+                    p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+                    i.fa.fa-check-double.is-readed
+            .chat__message-wrapper.clearfix
+                .chat__message.incoming
+                    p Есть много вариантов Lorem Ipsum
+
+
+        .chat__footer
+            .form.input-icon(onclick="openCommentBottom(this);")
+                textarea.form-control.message-textarea(placeholder="Введите сообщение..." rows="1" data-emojiable="true")
+                .input-icon__list.hide
+                    .left-icons
+                        li.input-icon__item.pointer.icon-grey
+                            //smile there
+                        li.input-icon__item.pointer.icon-grey
+                            i.far.fa-paperclip
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.far.fa-microphone
+                            input(type="file")
+                    .right-btn
+                        button(type="submit").btn-white Отправить

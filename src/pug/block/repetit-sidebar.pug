@@ -1,0 +1,153 @@
+aside.filter-sidebar.panel.panel-white
+    .filter-sidebar__container
+
+        .filter-sidebar__header
+            span.title Фильтры
+            span.filter-sidebar-close.pointer
+                i.fa.fa-times
+        form.filter-sidebar__body
+            .filter-block.submenu#subject
+                .filter-block__body.submenu__body
+                    .custom-select.select-subject-js
+                        select(data-id="subject")
+                            option(disabled="true" selected="true" hidden="true") Предмет
+                            option Математика
+                            option Русский
+                            option Литература
+
+            .filter-block.hide#subjectFor
+                .filter-block__body.submenu__body
+                    .custom-select
+                        select
+
+            #format.filter-block.filter-block_no-border.submenu
+                .filter-block__header.pointer(data-id="format" onclick="showSubmenuBody(this);")
+                    span.title Формат:
+                    span.show-more.submenu-down.pull-right
+                        i.fa.fa-angle-down
+                .filter-block__body.submenu__body
+                    ul.format-list
+                        li.format-list__item
+                            .custom-input.custom-input_check.format-lesson-main(onclick="formatLessonChildChange(this)")
+                                input(type="checkbox")
+                                label.checkbox-label любой
+                                    span.checkmark
+                        li.format-list__item
+                            .custom-input.custom-input_check.format-lesson-child(onclick="checkedBackground(this)")
+                                input(type="checkbox")
+                                label.checkbox-label у ученика
+                                    span.checkmark
+                        li.format-list__item
+                            .custom-input.custom-input_check.format-lesson-child(onclick="checkedBackground(this)")
+                                input(type="checkbox")
+                                label.checkbox-label у учителя
+                                    span.checkmark
+                        li.format-list__item
+                            .custom-input.custom-input_check.remoteness-lesson-main.format-lesson-child(onclick="remotenessLessonChildChange(this)")
+                                input(type="checkbox")
+                                label.checkbox-label дистанционно:
+                                    span.checkmark
+                        li.format-list__item
+                            ul.format-list_inside
+                                li.format-list__item
+                                    .custom-input.custom-input_check.remoteness-lesson-child.format-lesson-child(onclick="checkedBackground(this)")
+                                        input(type="checkbox")
+                                        label.checkbox-label онлайн
+                                            span.mini-label (индивидуально)
+                                            span.checkmark
+                                li.format-list__item
+                                    .custom-input.custom-input_check.remoteness-lesson-child.format-lesson-child(onclick="checkedBackground(this)")
+                                        input(type="checkbox")
+                                        label.checkbox-label онлайн
+                                            span.mini-label (в мини-группах)
+                                            span.checkmark
+                                li.format-list__item
+                                    .custom-input.custom-input_check.remoteness-lesson-child.format-lesson-child(onclick="checkedBackground(this)")
+                                        input(type="checkbox")
+                                        label.checkbox-label онлайн
+                                            span.mini-label (олимпиады)
+                                            span.checkmark
+                                li.format-list__item
+                                    .custom-input.custom-input_check.remoteness-lesson-child.format-lesson-child(onclick="checkedBackground(this)")
+                                        input(type="checkbox")
+                                        label.checkbox-label оффлайн
+                                            span.checkmark
+
+            .filter-block.filter-block_no-border
+                .filter-block__body
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label акции
+                            span.checkmark
+            .filter-block
+                .filter-block__body
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label фото
+                            span.checkmark
+
+            .filter-block#price
+                .filter-block__header
+                    span.title Цена:
+                .filter-block__body
+                    .ui-slider-container.ui-slider-container--double.price-container
+                        .slider-filters
+                            .slider-input.min-value-js
+                                span От
+                                input(type="text")
+                            .slider-input.max-value-js
+                                span До
+                                input(type="text")
+                            span руб
+                        .ui-slider-item-js--double(data-min="0" data-max="5000" data-step="50" data-current-min="400" data-current-max="2000")
+
+            .filter-block#exp
+                .filter-block__header
+                    span.title Опыт (лет):
+                .filter-block__body
+                    .ui-slider-container.ui-slider-container--double.price-container
+                        .slider-filters
+                            .slider-input.min-value-js
+                                span От
+                                input(type="text")
+                            .slider-input.max-value-js
+                                span До
+                                input(type="text")
+                        .ui-slider-item-js--double(data-min="0" data-max="50" data-step="1" data-current-min="10" data-current-max="20")
+
+            .filter-block.submenu#gender
+                .filter-block__header.submenu__header.pointer(data-id="gender" onclick="showSubmenuBody(this);")
+                    span.title Пол:
+                    span.show-more.submenu-down.pull-right
+                        i.fa.fa-angle-down
+                .filter-block__body.submenu__body.hide
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label мужской
+                            span.checkmark
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label женский
+                            span.checkmark
+
+            .filter-block.filter-block_no-border.submenu#age
+                .filter-block__header.submenu__header.pointer(data-id="age" onclick="showSubmenuBody(this);")
+                    span.title Возраст:
+                    span.show-more.submenu-down.pull-right
+                        i.fa.fa-angle-down
+                .filter-block__body.submenu__body.hide
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label до 30 лет
+                            span.checkmark
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label 30 - 50 лет
+                            span.checkmark
+                    .custom-input.custom-input_check(onclick="checkedBackground(this)")
+                        input(type="checkbox")
+                        label.checkbox-label старше 50 лет
+                            span.checkmark
+            .custom-btn
+                button(type="submit")
+                    span Найти

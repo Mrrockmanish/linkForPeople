@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+  .notif {
+    top: 50px;
+    right: 10px;
+
+    &__header {
+      margin-right: 26px !important;
+      color: #0b1a31 !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      line-height: 14.22px !important;
+
+      .bline__item {
+        font-size: 16px !important;
+      }
+    }
+    
+    a {
+      display: inline !important;
+      width: auto !important;
+    }
+  }
+}

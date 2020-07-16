@@ -1,0 +1,13 @@
+extends ../layout/layout
+
+block title
+    | Общие настройки
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/settings-main
+                include ../partials/settings-image-block
+                include ../block/settings-menu

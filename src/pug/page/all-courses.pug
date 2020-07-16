@@ -1,0 +1,288 @@
+extends ../layout/layout--top-app
+
+block title
+    | Все курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu.courses-menu--all
+                            li.active
+                                a(href="#allCourses" data-toggle='tab')
+                                    i.far.fa-copy
+                                    | Все курсы
+                            li
+                                a(href="#myCourses" data-toggle='tab')
+                                    i.far.fa-file
+                                    | Мои курсы
+                            li.courses-menu__right
+                                a(href="#boardCourses" data-toggle='tab')
+                                    i.far.fa-calendar-edit
+                                    | Доска
+                            li
+                                a(href="#scheduleCourses" data-toggle='tab')
+                                    i.far.fa-calendar-alt
+                                    | Расписание
+                            li
+                                a(href="#searchCourses" data-toggle='tab')
+                                    i.far.fa-search
+                                    | Найти курс
+
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade.in.active#allCourses
+                                include ../block/panel-courses__slider
+                                include ../block/panel-courses__slider
+
+                                .panel-courses__noslider
+                                    .panel-courses__title HTML and CSS - responsive layout and layout
+                                    .panel-courses__noslider-wrap
+                                        a.panel-courses__noslider-item(href="", title="")
+                                            .panel-courses__slider-bg-img(style="background-image: url(assets/img/allcoursesimg.jpg)")
+                                            .panel-courses__slider-info
+                                                .panel-courses__slider-info-top
+                                                    .panel-courses__slider-info-title HTML, CSS, JS Basics: Free Introductor Course
+                                                    .panel-courses__slider-info-top-right
+                                                        .rating.rating--nonactive.panel-courses__slider-info-rating
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="1")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="2")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="3", checked)
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="4")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="5")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                        .panel-courses__slider-info-views
+                                                            i.fas.fa-eye.panel-courses__slider-info-views-icon
+                                                            .panel-courses__slider-info-views-val 3 456
+                                                .panel-courses__slider-info-bottom
+                                                    .panel-courses__slider-info-author Андрей Мельников
+                                                    .panel-courses__slider-info-price 15 000 руб
+                                        a.panel-courses__noslider-item(href="", title="")
+                                            .panel-courses__slider-bg-img(style="background-image: url(assets/img/allcoursesimg.jpg)")
+                                            .panel-courses__slider-info
+                                                .panel-courses__slider-info-top
+                                                    .panel-courses__slider-info-title HTML, CSS, JS Basics: Free Introductor Course
+                                                    .panel-courses__slider-info-top-right
+                                                        .rating.rating--nonactive.panel-courses__slider-info-rating
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="1")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="2")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="3", checked)
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="4")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="5")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                        .panel-courses__slider-info-views
+                                                            i.fas.fa-eye.panel-courses__slider-info-views-icon
+                                                            .panel-courses__slider-info-views-val 3 456
+                                                .panel-courses__slider-info-bottom
+                                                    .panel-courses__slider-info-author Андрей Мельников
+                                                    .panel-courses__slider-info-price 15 000 руб
+                                        a.panel-courses__noslider-item(href="", title="")
+                                            .panel-courses__slider-bg-img(style="background-image: url(assets/img/allcoursesimg.jpg)")
+                                            .panel-courses__slider-info
+                                                .panel-courses__slider-info-top
+                                                    .panel-courses__slider-info-title HTML, CSS, JS Basics: Free Introductor Course
+                                                    .panel-courses__slider-info-top-right
+                                                        .rating.rating--nonactive.panel-courses__slider-info-rating
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="1")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="2")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="3", checked)
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="4")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="5")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                        .panel-courses__slider-info-views
+                                                            i.fas.fa-eye.panel-courses__slider-info-views-icon
+                                                            .panel-courses__slider-info-views-val 3 456
+                                                .panel-courses__slider-info-bottom
+                                                    .panel-courses__slider-info-author Андрей Мельников
+                                                    .panel-courses__slider-info-price 15 000 руб
+                                        a.panel-courses__noslider-item(href="", title="")
+                                            .panel-courses__slider-bg-img(style="background-image: url(assets/img/allcoursesimg.jpg)")
+                                            .panel-courses__slider-info
+                                                .panel-courses__slider-info-top
+                                                    .panel-courses__slider-info-title HTML, CSS, JS Basics: Free Introductor Course
+                                                    .panel-courses__slider-info-top-right
+                                                        .rating.rating--nonactive.panel-courses__slider-info-rating
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="1")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="2")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="3", checked)
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="4")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="5")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                        .panel-courses__slider-info-views
+                                                            i.fas.fa-eye.panel-courses__slider-info-views-icon
+                                                            .panel-courses__slider-info-views-val 3 456
+                                                .panel-courses__slider-info-bottom
+                                                    .panel-courses__slider-info-author Андрей Мельников
+                                                    .panel-courses__slider-info-price 15 000 руб
+                                        a.panel-courses__noslider-item(href="", title="")
+                                            .panel-courses__slider-bg-img(style="background-image: url(assets/img/allcoursesimg.jpg)")
+                                            .panel-courses__slider-info
+                                                .panel-courses__slider-info-top
+                                                    .panel-courses__slider-info-title HTML, CSS, JS Basics: Free Introductor Course
+                                                    .panel-courses__slider-info-top-right
+                                                        .rating.rating--nonactive.panel-courses__slider-info-rating
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="1")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="2")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="3", checked)
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="4")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="5")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                        .panel-courses__slider-info-views
+                                                            i.fas.fa-eye.panel-courses__slider-info-views-icon
+                                                            .panel-courses__slider-info-views-val 3 456
+                                                .panel-courses__slider-info-bottom
+                                                    .panel-courses__slider-info-author Андрей Мельников
+                                                    .panel-courses__slider-info-price 15 000 руб
+                                        a.panel-courses__noslider-item(href="", title="")
+                                            .panel-courses__slider-bg-img(style="background-image: url(assets/img/allcoursesimg.jpg)")
+                                            .panel-courses__slider-info
+                                                .panel-courses__slider-info-top
+                                                    .panel-courses__slider-info-title HTML, CSS, JS Basics: Free Introductor Course
+                                                    .panel-courses__slider-info-top-right
+                                                        .rating.rating--nonactive.panel-courses__slider-info-rating
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="1")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="2")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="3", checked)
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="4")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                            label.rating__item
+                                                                input.rating__input(type="radio", name="rating1", value="5")
+                                                                .rating__stars
+                                                                    i.fas.fa-star.rating__icon.rating__icon--full
+                                                                    i.far.fa-star.rating__icon.rating__icon--empty
+                                                        .panel-courses__slider-info-views
+                                                            i.fas.fa-eye.panel-courses__slider-info-views-icon
+                                                            .panel-courses__slider-info-views-val 3 456
+                                                .panel-courses__slider-info-bottom
+                                                    .panel-courses__slider-info-author Андрей Мельников
+                                                    .panel-courses__slider-info-price 15 000 руб
+
+                            .tab-pane.fade#myCourses
+                            .tab-pane.fade#boardCourses
+                                .panel-courses__board-wrap
+                                    a.btn-blue.panel-courses__board-btn(href="#", title="")
+                                        i.far.fa-plus-circle
+                                        | Создать
+                                    a.btn-white.panel-courses__board-btn(href="#", title="")
+                                        i.far.fa-clipboard
+                                        | Подключиться
+                                    form.panel-courses__board-form
+                                        input.panel-courses__board-form-input(type="text", placeholder="Придумайте название")
+                                        button.btn-blue.panel-courses__board-form-btn Старт
+                            .tab-pane.fade#scheduleCourses
+                            .tab-pane.fade#searchCourses

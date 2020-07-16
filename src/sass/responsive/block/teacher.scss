@@ -1,0 +1,140 @@
+@media (max-width: 768px) {
+  .teacher {
+    &__wrap {
+      padding: 14px 10px 0;
+    }
+
+    &__wrap-inner {
+      flex-wrap: wrap;
+      padding: 0 0 12px;
+    }
+
+    &__info {
+      width: calc(100% - 83px - 12px);
+      margin: 3px 0 0 12px;
+    }
+
+    &__price {
+      display: flex;
+    }
+
+    &__price-btns {
+      margin: -4px 0 0;
+    }
+
+    &__btn {
+      min-width: 0;
+      width: 32px;
+      height: 32px;
+      margin-right: 20px;
+      border-radius: 50%;
+
+      span {
+        display: none;
+      }
+    }
+
+    &__btn-icon {
+      font-size: 14px !important;
+      margin: 0 !important;
+    }
+
+    &__img {
+      width: 83px;
+      height: 83px;
+      border-radius: 8px;
+    }
+
+    &__rating {
+      top: -3px;
+      right: -7px;
+      width: 30px;
+      height: 30px;
+      color: #ffd247;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 7.15px;
+    }
+
+    &__rating-icon {
+      margin: 0 0 2px;
+      font-size: 13px;
+    }
+
+    &__name-wrap {
+      margin: 0 0 4px;
+    }
+
+    &__name {
+      color: #0b1a31;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    &__name-icon {
+      font-size: 16px;
+    }
+
+    &__place-teaching {
+      margin: 0 0 5px;
+      color: #0b1a31;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+    }
+
+    &__experience {
+      margin: 0 0 5px;
+      color: #0b1a31;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 12.44px;
+
+      span {
+        font-size: 11px;
+      }
+    }
+
+    &__desc {
+      margin: 0 0 5px;
+      color: #727d8d;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 12px;
+    }
+
+    &__share {
+      display: none;
+    }
+
+    &__price-val {
+      color: #327ae5;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &__price-val-money {
+      font-weight: 500;
+    }
+
+    &__price-type {
+      margin: 3px 0 0;
+      color: #727d8d;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 5.04px;
+    }
+
+    &__price-group,
+    &__price-individual {
+      align-items: flex-start;
+      margin: 0 14px 0 0;
+    }
+
+    &__price-group {
+      margin: 0 21px 0 0;
+    }
+  }
+}

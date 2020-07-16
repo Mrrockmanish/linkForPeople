@@ -1,0 +1,30 @@
+.user-post-date{
+  font-size: 12px;
+  .post-time{
+    color: #727d8d;
+    margin-right: 5px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .dropdown{
+    display: inline-block;
+    &-menu{
+      i{
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.user-name{
+  display: inline-block;
+  a{
+    color: $blueColor;
+    font-size: 17px;
+    margin-right: 5px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

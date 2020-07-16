@@ -1,0 +1,177 @@
+extends ../layout/layout
+
+block title
+    | Поиск курсов
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                .search-page
+                    .panel.panel-white.panel-search
+                        .switch
+                            span Поиск в:
+                            a(href="javascript:void(0);").active Курсы
+                            a(href="javascript:void(0);") Преподаватели
+                        form.search-form
+                            .form-group
+                                input(type="text" placeholder="Я ищу...").form-control
+                                i.fas.fa-sliders-h.selected
+                            button(type="submit") Найти
+                            .extra.hide
+                                .title Дополнительные параметры
+                                .params
+                                    .params-col
+                                        .select-tree.params-col__item
+                                            input(type="hidden")
+                                            .pseudo-input
+                                                span.placeholder Плейсхолдер
+                                            .select-tree-options
+                                                ul.select-tree-box
+                                                    .grouped-category.two-level.open
+                                                        li.select-tree-node
+                                                            .input-wrapper-styled-checkbox.parent-item
+                                                                input(type="checkbox" value="value-node-1" data-text="Маникюр")
+                                                                label Маникюр
+                                                            ul
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-1-1" data-text="Маникюр классический" checked)
+                                                                        label Классический
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-1-2" data-text="Маникюр французский")
+                                                                        label Французский
+                                                    .grouped-category.two-level.open
+                                                        li.select-tree-node
+                                                            .input-wrapper-styled-checkbox.parent-item
+                                                                input(type="checkbox" value="value-node-2" data-text="Парикмахерские услуги")
+                                                                label Парикмахерские услуги
+                                                            ul
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-2-1" data-text="Стрижка № 1")
+                                                                        label Стрижка № 1
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-2-2" data-text="Стрижка № 2")
+                                                                        label Стрижка № 2
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-2-3" data-text="Стрижка № 3")
+                                                                        label Стрижка № 3
+                                        .select-tree.params-col__item
+                                            input(type="hidden" value="value-node-1-1")
+                                            .pseudo-input
+                                                .pseudo-item(data-value="value-node-1-1")
+                                                    span Маникюр классический
+                                                    i.fa.fa-times
+                                            .select-tree-options
+                                                ul.select-tree-box
+                                                    .grouped-category.open
+                                                        .grouped-title
+                                                            .icon
+                                                            span Категория
+                                                        li.select-tree-node
+                                                            .input-wrapper-styled-checkbox.parent-item
+                                                                input(type="checkbox" value="value-node-1" data-text="Маникюр")
+                                                                label Маникюр
+                                                            ul
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-1-1" data-text="Маникюр классический" checked)
+                                                                        label Классический
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-1-2" data-text="Маникюр французский")
+                                                                        label Французский
+                                                    .grouped-category
+                                                        .grouped-title
+                                                            .icon
+                                                            span Категория
+                                                        li.select-tree-node
+                                                            .input-wrapper-styled-checkbox.parent-item
+                                                                input(type="checkbox" value="value-node-2" data-text="Парикмахерские услуги")
+                                                                label Парикмахерские услуги
+                                                            ul
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-2-1" data-text="Стрижка № 1")
+                                                                        label Стрижка № 1
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-2-2" data-text="Стрижка № 2")
+                                                                        label Стрижка № 2
+                                                                li.select-tree-item
+                                                                    .input-wrapper-styled-checkbox.child-item
+                                                                        input(type="checkbox" value="value-node-2-3" data-text="Стрижка № 3")
+                                                                        label Стрижка № 3
+                                        .params-col__item
+                                            .input-wrapper.input-wrapper-select
+                                                select
+                                                    option(selected="true" disabled="true") Выберите формат занятия
+                                                    option Индивидуальное
+                                        .params-col__item
+                                            .input-wrapper.input-wrapper-select
+                                                select
+                                                    option(selected="true" disabled="true") Все подразделы
+                                                    option Индивидуальное
+                                                    option Групповое
+                                        .params-col__item
+                                            .input-wrapper-styled-checkbox
+                                                input(type="checkbox" name="photo")
+                                                label Фото
+                                    .params-col
+                                        .params-col__item.mb-45
+                                            span.title Тип курса
+                                            .flex-list.fifty
+                                                .input-wrapper-styled-checkbox
+                                                    input(type="checkbox" name="individual" disabled)
+                                                    label Индивидуальный
+                                                .input-wrapper-styled-checkbox
+                                                    input(type="checkbox" name="group")
+                                                    label Групповой
+                                                .input-wrapper-styled-checkbox
+                                                    input(type="checkbox" name="self")
+                                                    label Самостоятельный
+                                                .input-wrapper-styled-checkbox
+                                                    input(type="checkbox" name="olymp")
+                                                    label Олимпиада
+                                        .params-col__item
+                                            span.title Цена:
+                                            .ui-slider-container.ui-slider-container--double
+                                                b.slider-min-value 0
+                                                b.slider-max-value 5000
+                                                .slider-filters
+                                                    .slider-input.min-value-js
+                                                        input(type="text")
+                                                    .slider-input.max-value-js
+                                                        input(type="text")
+                                                .ui-slider-item-js--double(data-min="0" data-max="5000" data-step="50" data-current-min="400" data-current-max="2000")
+                                        .params-col__item
+                                            .flex-list
+                                                .input-wrapper-styled-checkbox
+                                                    input(type="checkbox" name="photo")
+                                                    label Фото
+                                                .input-wrapper-styled-checkbox
+                                                    input(type="checkbox" name="promo")
+                                                    label Акции
+
+                                button(type="submit").btn-blue Поиск
+
+                    .page-info.panel.panel-white.courses
+                        .courses__desktop
+                            include ../block/course
+                            include ../block/course
+                            include ../block/course
+                            include ../block/course
+                            include ../block/course
+                            include ../block/course
+                        .courses__mobile
+                            include ../block/course--mobile
+                            include ../block/course--mobile
+                            include ../block/course--mobile
+                            include ../block/course--mobile
+                            include ../block/course--mobile
+                            include ../block/course--mobile

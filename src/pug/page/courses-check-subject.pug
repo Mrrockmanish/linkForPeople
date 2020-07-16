@@ -1,0 +1,135 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade#myCreatedCourses
+                            .tab-pane.fade.in.active#checkTest
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        a(href="javascript:void(0)") Английский язык
+                                    li
+                                        span Проверить тесты
+                                .check-subject-container.courses-inner-container
+                                    .title Результаты занятий
+                                    .custom-table.custom-table--bordered
+                                        .custom-table-row.custom-table-thead
+                                            .custom-table-cell Подписчик
+                                            .custom-table-cell.switchable(data-start="1" data-total-lessons="4") 1 Занятие
+                                                .switchable-btn.prev
+                                                    i.fal.fa-angle-left
+                                                .switchable-btn.next
+                                                    i.fal.fa-angle-right
+                                            .custom-table-cell Итоговый тест
+                                            .custom-table-cell.hidden-xs.hidden-sm Результаты курса
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                                .results.hidden-lg.hidden-md Результаты: 92%
+                                            //.custom-table-cell.switchable-container--mobile
+                                            //    span(data-number="1").test-lesson 10/15
+                                            //    span(data-number="2").test-lesson.active 10/15
+                                            //    span(data-number="3").test-lesson 9/15
+                                            //    span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell
+                                                span(data-number="1").test-lesson 10/15
+                                                span(data-number="2").test-lesson.active 10/15
+                                                span(data-number="3").test-lesson 9/15
+                                                span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell 10/15
+                                            .custom-table-cell.hidden-xs.hidden-sm 92%
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                                .results.hidden-lg.hidden-md Результаты: 92%
+                                            //.custom-table-cell.switchable-container--mobile
+                                            //    span(data-number="1").test-lesson 10/15
+                                            //    span(data-number="2").test-lesson.active 10/15
+                                            //    span(data-number="3").test-lesson 9/15
+                                            //    span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell
+                                                span(data-number="1").test-lesson 10/15
+                                                span(data-number="2").test-lesson.active 10/15
+                                                span(data-number="3").test-lesson 9/15
+                                                span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell 10/15
+                                            .custom-table-cell.hidden-xs.hidden-sm 92%
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                                .results.hidden-lg.hidden-md Результаты: 92%
+                                            //.custom-table-cell.switchable-container--mobile
+                                            //    span(data-number="1").test-lesson 10/15
+                                            //    span(data-number="2").test-lesson.active 10/15
+                                            //    span(data-number="3").test-lesson 9/15
+                                            //    span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell
+                                                span(data-number="1").test-lesson 10/15
+                                                span(data-number="2").test-lesson.active 10/15
+                                                span(data-number="3").test-lesson 9/15
+                                                span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell 10/15
+                                            .custom-table-cell.hidden-xs.hidden-sm 92%
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                                .results.hidden-lg.hidden-md Результаты: 92%
+                                            //.custom-table-cell.switchable-container--mobile
+                                            //    span(data-number="1").test-lesson 10/15
+                                            //    span(data-number="2").test-lesson.active 10/15
+                                            //    span(data-number="3").test-lesson 9/15
+                                            //    span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell
+                                                span(data-number="1").test-lesson 10/15
+                                                span(data-number="2").test-lesson.active 10/15
+                                                span(data-number="3").test-lesson 9/15
+                                                span(data-number="4").test-lesson 4/15
+                                            .custom-table-cell 10/15
+                                            .custom-table-cell.hidden-xs.hidden-sm 92%

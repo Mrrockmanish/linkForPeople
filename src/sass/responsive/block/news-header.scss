@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+  .news-header {
+    top: 42px;
+
+    &__item-icon {
+      height: auto;
+      margin: 0 3px 0 0;
+
+      &--star {
+        width: 12px;
+        height: 12px;
+      }
+
+      &--news-peper {
+        width: 13px;
+        height: 11px;
+      }
+    }
+
+    &__item-title {
+      color: #0b1a31;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__panel {
+      padding: 0 10px;
+      border-radius: 0;
+    }
+
+    &__item {
+      margin: 0 20px 0 0;
+      padding: 13px 0 9px;
+    }
+  }
+}

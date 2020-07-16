@@ -1,0 +1,42 @@
+extends ../layout/layout
+
+block title
+    | Урок - Вопросы и ответы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                // Задать вопрос
+                .modal.fade.modal-course.modal-md.modal--askQuest#askQuest(tabindex="-1" role="dialog" aria-labelledby="#askQuest" data-backdrop="static")
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                .pointer.close-modal
+                                    i.fa.fa-times
+                                h4 Задать вопрос
+                            .modal-body
+                                .modal__date-wrap
+                                    span.modal__date-time 10:57
+                                    span.modal__date-date 02/12/2019
+                                textarea.modal__textarea-qa(placeholder="Комментарий")
+                                .modal__btns
+                                    button.btn-invite.btn-invite.modal__textarea-btn(type='submit') Отправить
+                                    a.modal__close.close-modal(href="", title="отмена") отмена
+                .panel.panel-white.panel-courses
+                    .panel-courses__header.panel-courses__header--lesson
+                        include ../block/lesson-header
+                    .panel-courses__body.panel-courses__body--lesson
+                        .tab-content
+                            .tab-pane.fade#lessonLecture
+                            .tab-pane.fade.in.active#lessonQA
+                                include ../block/lesson-qa
+                            .tab-pane.fade#lessonTest
+                            .tab-pane.fade#lessonBookmarks
+                            .tab-pane.fade#lessonAds
+
+
+
+
+

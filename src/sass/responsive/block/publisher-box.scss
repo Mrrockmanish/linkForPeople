@@ -1,0 +1,63 @@
+@media (max-width: $screen-sm-max) {
+	.publisher-box {
+
+		&__footer {
+			font-size: 12px;
+		}
+
+		&__submit-button {
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.publisher-box {
+		&__header {
+			.create-course {
+				right: 15px;
+			}
+		}
+		.avatar-circle_md {
+			display: none;
+		}
+
+		.publisher{
+			padding-left: 15px;
+			padding-right: 30px;
+		}
+
+		&__hide-form{
+			padding: 0 15px 0 5px;
+		}
+
+		&__footer {
+			padding: 8px 8px;
+			&-list {
+				&-item {
+					padding: 4px 5px;
+					margin-right: 6px;
+				}
+
+			}
+		}
+	}
+	.panel-themes {
+		top: 43px;
+		.publisher-box {
+			.publisher {
+				min-height: 55px !important;
+				padding-left: 15px;
+			}
+		}
+		.publisher-slide {
+			justify-content: center;
+			font-weight: bold;
+			.avatar-circle_md {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.panel.panel-white.panel-settings
+    .panel-settings__header
+        h2.title Социальные ссылки
+        .menu-icon.pointer
+            i.fas.fa-th
+    .panel-settings__body
+        form.form
+            .form-group.form-group_flex
+                label.educator-label Аватар
+                .input-wrapper.input-wrapper-photo
+                    p Загрузить документ
+                    i.fal.fa-camera-alt
+                    img(src="#")
+                    input(type="file" onchange="readURL(this)")
+            .form-group.form-group_flex
+                label.educator-label Обложка
+                .input-wrapper.input-wrapper-photo
+                    p Загрузить документ
+                    i.fal.fa-camera-alt
+                    img(src="#")
+                    input(type="file" onchange="readURL(this)")
+        .panel-settings__footer
+            button(type="submit").btn-blue--lg Сохранить

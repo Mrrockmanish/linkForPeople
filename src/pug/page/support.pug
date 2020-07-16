@@ -1,0 +1,37 @@
+extends ../layout/layout
+
+block title
+    | Техническая поддержка
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                .panel.panel-white.panel-settings.support
+                    .panel-settings__header
+                        h2.title Техническая поддержка
+                    .panel-settings__body
+                        form.form
+                            .form-group.form-group_flex
+                                label Имя
+                                .input-wrapper
+                                    input(type="text" value="Константин")
+                            .form-group.form-group_flex
+                                label Email
+                                .input-wrapper
+                                    input(type="text" value="email@email.com")
+                            .form-group.form-group_flex
+                                label Причина обращения
+                                .input-wrapper
+                                    textarea(rows="3")
+                            .form-group.form-group_flex--top
+                                label.educator-label
+                                .input-wrapper.input-wrapper-photo
+                                    p Загрузить документ
+                                    i.fal.fa-camera-alt
+                                    img(src="#")
+                                    input(type="file" onchange="readURL(this)")
+                                .input-prompt Максимальный размер <br> загрузки: 5mb
+                    .panel-settings__footer
+                        button(type="submit").btn-blue--lg Отправить

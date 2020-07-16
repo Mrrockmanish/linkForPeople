@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+	.repetit-request{
+		padding: 10px 30px 20px;
+	}
+	.request-item{
+		.custom-table{
+			font-size: 14px;
+			.icon-margin{
+				margin-right: 10px;
+			}
+			&-cell{
+				padding: 5px 10px 5px 0;
+				flex: 0 0 50%;
+				&:first-child{
+					flex: 0 0 50%;
+				}
+				&:nth-child(3){
+					flex: 0 0 50%;
+				}
+				&:nth-child(4){
+					flex: 0 0 50%;
+					text-align: left;
+				}
+			}
+			&-row{
+				flex-wrap: wrap
+			}
+		}
+	}
+}

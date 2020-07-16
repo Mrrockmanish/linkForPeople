@@ -1,0 +1,98 @@
+extends ../layout/layout
+
+block title
+    | Курсы (проверить тесты)
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li.active
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade#myCreatedCourses
+                            .tab-pane.fade.in.active#checkTest
+                                .check-test.courses-inner-container
+                                    .actions.actions-circle-sm
+                                        a(href="javascript:void(0)").btn-invite
+                                            i.fal.fa-long-arrow-left
+                                            span.hidden-xs Вернуться
+                                        a(href="javascript:void(0)").btn-invite
+                                            i.fas.fa-save
+                                            span.hidden-xs Сохранить
+                                    .title Контрольный тест по математике ( урок 1 )
+                                    .custom-table.custom-table--bordered.table-test
+                                        .custom-table-row
+                                            .custom-table-cell Подписчик
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                        .custom-table-row
+                                            .custom-table-cell Тест
+                                            .custom-table-cell
+                                                ul.breadcrumbs
+                                                    li
+                                                        a(href="javascript:void(0)") Курсы
+                                                    li
+                                                        span Математика 1 класс
+                                        .custom-table-row
+                                            .custom-table-cell Попытка
+                                            .custom-table-cell 2 из 3
+                                    .solution
+                                        .title Ответы подписчика:
+                                        .solution-item
+                                            .left-side
+                                                p.question-text
+                                                    b Вопрос 1:
+                                                    | &nbsp; Одна рыба стоит один рубль и еще полрыбы. Сколько рублей стоят 5 рыб?
+                                                label Ответ
+                                                .input-wrapper
+                                                    textarea(rows="3") Одна рыба стоит один рубль
+                                                label Комментарий
+                                                .input-wrapper
+                                                    textarea(rows="3")
+                                            .right-side
+                                                a(href="javascript:void(0)").btn-success Правильно
+                                                a(href="javascript:void(0)").btn-danger Не правильно
+                                        .solution-item
+                                            .left-side
+                                                p.question-text
+                                                    b Вопрос 2:
+                                                    | &nbsp; Одна рыба стоит один рубль и еще полрыбы. Сколько рублей стоят 5 рыб?
+                                                label Ответ
+                                                .input-wrapper
+                                                    textarea(rows="3") Одна рыба стоит один рубль
+                                                label Комментарий
+                                                .input-wrapper
+                                                    textarea(rows="3")
+                                            .right-side
+                                                a(href="javascript:void(0)").btn-success Правильно
+                                                a(href="javascript:void(0)").btn-danger Не правильно

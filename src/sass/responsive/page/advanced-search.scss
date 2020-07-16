@@ -1,0 +1,20 @@
+@media (max-width: $screen-sm-max) {
+  .advanced-search{
+    @include make-row();
+    .form-container{
+      padding: 6px 15px;
+    }
+    &-form{
+      .search-options{
+        left: 0 !important;
+        right: 0 !important;
+      }
+    }
+    &-results{
+      padding: 5px 15px;
+    }
+    .slider.slider-horizontal{
+      margin-left: 10px;
+    }
+  }
+}

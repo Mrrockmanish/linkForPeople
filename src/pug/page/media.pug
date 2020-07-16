@@ -1,0 +1,226 @@
+extends ../layout/layout
+
+block title
+    | Новости
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+
+                .panel.panel-white.panel-media
+                    .panel-media__header
+                        ul.media-menu
+                            li.active
+                                a(href="#mediaPhoto" data-toggle='tab')
+                                    i.fa.fa-camera-alt
+                                    | Фото
+                            li
+                                a(href="#mediaAudio" data-toggle='tab')
+                                    i.fa.fa-play
+                                    | Аудио
+                            li
+                                a(href="#mediaVideo" data-toggle='tab')
+                                    i.fa.fa-video
+                                    | Видео
+                    .panel-media__body
+                        .tab-content
+                            .tab-pane.fade.in.active#mediaPhoto
+                                .media-album
+                                    //span.show-more.pointer
+                                    //    i.far.fa-angle-down
+                                    .media-album__header.form-parent-js
+                                        .line
+                                            h4.title Альбом
+                                            .actions
+                                                button(type="button").btn-invite.btn-create-js
+                                                    i.fa.fa-plus-circle
+                                                    span Создать альбом
+                                                button(type="button").btn-invite.btn-create-js
+                                                    i.fa.fa-trash-alt
+                                                    span Создать альбом
+                                        form.form#create-album.hide
+                                            .form-group
+                                                .input-wrapper
+                                                    input(type="text" value="" placeholder="Введите название альбома")
+                                            button(type="submit").btn-blue Создать
+                                            button(type="button").btn-white.btn-create-cancel-js Отмена
+                                    .media-album__list
+                                        a(href="javascript:void(0)").media-album__list-item
+                                            img(src="./pictures/back.jpg")
+                                            span.name Олимпиада 2018
+                                        a(href="javascript:void(0)").media-album__list-item
+                                            img(src="./pictures/back.jpg")
+                                            span.name Олимпиада 2018
+                                        a(href="javascript:void(0)").media-album__list-item
+                                            img(src="./pictures/back.jpg")
+                                            span.name Олимпиада 2018 Олимпиада 2018 Олимпиада 2018
+                                        span.show-more.pointer
+                                            i.far.fa-angle-down
+                            .tab-pane.fade#mediaAudio
+                                .media-audio
+                                    .media-audio__header.form-parent-js
+                                        .line
+                                            h4.title Аудио
+                                            .actions
+                                                button(type="button").btn-invite.btn-create-js
+                                                    i.fa.fa-plus-circle
+                                                    span Загрузить
+                                                button(type="button").btn-invite.border-error
+                                                    i.fa.fa-plus-circle
+                                                    span Загрузить
+                                        form.form#create-audio.hide
+                                            .form-group
+                                                .input-wrapper-named-file.parent-container--js
+                                                    input(type="text" value="" placeholder="Введите название песни")
+                                                    i.glyphicon.fa.fa-play
+                                                    .input-file-container
+                                                        span.hidden-xs Выберите файл
+                                                        span.hidden-lg.hidden-sm.hidden-md
+                                                            i.fa.fa-plus-circle
+                                                        input(type="file" onchange='addFileName(this);')
+                                            button(type="submit").btn-blue Создать
+                                            button(type="button").btn-white.btn-create-cancel-js Отмена
+                                    .media-audio__list
+                                        include ../partials/player
+                                        include ../partials/player
+
+                            .tab-pane.fade#mediaVideo
+                                .media-video
+                                    .media-video__header.form-parent-js
+                                        .line
+                                            h4.title Видео
+                                            .actions
+                                                button(type="button").btn-invite.btn-create-js
+                                                    i.fa.fa-plus-circle
+                                                    span Загрузить
+                                                button(type="button").btn-invite.border-error
+                                                    i.fa.fa-plus-circle
+                                                    span Загрузить
+                                        form.form#create-video.hide
+                                            .form-group
+                                                .input-wrapper-named-file.parent-container--js
+                                                    input(type="text" value="" placeholder="Введите название")
+                                                    i.glyphicon.fa.fa-video
+                                                    .input-file-container
+                                                        span Выберите файл
+                                                        input(type="file" onchange='addFileName(this);')
+                                            button(type="submit").btn-blue Создать
+                                            button(type="button").btn-white.btn-create-cancel-js Отмена
+                                    .media-video__list
+                                        .media-video__list-item
+                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        .media-video__list-item
+                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        .media-video__list-item
+                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        .media-video__list-item
+                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        .media-video__list-item
+                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        .media-video__list-item
+                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+                .panel.panel-white.panel-media
+                    .panel-media__body.panel-media__body--photo
+                        .media-photo
+                            .media-photo__header.form-parent-js
+                                .line
+                                    h4.title Фото
+                                    .actions
+                                        button(type="button").btn-invite.btn-create-js
+                                            i.fa.fa-plus-circle
+                                            span Загрузить
+                                form.form#create-photo.hide
+                                    .form-group
+                                        .input-wrapper-named-file.parent-container--js
+                                            input(type="text" value="" placeholder="Введите название")
+                                            i.glyphicon.fa.fa-camera
+                                            .input-file-container
+                                                span Выберите файл
+                                                input(type="file" onchange='addFileName(this);')
+                                    button(type="submit").btn-blue Создать
+                                    button(type="button").btn-white.btn-create-cancel-js Отмена
+                            .media-photo__list
+                                .media-album__list-item.photo-hover
+                                    .photo-hover__container
+                                        span.plus
+                                            i.fa.fa-plus-circle
+                                        span.dropdown
+                                            a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                                                i.fal.fa-cog
+                                            ul.dropdown-menu.dropdown-menu-right
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 1
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 2
+                                    img(src="./pictures/back.jpg")
+                                .media-album__list-item.photo-hover
+                                    .photo-hover__container
+                                        span.plus
+                                            i.fa.fa-plus-circle
+                                        span.dropdown
+                                            a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                                                i.fal.fa-cog
+                                            ul.dropdown-menu.dropdown-menu-right
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 1
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 2
+                                    img(src="./pictures/back.jpg")
+                                .media-album__list-item.photo-hover
+                                    .photo-hover__container
+                                        span.plus
+                                            i.fa.fa-plus-circle
+                                        span.dropdown
+                                            a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                                                i.fal.fa-cog
+                                            ul.dropdown-menu.dropdown-menu-right
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 1
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 2
+                                    img(src="./pictures/back.jpg")
+                                .media-album__list-item.photo-hover
+                                    .photo-hover__container
+                                        span.plus
+                                            i.fa.fa-plus-circle
+                                        span.dropdown
+                                            a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                                                i.fal.fa-cog
+                                            ul.dropdown-menu.dropdown-menu-right
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 1
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 2
+                                    img(src="./pictures/back.jpg")
+                                .media-album__list-item.photo-hover
+                                    .photo-hover__container
+                                        span.plus
+                                            i.fa.fa-plus-circle
+                                        span.dropdown
+                                            a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                                                i.fal.fa-cog
+                                            ul.dropdown-menu.dropdown-menu-right
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 1
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 2
+                                    img(src="./pictures/back.jpg")
+                                .media-album__list-item.photo-hover
+                                    .photo-hover__container
+                                        span.plus
+                                            i.fa.fa-plus-circle
+                                        span.dropdown
+                                            a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                                                i.fal.fa-cog
+                                            ul.dropdown-menu.dropdown-menu-right
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 1
+                                                li
+                                                    a(href="javascript:void(0)") Пункт меню 2
+                                    img(src="./pictures/back.jpg")

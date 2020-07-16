@@ -1,0 +1,86 @@
+.tooltip > .tooltip-inner {
+  background-color: #333;
+  white-space: nowrap;
+  border: 1px solid #222;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.panel-white{
+  box-shadow: 0 1px 0 0 #e3e4e8, 0 0 0 1px #f1f1f1;
+  border: none;
+}
+
+textarea.form-control{
+  resize: none !important;
+}
+
+.form-control {
+  box-shadow: none;
+  &:focus {
+    border-color: #ccc;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.left-addon input {
+  padding-left: 30px;
+}
+
+.inner-addon{
+  position: relative;
+  .glyphicon {
+    position: absolute;
+    padding: 8px;
+    pointer-events: none;
+  }
+}
+
+.check-input {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 10px;
+  &-label{
+    margin: 0;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+    &:after{
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  input:checked ~ .checkmark{
+    background-color: $mainColor;
+  }
+  input:checked ~ .checkmark:after{
+    display: block;
+  }
+  input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+  }
+}

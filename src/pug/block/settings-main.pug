@@ -1,0 +1,68 @@
+.panel.panel-white.panel-settings.panel-settings--centered
+    .panel-settings__header
+        h2.title  Общие настройки
+        .menu-icon.pointer
+            i.fas.fa-th
+    .panel-settings__body
+        form.form
+            .form-group.form-group_flex
+                label Логин
+                .input-wrapper
+                    input(type="text" value="User")
+            .form-group.form-group_flex
+                label E-mail адрес
+                .input-wrapper
+                    input(type="text" value="e-mail@email.com")
+            .form-group.form-group_flex
+                label Страна
+                .input-wrapper.input-wrapper-select
+                    select
+                        option Россия
+                        option United Kingdom
+            .form-group.form-group_flex.few-input
+                label Дата рождения
+                .input-wrapper.input-wrapper-select
+                    select
+                        option(selected="true" disabled="true") День
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                        option 6
+                        option 7
+                        option 8
+                .input-wrapper.input-wrapper-select
+                    select
+                        option(selected="true" disabled="true") Месяц
+                        option 1
+                        option 2
+                        option 3
+                .input-wrapper.input-wrapper-select
+                    select
+                        option(selected="true" disabled="true") Год
+                        option 1
+                        option 2
+                        option 3
+            .form-group.form-group_flex
+                label Пол
+                .input-wrapper.input-wrapper-select
+                    select
+                        option Мужской
+                        option Женский
+            .form-group.form-group_flex
+                label Язык
+                .input-wrapper.input-wrapper-select
+                    select
+                        option Русский
+                        option English
+            .form-group.form-group_flex
+                label Верификация
+                .input-wrapper.input-wrapper-radio
+                    fieldset(id="radio_group")
+                        input(type="radio" id="radio_yes" name='radio_verification')
+                        label(for="radio_yes") Подтвержден
+                        input(type="radio" id="radio_no" name='radio_verification')
+                        label(for="radio_no") Не подтвержден
+        .panel-settings__footer
+            button(type="submit").btn-blue--lg Сохранить

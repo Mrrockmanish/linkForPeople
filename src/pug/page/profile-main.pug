@@ -1,0 +1,26 @@
+extends ../layout/layout
+
+block title
+    | Основная страница профиля
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+                include ../block/publisher-box
+
+                include ../block/user-post-media-1
+                include ../block/user-post-science
+                include ../block/user-post-article
+                include ../block/user-post
+                include ../block/user-post-media-2
+                include ../block/user-post-media-3
+                include ../block/user-post-media-4
+                include ../block/user-post-media-5
+
+                .get-more.btn-white
+                    i.fa.fa-spinner.animated-spin.hide
+                    span Показать еще

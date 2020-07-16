@@ -1,0 +1,173 @@
+.panel-science {
+	margin-bottom: 6px;
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 0 30px 0 10px;
+		border-bottom: 1px solid #6bbeed;
+		.btn-invite {
+			margin-left: auto;
+		}
+		.btn-circle {
+			@extend %btn-white;
+		}
+	}
+	&__body {
+		padding: 15px 30px 15px 30px;
+
+		.science-board {
+			position: relative;
+
+			&__header {
+				margin-bottom: 15px;
+				.line {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				.title {
+					font-size: 24px;
+					margin: 0;
+				}
+				form {
+					padding: 15px 0;
+					button {
+						font-size: 12px;
+						text-transform: uppercase;
+						padding: 8px 16px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.science-menu{
+	display: flex;
+	width: 100%;
+	li{
+		a {
+			display: block;
+			padding: 15px 20px;
+			color: $textDarkColor;
+			font-size: 15px;
+			i {
+				color: #175dc4;
+				margin-right: 10px;
+			}
+		}
+		&:nth-child(3){
+			margin-left: auto;
+		}
+		&.active{
+			position: relative;
+			&:before, &:after{
+				content: '';
+				bottom: 0;
+				left: 50%;
+				border: solid transparent;
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+			&:before{
+				border-color: transparent;
+				border-bottom-color: #6bbeed;
+				border-width: 10px;
+				margin-left: -11px;
+			}
+			&:after{
+				border-color: transparent;
+				border-bottom-color: white;
+				border-width: 9px;
+				margin-left: -10px;
+				bottom: -1px;
+			}
+		}
+	}
+}
+
+.science-post-inner{
+	padding: 25px 0 30px;
+	.breadcrumbs{
+		margin-bottom: 40px;
+	}
+	&__header{
+		display: flex;
+		align-items: flex-start;
+		padding-right: 40px;
+		margin-bottom: 25px;
+		img {
+			width: 205px;
+			height: 140px;
+			margin-right: 25px;
+		}
+		.title{
+			font-size: 30px;
+			margin: 0;
+			max-width: 440px;
+			font-weight: normal;
+			line-height: 1.2;
+		}
+		.course-price {
+			text-align: center;
+			margin-left: auto;
+			.price{
+				font-size: 22px;
+				font-weight: 500;
+				color: $blueColor;
+				display: block;
+				margin-bottom: 5px;
+			}
+			.price-per-hour{
+				font-size: 15px;
+				line-height: 1.13;
+				color: #8aa8d5;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.start-date{
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.science-test{
+	padding: 25px 30px 15px;
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		.title{
+			font-size: 20px;
+			font-weight: 500;
+		}
+	}
+	.btn-invite, .btn-blue {
+		font-size: 11px;
+		text-transform: uppercase;
+		padding: 6px 10px;
+		letter-spacing: .3px;
+	}
+}
+
+.back-to-page{
+	margin-bottom: 10px;
+	a{
+		color: #b0bed3;
+		font-size: 12px;
+		text-transform: uppercase;
+		&:hover{
+			color: $grayText;
+		}
+		i{
+			margin-right: 5px;
+			font-size: 14px;
+			vertical-align: text-bottom;
+		}
+	}
+}

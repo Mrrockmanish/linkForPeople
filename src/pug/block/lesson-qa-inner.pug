@@ -1,0 +1,37 @@
+.lesson-qa.lesson-qa--inner
+    .lesson-qa__list-wrap.comments
+        .lesson-qa__list-title-wrap
+            a.lesson-qa__list-title(href="#", title="")
+                i.fas.fa-arrow-left.lesson-qa__list-title-icon
+                span назад ко всем вопросам
+        .comments__list.lesson-qa__list
+            .comments__item.lesson-qa__comment
+                .comments__inner
+                    img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                    .comments__body
+                        .comments__body-top
+                            a.comments__user(href="#", title="") Валерий Миронов
+                            a.comments__lecture(href="#", title="") лекция 1
+                            a.comments__date(href="#", title="") 2 часа назад
+                        .comments__text-wrap
+                            strong.comments__text-title Долго ли учиться программированию? 
+                            p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                        .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+
+                .comments.lesson-qa__inner-comments
+                    .lesson-qa__inner-comments-header 1 ответ
+                    ul.comments__list
+                        li.comments__item
+                            img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                            .comments__body
+                                a.comments__user(href="") Валерий Миронов
+                                .comments__text-wrap
+                                    p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                                .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                                .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                                .comments__footer
+                                    a.comments__date(href="#", title="2 часа назад") 2 часа назад
+                                    a.comments__answer-btn(href="#", title="Ответить") Ответить
+                            .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+                            .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+                    include ../block/publisher-box--comments-qa

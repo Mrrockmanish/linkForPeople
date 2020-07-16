@@ -1,0 +1,69 @@
+header.course-header
+    <lite-youtube class="course-header__video" videoid="M_pclb-58ZY" style="background: url('https://img.youtube.com/vi/FH5e407Xeto/maxresdefault.jpg');">
+        .course-header__video-preview(style="background-image: url('https://img.youtube.com/vi/FH5e407Xeto/maxresdefault.jpg');")
+        .course-header__video-title JavaScript интервью. Полный курс по JS собеседованию
+    </lite-youtube>
+
+    .course-header__video.course-header__video--native
+        .course-header__video-preview(style="background-image: url('https://img.youtube.com/vi/FH5e407Xeto/maxresdefault.jpg');")
+        .course-header__video-title JavaScript интервью. Полный курс по JS собеседованию
+        .course-header__video-play(onclick="chVideoPlay(this);")
+        video.course-header__video-player(controls)
+            source(src="assets/video/video.mp4", type="video/mp4")
+
+    .course-header__info
+
+        .course-header__info-top
+            .course-header__share-btn.btn-white
+                .course-header__share-btn-inner(onclick="courseShare();")
+                    i.fas.fa-share-alt.course-header__share-btn-icon
+                .course-header__share-drop
+                    a.btn-invite.course-header__share-drop-btn(href="#", title="На мою стену") На мою стену
+                    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                    <script src="https://yastatic.net/share2/share.js"></script>
+                    <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter,qzone,viber,whatsapp,skype,telegram"></div>
+            .course-header__main-btns
+                a.course-header__main-btn.course-header__main-btn--sub(href="#", title="") Подписаться
+                a.course-header__main-btn.course-header__main-btn--unsub(href="#", title="") Отписаться
+                a.course-header__main-btn.course-header__main-btn--feedback(href="#", title="", data-target="#yourFeedback", data-toggle="modal") Отзывы
+            .btn-circle.course-header__chat-btn.btn-white
+                i.fal.fa-comments.course-header__chat-btn-icon
+
+        .course-header__info-center
+            ul.course-header__list
+                li.course-header__list-item
+                    span.course-header__list-key Author:
+                    a.course-header__list-val(href="#", title="") Alexander Ivanov
+                li.course-header__list-item
+                    span.course-header__list-key Сharter:
+                    a.course-header__list-val.tooltips(href="#", title="") Development
+                        .tooltips__drop Целью квалификации педагогических кадров совершенствование
+            ul.course-header__list
+                li.course-header__list-item
+                    span.course-header__list-key
+                        i.fal.fa-clock
+                    span.course-header__list-val 120 min
+                li.course-header__list-item
+                    span.course-header__list-key
+                        i.fas.fa-star
+                    span.course-header__list-val 4.5
+            .course-header__center-sub
+                ul.course-header__list
+                    li.course-header__list-item
+                        span.course-header__list-key Тип курса:
+                        span.course-header__list-val Групповой
+                    li.course-header__list-item
+                        span.course-header__list-key Статус курса:
+                        span.course-header__list-val Опубликован
+                a.course-header__sub-btn.btn-invite(href="", title="подписаться на автора") Подписаться на автора
+
+        .course-header__info-bottom
+          .user-post.course-header__desc#post18
+            .user-post__content
+              .post-article.wrapper
+                  span.show-more.pointer(onclick='showMoreText(post18); showCenterSub(this); return false;')
+                    i.fal.fa-angle-down
+                  .post-article__body
+                    .post-text
+                      p For 9 months of training 10 hours a week, you will master the required skills of a web developer and collect a portfolio of projects. For 9 months of training 10 hours a week, you will master the required skills of a web developer and collect a portfolio of projects. You will master the required skills of a web develope a portfolio of projects.
+                      p For 9 months of training 10 hours a week, you will master the required skills of a web developer and collect a portfolio of projects. For 9 months of training 10 hours a week, you will master the required skills of a web developer and collect a portfolio of projects. You will master the required skills of a web develope a portfolio of projects.

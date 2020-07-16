@@ -1,0 +1,51 @@
+/* rating */
+.rating {
+  display: flex;
+
+  &--nonactive {
+    .rating {
+      &__item {
+        user-select: none;
+        pointer-events: none;
+        touch-action: none;
+      }
+    }
+  }
+
+  &__item {
+    margin-right: 2px;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 5px;
+    }
+
+    &:hover,
+    &--active {
+      .rating {
+        &__icon {
+          &--full {
+            display: inline-flex;
+          }
+
+          &--empty {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__icon {
+    font-size: 14px;
+    color: #f1c11a;
+
+    &--full {
+      display: none;
+    }
+  }
+}

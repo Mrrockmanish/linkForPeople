@@ -1,0 +1,107 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade.in.active#myCreatedCourses
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Математика 1 класс
+                                    li
+                                        a(href="javascript:void(0)") Урок 1
+                                    li
+                                        span Тест
+                                .courses-view-test-container.courses-inner-container
+                                    .title Тест № 1
+                                    .courses-view-test
+                                        .actions.actions-circle-sm
+                                            a(href="javascript:void(0)").btn-disabled
+                                                i.fa.fa-pencil-alt
+                                                span.hidden-xs Редактировать
+                                            a(href="javascript:void(0)").btn-red
+                                                i.fal.fa-trash-alt
+                                                span.hidden-xs Удалить
+                                        .custom-table.custom-table--bordered.table-test
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Название
+                                                    .hidden-sm.hidden-md.hidden-lg Название:&nbsp;
+                                                        span Тест №1
+                                                .custom-table-cell.hidden-xs Тест №1
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Описание
+                                                    .hidden-sm.hidden-md.hidden-lg Описание курса:&nbsp;
+                                                        span Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                                .custom-table-cell.hidden-xs Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Число попыток
+                                                    .hidden-sm.hidden-md.hidden-lg Число попыток:&nbsp;
+                                                        span 2
+                                                .custom-table-cell.hidden-xs 2
+                                        .actions.actions-circle-sm
+                                            a(href="javascript:void(0)").btn-invite
+                                                i.fal.fa-question-circle
+                                                span.hidden-xs Создать вопрос
+                                        p.total-records Показаны записи &nbsp;
+                                            span.current-count 2
+                                            | &nbsp; из &nbsp;
+                                            span.total-count 2
+                                        .custom-table.custom-table--bordered.table-answer
+                                            .custom-table-row.custom-table-thead
+                                                .custom-table-cell #
+                                                .custom-table-cell Описание
+                                                .custom-table-cell
+                                            .custom-table-row
+                                                .custom-table-cell 1
+                                                .custom-table-cell Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                                .custom-table-cell
+                                                    .operations
+                                                        a(href="javascript:void(0)")
+                                                            i.fal.fa-pen
+                                                        a(href="javascript:void(0)")
+                                                            i.fal.fa-trash-alt
+                                            .custom-table-row
+                                                .custom-table-cell 1
+                                                .custom-table-cell Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                                .custom-table-cell
+                                                    .operations
+                                                        a(href="javascript:void(0)")
+                                                            i.fal.fa-pen
+                                                        a(href="javascript:void(0)")
+                                                            i.fal.fa-trash-alt
+                            .tab-pane.fade#checkTest

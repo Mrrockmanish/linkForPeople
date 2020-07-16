@@ -1,0 +1,50 @@
+.panel.panel-white.panel-settings
+    .panel-settings__header
+        h2.title Профиль
+        .menu-icon.pointer
+            i.fas.fa-th
+    .panel-settings__body
+        form.form
+            .form-group.form-group_flex
+                label Имя
+                .input-wrapper.success
+                    input(type="text" value="Константин")
+            .form-group.form-group_flex
+                label Фамилия
+                .input-wrapper
+                    input(type="text" value="Константиновский")
+            .form-group.form-group_flex
+                label Обо мне
+                .input-wrapper
+                    textarea(rows="3")
+            .form-group.form-group_flex
+                label Расположение
+                .input-wrapper
+                    input(type="text" value="Расположение")
+            .form-group.form-group_flex
+                label Школа
+                .input-wrapper
+                    input(type="text" value="")
+            .form-group.form-group_flex
+                label Университет
+                .input-wrapper
+                    input(type="text" value="")
+            .form-group.form-group_flex--top.few-input
+                label Работает в
+                .input-wrapper
+                    input(type="text" value="" placeholder="")
+                    .input-prompt пример: Apple
+                .input-wrapper
+                    input(type="text" value="" placeholder="")
+                    .input-prompt Веб-сайт компании
+            .form-group.form-group_flex
+                label Отношения
+                .input-wrapper.input-wrapper-select
+                    select
+                        option Не выбрано
+                        option Все сложно
+                        option В отношениях
+                        option В браке
+                        option Помолвлен(а)
+        .panel-settings__footer
+            button(type="submit").btn-blue--lg Сохранить

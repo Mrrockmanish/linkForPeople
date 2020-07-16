@@ -1,0 +1,23 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        <link rel="stylesheet" href="./assets/css/libs.min.css">
+        <link rel="stylesheet" href="./assets/css/app.min.css">
+
+        script(src="./assets/js/jquery.js")
+        script(src="./assets/js/libs.js")
+        script(src="./assets/js/app.js")
+        //<script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
+
+        title
+            block title
+    body
+        .fixed-wrapper.hide
+        include ../modules/header-repetit
+        include ../modules/modal-repetit
+        block content
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>

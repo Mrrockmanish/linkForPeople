@@ -1,0 +1,37 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__body.courses-inner-container
+                        .title Заполните ответы
+                        form.courses-create
+                            .answer-group
+                                .title Ответ:
+                                .form-group
+                                    .input-wrapper-styled-checkbox
+                                        input(type="checkbox" disabled="true")
+                                        label Основной вопрос
+                                .form-group
+                                    .input-label Описание курса
+                                    .input-wrapper
+                                        textarea(rows="3")
+                            .answer-group
+                                .title Ответ:
+                                .form-group
+                                    .input-wrapper-styled-checkbox
+                                        input(type="checkbox")
+                                        label Основной вопрос
+                                .form-group
+                                    .input-label Описание курса
+                                    .input-wrapper
+                                        textarea(rows="3")
+                            .btn-form-container
+                                button(type="submit").btn-invite Сохранить

@@ -1,0 +1,27 @@
+@media (max-width: $screen-sm-max) {
+	.modal-repetit {
+		&.modal {
+			&--xs {
+				.modal-body {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+
+				.modal-header {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		.modal-dialog {
+			margin: 0 auto;
+			margin-top: 15px;
+			padding-left: 0;
+			padding-right: 0;
+
+			.custom-tabs li:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+}

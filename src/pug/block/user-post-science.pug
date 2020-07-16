@@ -1,0 +1,125 @@
+.user-post.user-post_science#post24
+    .panel.panel-white.post-panel
+        .user-post__header
+            .user-post__header-avatar
+                a(href="javascript:void(0)").avatar-circle_xl
+                    img(src="./assets/img/default-avatar.png")
+                .who-when
+                    .user-name
+                        a(href="javascript:void(0)") Константин Калиновский
+                    .user-post-date
+                        include ../partials/user-post-date
+            .user-post__header-actions
+                span.dropdown.pointer
+                    .dropdown-toggle(data-toggle="dropdown")
+                        i.fa.fa-ellipsis-h.icon-grey
+                    ul.dropdown-menu.dropdown-menu-right
+                        li
+                            a(href='javascript:void:0')
+                                i.fa.fa-flag
+                                | Пожаловаться
+                        li
+                            a(href='javascript:void:0')
+                                i.fa.fa-link
+                                | Открыть в новой вкладке
+        .user-post__content.user-post__content-science
+            .post-science__header.hidden-lg.hidden-md.hidden-sm
+                a(href="javascript:void(0)").title Групповые занятия на 16 уроков по подготовке к ЕГЭ
+                .science-short-wrapper
+                    .science-short
+                        p.course-type Тип курса:
+                            b  Групповой
+                        p.course-rating Рейтинг:
+                            b  4.6
+                        p.course-start Начало:
+                            b  20 сентября
+                    .course-price
+                        span.price 6000 руб.
+                        span.price-per-hour 250 руб/ч
+            .post-science.wrapper
+                span.show-more.pointer(onclick='showMoreText(this); return false;')
+                    i.fal.fa-angle-down
+                .post-science__img
+                    .inner-img(style="background-image: url('./assets/img/vertical.jpg')")
+                .post-science__header.hidden-xs
+                    a(href="javascript:void(0)").title Групповые занятия на 16 уроков по подготовке к ЕГЭ
+                    p.course-type Тип курса:
+                        b  Групповой
+                    p.course-rating Рейтинг
+                        b  4.6
+                    .course-price
+                        span.price 6000 руб.
+                        span.price-per-hour 250 руб/ч
+                        span.start-date 20 сентября
+                .post-science__body
+                    .post-text
+                        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        .user-post__footer
+            .left-actions
+                span.pointer.like-icon.icon-blue
+                    i.far.fa-heart
+                    |  1
+                span.pointer.comment-icon.icon-blue(onclick="showComments(post24);")
+                    i.far.fa-comment
+                    |  1
+                span.pointer.share-icon.icon-blue(onclick="showShares(post24);")
+                    i.far.fa-share-alt
+            .right-btn
+                a(href="javascript:void(0)" data-target="#SignupModal" data-toggle="modal").btn-gradient Записаться
+        .share-container.hide
+            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,qzone,viber,whatsapp,skype,telegram"></div>
+
+
+
+
+        .user-post__comment.hide
+            .load-comments-container
+                span.pointer.load-comments(onclick="loadComments(post24);") Показать все комментарии
+                    i.fal.fa-angle-down.show-more
+                i.fa.fa-spinner.animated-spin.hide
+            .user-post__comment-list.comment-list
+                .comment-list__item#comment13
+                    a(href="javascript:void(0)").avatar-circle_lg
+                        img(src="./assets/img/default-avatar.png")
+
+                    .comment-list__item-body.clearfix
+                        .user-name
+                            a(href="javascript:void(0)") Константин Калиновский
+                        .pull-right
+                            span.post-time.hidden-sm.hidden-md.hidden-lg 1д. назад
+                            //span.pointer.edit-icon(onclick="editComment(post24, comment13);")
+                            //    i.fa.fa-pen
+                            //span.pointer.delete-icon
+                            //    i.fa.fa-trash
+                            //span.pointer.reply-icon
+                            //    i.fa.fa-reply(onclick="toggleReply(post24);")
+                        p.text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                        .bottoms
+                            span.post-time.hidden-xs 1 день назад
+                            a(href="javascript:void(0)").btn-white Ответить
+                        textarea.comment-list__item-edit.form-control(placeholder="Редактировать комментарий").hide
+                        textarea.comment-list__item-reply.form-control(placeholder="Ответить на комментарий").hide
+            form.input-icon(onclick="openCommentBottom(this);")
+                textarea.form-control.comment-textarea(placeholder="Напишите комментарий и нажмите клавишу ВВОД" rows="1" data-emojiable="true")
+                .avatar-circle_lg
+                    img(src="./assets/img/default-avatar.png")
+                .input-icon__list.hide
+                    .left-icons
+                        li.input-icon__item.pointer.icon-grey
+                            //smile there
+                        li.input-icon__item.pointer.icon-grey
+                            i.fal.fa-camera-alt
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.far.fa-film
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.fas.fa-music
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.far.fa-file
+                            input(type="file")
+                    .right-btn
+                        button(type="submit").btn-blue Отправить
+
+        include comments

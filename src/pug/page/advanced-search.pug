@@ -1,0 +1,231 @@
+extends ../layout/layout
+
+block title
+    | Расширенный поиск
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content.advanced-search
+            .form-container
+                form.advanced-search-form
+                    .form-group.inner-addon.left-addon.advanced-search-form__input
+                        i.glyphicon.fa.fa-search
+                        input(type="text").form-control
+                    .advanced-search-form__buttons
+                        button.btn.btn-form(type="button" onclick="showSearchOptions(this);")
+                            i.fas.fa-sliders-h
+                        button.btn.btn-form(type="submit") Поиск
+                    .search-options.hide
+                        h5 Дополнительные параметры
+                        .form-group
+                            label Поиск в
+                            select.form-control(name="select-category")
+                                option(value="all" selected) Все
+                                option(value="article") Статьи
+                                option(value="users") Пользователи
+                                option(value="channel") Каналы
+                                option(value="audio") Аудио
+                                option(value="video") Видео
+                                option(value="science") Курсы
+                                option(value="proffessor") Преподаватели
+
+                        .search-channel-options.hide
+                            .row.form-group
+                                .col-md-3
+                                    label Категория
+                                .col-md-6
+                                    select.form-control
+                                        option(value="all" selected) Все
+                                        option(value="individual") Индивидуальный
+                                        option(value="group") Групповой
+                                        option(value="independent") Самостоятельный
+                                        option(value="Olympic") Олимпиада
+
+                        .search-science-options.hide
+                            .row.form-group
+                                .col-md-3
+                                    label Тип курса
+                                .col-md-6
+                                    select.form-control
+                                        option(value="all" selected) Все
+                                        option(value="individual") Индивидуальный
+                                        option(value="group") Групповой
+                                        option(value="independent") Самостоятельный
+                                        option(value="Olympic") Олимпиада
+                            .row.form-group
+                                .col-md-3
+                                    label Цена
+                                .col-md-8
+                                    .form-group
+                                        .check-input
+                                            input(type="checkbox")
+                                            span.checkmark
+                                        label.check-input-label Бесплатно
+                                    div
+                                        .check-input
+                                            input(type="checkbox")
+                                            span.checkmark
+                                        label.check-input-label(style="margin-right: 20px") Платные
+                                        .row
+                                            .col-md-4
+                                                .ui-slider-container
+                                                    .slider-filters
+                                                        .slider-input.min-value-js
+                                                            span От
+                                                            input(type="text" value="0")
+                                                        .slider-input.max-value-js
+                                                            span До
+                                                            input(type="text" value="5000")
+                                                        span руб
+                                                    .ui-slider-item-js(data-min="0" data-max="5000" data-step="50")
+                            .row.form-group
+                                .col-md-3
+                                    label Рейтинг курса
+                                .col-md-3
+                                    .ui-slider-container
+                                        .slider-filters
+                                            .slider-input.min-value-js
+                                                span От
+                                                input(type="text" value="0")
+                                            .slider-input.max-value-js
+                                                span До
+                                                input(type="text" value="100")
+                                            span руб
+                                        .ui-slider-item-js(data-min="0" data-max="100" data-step="1")
+                            .row.form-group
+                                .col-md-3
+                                    label Рейтинг преподавателя
+                                .col-md-3
+                                    .ui-slider-container
+                                        .slider-filters
+                                            .slider-input.min-value-js
+                                                span От
+                                                input(type="text" value="0")
+                                            .slider-input.max-value-js
+                                                span До
+                                                input(type="text" value="100")
+                                            span руб
+                                        .ui-slider-item-js(data-min="0" data-max="100" data-step="1")
+
+                        .search-proffessor-options.hide
+                            .row.form-group
+                                .col-md-3
+                                    label Стоимость часа занятия
+                                .col-md-3
+                                    .ui-slider-container
+                                        .slider-filters
+                                            .slider-input.min-value-js
+                                                span От
+                                                input(type="text" value="0")
+                                            .slider-input.max-value-js
+                                                span До
+                                                input(type="text" value="5000")
+                                            span руб
+                                        .ui-slider-item-js(data-min="0" data-max="5000" data-step="50")
+                            .row.form-group
+                                .col-md-3
+                                    label Предмет
+                                .col-md-6
+                                    select.form-control
+                                        option(value="math" selected) Математика
+                                        option(value="history") История
+                            .row.form-group
+                                .col-md-3
+                                    label Рейтинг преподавателя
+                                .col-md-3
+                                    .ui-slider-container
+                                        .slider-filters
+                                            .slider-input.min-value-js
+                                                span От
+                                                input(type="text" value="0")
+                                            .slider-input.max-value-js
+                                                span До
+                                                input(type="text" value="100")
+                                            span руб
+                                        .ui-slider-item-js(data-min="0" data-max="100" data-step="1")
+                            .row.form-group
+                                .col-md-3
+                                    label Опыт работы
+                                .col-md-3
+                                    .ui-slider-container
+                                        .slider-filters
+                                            .slider-input.min-value-js
+                                                span От
+                                                input(type="text" value="0")
+                                            .slider-input.max-value-js
+                                                span До
+                                                input(type="text" value="50")
+                                            span руб
+                                        .ui-slider-item-js(data-min="0" data-max="50" data-step="1")
+                            .row.form-group
+                                .col-md-3
+                                    .check-input
+                                        input(type="checkbox")
+                                        span.checkmark
+                                    label.check-input-label(style="margin-right: 20px") Онлайн занятия
+                            .row.form-group
+                                .col-md-3
+                                    .check-input
+                                        input#first_check(onclick="showSelectIfChecked(this)" type="checkbox")
+                                        span.checkmark
+                                    label.check-input-label Занятия у репетитора
+                                .col-md-6
+                                    select.form-control.select-js(data-id="first_check").hide
+                                        option(value="Moscow" selected) Москва
+                                        option(value="Barnaul") Барнаул
+                            .row.form-group
+                                .col-md-3
+                                    .check-input
+                                        input#second_check(onclick="showSelectIfChecked(this)" type="checkbox")
+                                        span.checkmark
+                                    label.check-input-label Занятия у репетитора
+                                .col-md-6
+                                    select.form-control.select-js(data-id="second_check").hide
+                                        option(value="Moscow" selected) Москва
+                                        option(value="Barnaul") Барнаул
+
+                        button.btn.btn-form.pull-right(type="submit") Поиск
+
+
+            .advanced-search-results
+                .advanced-search-results__header
+                    span.icon-margin
+                        i.fa.fa-bars
+                        | Результат:
+                .advanced-search-results__body
+                    .search-results.search-results_article.clearfix
+                        .articles.hide
+                            include ../block/search-results_article-item
+                            include ../block/search-results_article-item
+
+                        .sciences.hide
+                            include ../block/search-results_science-item
+                            include ../block/search-results_science-item
+
+                        .profiles.hide
+                            include ../block/search-results_profile-item
+                            .search-results_profile-item.col-md-6
+                                a(href="javascript:void(0);").link-to-user
+                                    .user-avatar-md.pull-left
+                                        img(src="./assets/img/default-avatar.png")
+                                    span.user-name Тестовый ползьователь
+                                .user-post-date
+                                    span.post-time Был(а) 10 дн. назад
+                                .user-follow-button
+                                    button(type="button").btn.btn-default.btn-follow.btn-activated
+                                        span.icon-margin
+                                            i.fa.fa-check
+                                            | Подписан
+
+                        .channels.hide
+                            include ../block/search-results_channel-item
+                            include ../block/search-results_channel-item
+
+                        .audios.hide
+                            include ../block/search-results_audio-item
+
+                        .videos.hide
+                            include ../block/search-results_video-item
+                            include ../block/search-results_video-item
+                            include ../block/search-results_video-item

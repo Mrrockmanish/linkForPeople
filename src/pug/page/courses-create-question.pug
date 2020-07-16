@@ -1,0 +1,36 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__body.courses-inner-container
+                        .title Создать вопрос
+                        form.courses-create
+                            .form-group
+                                .input-label Описание курса
+                                .input-wrapper
+                                    textarea(rows="3")
+                            .form-group_flex
+                                .form-group
+                                    .input-label Тип ответа
+                                    .input-wrapper.input-wrapper-select
+                                        select
+                                            option Чек-бокс
+                                            option Список
+                                .form-group
+                                    .input-label Количесвто ответов
+                                    .input-wrapper
+                                        input(type="text")
+                            .form-group
+                                .input-wrapper-styled-checkbox
+                                    input(type="checkbox")
+                                    label Основной вопрос
+                            .btn-form-container
+                                button(type="submit").btn-invite Сохранить

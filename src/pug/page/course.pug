@@ -1,0 +1,61 @@
+extends ../layout/layout
+
+block title
+    | Курс
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                // Оставьте свой отзыв
+                .modal.fade.modal-course.modal-md.modal--yourFeedback#yourFeedback(tabindex="-1" role="dialog" aria-labelledby="#yourFeedback" data-backdrop="static")
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                .pointer.close-modal
+                                    i.fa.fa-times
+                                h4 Оставьте свой отзыв
+                            .modal-body
+                                .rating.modal__rating.modal__rating--feedback
+                                    label.rating__item
+                                        input.rating__input(type="radio", name="rating1", value="1")
+                                        .rating__stars
+                                            i.fas.fa-star.rating__icon.rating__icon--full
+                                            i.far.fa-star.rating__icon.rating__icon--empty
+                                    label.rating__item
+                                        input.rating__input(type="radio", name="rating1", value="2")
+                                        .rating__stars
+                                            i.fas.fa-star.rating__icon.rating__icon--full
+                                            i.far.fa-star.rating__icon.rating__icon--empty
+                                    label.rating__item
+                                        input.rating__input(type="radio", name="rating1", value="3", checked)
+                                        .rating__stars
+                                            i.fas.fa-star.rating__icon.rating__icon--full
+                                            i.far.fa-star.rating__icon.rating__icon--empty
+                                    label.rating__item
+                                        input.rating__input(type="radio", name="rating1", value="4")
+                                        .rating__stars
+                                            i.fas.fa-star.rating__icon.rating__icon--full
+                                            i.far.fa-star.rating__icon.rating__icon--empty
+                                    label.rating__item
+                                        input.rating__input(type="radio", name="rating1", value="5")
+                                        .rating__stars
+                                            i.fas.fa-star.rating__icon.rating__icon--full
+                                            i.far.fa-star.rating__icon.rating__icon--empty
+                                    .rating__val 4
+                                textarea.modal__feedback-textarea(placeholder="Ваш комментарий")
+                                .modal__btns
+                                    button.btn-invite.btn-invite.modal__textarea-btn(type='submit') Сохранить
+                                    a.modal__close.close-modal(href="", title="отмена") отмена
+
+                .panel.panel-white.panel-courses.panel-courses--course
+                    include ../block/course-header
+                .panel.panel-white.panel-courses.panel-courses--course
+                    include ../block/course-lessons
+                .panel.panel-white.panel-courses.panel-courses--course.panel-courses--course-padding
+                    include ../block/panel-courses__slider--feedback
+                    include ../block/panel-courses__slider
+                    include ../block/panel-courses__slider
+                .panel.panel-white.panel-courses.panel-courses--course
+                    include ../block/course-lessons--student

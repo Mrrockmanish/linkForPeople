@@ -1,0 +1,54 @@
+extends ../layout/layout
+
+block title
+    | Друзья
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+
+                .panel.panel-white.panel-friends
+                    .panel-friends__header
+                        ul.friends-menu
+                            li.active
+                                a(href="#myFriends" data-toggle='tab')
+                                    i.fa.fa-user-check
+                                    | Мои друзья
+                            li
+                                a(href="#friendshipOffer" data-toggle='tab')
+                                    i.fa.fa-user-edit
+                                    | Запросы в друзья
+                            li
+                                a(href="#myFriendReq" data-toggle='tab')
+                                    i.fa.fa-user-plus
+                                    | Мои заявки в друзья
+                        a(href="javascript:void(0)").btn-invite.hidden-xs
+                            i.fa.fa-plus-circle
+                            | Найти друзей
+                        a(href="javascript:void(0)").btn-circle.hidden-lg.hidden-md.hidden-sm
+                            i.fa.fa-plus
+                    .panel-friends__body
+                        .tab-content
+                            .tab-pane.fade.in.active#myFriends
+                                .friends-list
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                            .tab-pane.fade#friendshipOffer
+                                .friends-list
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                            .tab-pane.fade#myFriendReq
+                                .friends-list
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card
+                                    include ../partials/user-mini-card

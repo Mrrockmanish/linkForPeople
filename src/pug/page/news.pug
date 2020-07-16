@@ -1,0 +1,17 @@
+extends ../layout/layout
+
+block title
+    | Новости
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-post-science
+                include ../block/user-post-article
+                include ../block/user-post
+                include ../block/user-post-media-2
+                include ../block/user-post-media-3
+                include ../block/user-post-media-4
+                include ../block/user-post-media-5

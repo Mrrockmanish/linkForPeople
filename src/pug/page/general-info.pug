@@ -1,0 +1,14 @@
+extends ../layout/layout
+
+block title
+    | Основная страница профиля
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+                .panel.panel-white.post-panel
+                    include ../block/general-info

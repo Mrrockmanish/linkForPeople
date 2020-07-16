@@ -1,0 +1,49 @@
+.user-navigation{
+  margin-bottom: 30px;
+  position: sticky;
+  z-index: 900;
+  top: 50px;
+  &__filter{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 6px 35px -10px $shadowColor;
+    &-text{
+      font-size: 11px;
+    }
+    a {
+      font-size: 16px;
+      padding: 6px 12px;
+      display: inline-block;
+      margin-bottom: 0;
+      text-align: center;
+      vertical-align: middle;
+      transition: all .4s;
+      text-transform: uppercase;
+      color: $blueDarkColor;
+      border-bottom: 2px solid transparent;
+      &:hover{
+        border-bottom: 2px solid $blueColor !important;
+        transition: all .4s;
+      }
+      &.active{
+        border-bottom: 2px solid $blueDarkColor !important;
+      }
+      i {
+        font-size: 14px;
+        margin-right: 5px;
+        color: $blueDarkColor;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__avatar{
+    padding: 5px;
+    flex: 0;
+  }
+
+  .filter {
+    flex: 1 1 auto;
+  }
+}

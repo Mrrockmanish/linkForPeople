@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+  .ce-quest {
+    &__media-btn {
+      margin-right: 9px;
+
+      &--plus {
+        display: none;
+      }
+    }
+
+    &__modal {
+      padding: 0 10px !important;
+
+      .modal-body {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .modal-header {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__media-btn-body {
+      height: 36px;
+      padding: 4px 7.5px 0;
+      font-size: 13px;
+    }
+
+    &__publisher {
+      height: 108px;
+    }
+
+    &__textarea-wrap {
+      .publisher-box__footer .publisher-box__footer-list {
+        margin: 0 0 4px 10px;
+      }
+    }
+
+    &__media-block {
+      &--photo {
+        .swiper-container {
+          height: 100px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: none !important;
+        }
+      }
+    }
+
+    &__media-block--photo 
+
+    &__media-block-item {
+      height: 100px !important;
+    }
+
+    &__form-btns {
+      margin-top: 20px;
+    }
+
+    &__send-btn {
+      min-width: 135px;
+      height: 36px;
+      margin-right: 15px;
+      font-size: 13px;
+    }
+
+    &__close-btn {
+      font-size: 13px;
+    }
+
+    &__modal-tabs {
+      li {
+        margin-right: 30px;
+
+        a {
+          padding: 10px 0px;
+          font-size: 16px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    &__editor + .tox {
+      min-height: 400px;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.publisher-box {
+	margin-bottom: 10px;
+	.avatar-circle_md {
+		position: absolute;
+		left: 30px;
+		top: 5px;
+	}
+
+	&__header {
+		position: relative;
+		textarea {
+			border: none;
+			padding-top: 12px;
+			padding-left: 50px;
+			box-shadow: none;
+		}
+		.create-course {
+			position: absolute;
+			right: 30px;
+			top: 14px;
+			opacity: .3;
+			transition: all .3s ease;
+			color: $blueDarkColor;
+			&:hover {
+				transition: all .3s ease;
+				opacity: 1;
+			}
+		}
+	}
+
+	.publisher {
+		border: none;
+		padding-left: 75px;
+		padding-top: 15px;
+		padding-right: 45px;
+		cursor: pointer;
+		&:focus {
+			border: none;
+		}
+	}
+
+	&__hide-form {
+		padding: 0 30px;
+	}
+
+	&__hidden-options {
+		color: $iconColor;
+		input {
+			border-radius: 0;
+			border: none;
+		}
+	}
+
+	&__choose {
+		position: relative;
+		margin-top: -25px;
+		font-size: 14px;
+		color: $iconColor;
+		cursor: pointer;
+		&-item {
+			display: inline-block;
+			position: relative;
+			overflow: hidden;
+			i {
+				margin-right: 5px;
+			}
+			input[type='file'] {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 100%;
+				opacity: 0;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__footer {
+		padding: 8px 30px;
+		border-top: 1px solid #f4f4f4;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		&-list {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: inline-flex;
+			&-item {
+				padding: 4px 8px;
+				margin-right: 8px;
+				color: $iconColor;
+				i {
+					cursor: pointer;
+				}
+			}
+
+			.chars-left {
+				padding: 4px 0;
+				span {
+					color: #999;
+				}
+			}
+		}
+		.btn-blue {
+			border: none;
+		}
+	}
+
+	&__left-buttons {
+		margin-right: 20px;
+		margin-left: 15px;
+		.btn {
+			padding: 4px 8px;
+		}
+	}
+}
+
+#publisher-box__smile-button {
+	position: relative;
+	.emoji-picker-icon {
+		position: static;
+	}
+}
+
+.publisher-box-fixed {
+	background: #fff;
+	position: fixed;
+	z-index: -1;
+	width: 100vw;
+	max-width: 985px;
+	opacity: 0;
+	&.activated {
+		z-index: 1000;
+		transform: translate3d(0, -89px, 0);
+		opacity: 1;
+		.publisher-box {
+			margin-bottom: 0;
+			&__footer {
+				border-bottom: 1px solid #f4f4f4;
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+@media (max-width: 768px) {
+	.account{
+		padding: 15px;
+		margin-bottom: 0;
+		.type-list{
+			margin-bottom: 20px;
+		}
+		&__common, &__type, &__about {
+			padding-right: 0;
+			padding-bottom: 20px;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 1px;
+				display: block;
+				background-color: #ebeff4;
+			}
+			.title {
+				position: static;
+				max-width: 100%;
+				margin-right: 5px;
+			}
+			.text {
+				padding-left: 0;
+				margin-bottom: 20px;
+				line-height: 1.5 !important;
+			}
+			.user-type{
+				font-size: 17px;
+				line-height: 1.06;
+				padding: 5px 0;
+			}
+			.two-lines{
+				height: auto;
+				display: block;
+			}
+			.images{
+				.title{
+					display: inline-block;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&__type{
+			padding-top: 20px;
+			&:after{
+				display: block;
+			}
+		}
+
+		&__about{
+			padding-top: 20px;
+			padding-bottom: 0;
+			&:after{
+				display: none;
+			}
+		}
+
+		.doc-images {
+			display: flex;
+			&__item {
+				margin-right: 15px;
+				img {
+					max-width: 196px;
+					max-height: 135px;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.price-container {
+		position: static;
+		.lesson-price {
+			display: flex;
+			&__item {
+				text-align: left;
+				margin-right: 15px;
+				&:not(:last-child) {
+					margin-bottom: 0
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,43 @@
+header.header-container.header-repetit
+    .header-container__nav.navbar.navbar-default.navbar-fixed-top
+        .nav.container-1160
+            .container-fluid
+                .header-container__brand
+                    a(href="/").header-brand
+                        span.header-brand__title.desktop-logo Link
+                            span.red-letter  for
+                            |  People
+
+                        span.header-brand__title.mobile-logo L
+                            span.red-letter f
+                            | P
+
+                        span.header-brand__desc Образовательный портал
+
+                .header-container__form.hidden-xs
+                    form.search(data-toggle="dropdown")#navbar-searchbox
+                        input.form-control.search__input(placeholder="Поиск" type="text")
+
+                ul.header-container__menu
+                    .organization-phone
+                        a(href="tel:+7(495) 741-00-33")
+                            i.fa.fa-phone
+                            span +7(495) 741-00-33
+                    .organization-schedule
+                        p
+                            span.title Пн-Пт
+                            span 8:00-23:00
+                        p
+                            span.title Сб-Вс
+                            span 9:00-22:00
+                    li
+                        a(href="/test/profile-main.html")
+                            i.fa.fa-home
+                    li.dropdown.header-container__avatar
+                        a(href="javascript:void(0);" data-target="#Registration" data-toggle="modal").user-avatar-link
+                            .hamburger.hamburger_mobile
+                                span.hamburger__line
+                                span.hamburger__line
+                                span.hamburger__line
+                            .user-avatar
+                                img(src="./assets/img/default-avatar.png")

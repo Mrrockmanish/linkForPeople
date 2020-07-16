@@ -1,0 +1,26 @@
+extends ../layout/layout-banner
+
+block title
+    | Лама
+
+block content
+    .circles
+        .circle-blue
+            .icon-idea
+            .icon-idea.second
+        .circle-green
+    .content
+        .title
+            .free Бесплатный
+            .portal Образовательный портал № 1
+        .tagline
+            span Только спроси - ответ получи!
+            .click
+                a(href="javascript:void(0)").btn-white--shadow
+                    span #NOPROBLLAMA
+                .click-arrow
+        .join
+            a(href="javascript:void(0)" data-target="#SignupModal" data-toggle="modal").btn-green--shadow
+                span Присоединяйся!
+    .science-lama
+        img(src="./assets/img/lama.png")

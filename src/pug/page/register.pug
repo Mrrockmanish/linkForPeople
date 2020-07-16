@@ -1,0 +1,237 @@
+extends ../layout/layout
+
+block title
+    | Регистрация
+
+block content
+    .register-background
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                section.sec-1
+                    .mob-line.hid-desctop
+                        a.enter-mob.modalboxx(href='#login') Вход
+                        a.registr-mob.modalboxx(href='#register') Зарегестрироваться
+                    .register-wrap
+                        form#login.login.sga-main-page.login-block(method='post')
+                            span.hid-desctop.sga-close
+                                i.fa.fa-times
+                            .title
+                                a.enter(href='#') Вход
+                                a.registr(href='#') Зарегестрироваться
+                            .input-wrapper.has-error
+                                input(type="text" placeholder="Телефон").input-phone
+                            .input-wrapper.input-wrapper_icon
+                                input(type="password" placeholder="Пароль")
+                                span.glyphicon.fa.fa-key
+                            .social-login
+                                a(href="javascript:void(0);").social-login__item.vk
+                                a(href="javascript:void(0);").social-login__item.ok
+                                a(href="javascript:void(0);").social-login__item.fb
+                                a(href="javascript:void(0);").social-login__item.inst
+                                a(href="javascript:void(0);").social-login__item.google
+                            a.forgot-passw(href='#') Забыли пароль?
+                            .text-center.border
+                            button(type='submit')
+                                i.spinner
+                                span.state
+                                    i.fa.fa-sign-in
+                                    |  &Vcy;&khcy;&ocy;&dcy;
+                        form#register.login.hid-form.sga-main-page.register-block(method='post')
+                            span.hid-desctop.sga-close
+                                i.fa.fa-times
+                            .title
+                                a.enter(href='#') Вход
+                                a.registr(href='#') Зарегистрироваться
+                            .tab-content
+                                #user-register.tab-pane.fade.in.active
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Ваше имя")
+                                        span.glyphicon.glyphicon-user
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Фамилия")
+                                        span.glyphicon.glyphicon-user
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Email")
+                                        span.glyphicon.glyphicon-envelope
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="password" placeholder="Пароль")
+                                        span.glyphicon.fa.fa-key
+
+                                    .input-wrapper-checkbox
+                                        input(type="checkbox")
+                                        label.checkbox-label Согласен с
+                                            a.see-sga-terms(href='#')  условиями
+                                            span.checkmark
+                            button#signin(disabled='disabled')
+                                i.spinner
+                                span.state
+                                    i.fa.fa-sign-in
+                                    | Зарегестрироваться!
+                        form#forgot-form.login.hid-form.sga-main-page.forgot-block(method='post')
+                            span.hid-desctop.sga-close
+                                i.fa.fa-times
+                            .title
+                                a.forgot(href='#') &Zcy;&acy;&bcy;&ycy;&lcy;&icy; &pcy;&acy;&rcy;&ocy;&lcy;&softcy;?
+                                a.enter2(href='#') &Vcy;&khcy;&ocy;&dcy;
+                            input#recoveremail(name='recoveremail' type='text' placeholder='E-mail адрес' autofocus='')
+                            i.fa.fa-envelope-o
+                            button
+                                i.spinner
+                                span.state
+                                    i.fa.fa-repeat
+                                    |  &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+                    // register-wrap
+                    .sga-container
+                        .slider-wrap
+                            .logo-sga
+                                a(href='https://linkforpeople.com')
+                                    span
+                                        | Link &nbsp
+                                        span.for(style='color: #f20505;') for &nbsp
+                                        span.for-right People
+                            .logo-sga.hid-desctop
+                                a(href='https://linkforpeople.com')
+                                    span
+                                        | Link
+                                        span(style='color: #f20505;') for
+                                        |  People
+                            // условия использования
+                            .sga-terms-wrap.hid-form
+                                #info-close.info-close
+                                    i.fa.fa-times
+                                .terms-text
+                                    h4 1- Write your Terms Of Use here.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam modi quis, quia corporis et maxime quidem nihil repudiandae voluptatum quas omnis qui, quo molestias dolor doloribus consectetur consequatur nostrum facilis.
+                                    h4 2- Random title
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                            // sga-terms-wrap
+                            // Контакты и оплата
+                            .sga-payments-wrap.hid-form
+                                #payments-close.info-close
+                                    i.fa.fa-times
+                                .payments-text
+                                    .title
+                                        h4 &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy; &icy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&ycy; &ocy;&pcy;&lcy;&acy;&tcy;&ycy;
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam modi quis, quia corporis et maxime quidem nihil repudiandae voluptatum quas omnis qui, quo molestias dolor doloribus consectetur consequatur nostrum facilis.
+                                    h4 2- Random title
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, magnam voluptas, quidem exercitationem perferendis sit sapiente doloremque earum accusantium nulla ipsa quia necessitatibus. Reiciendis natus, sint quia quod velit neque.
+                                    img(src='./images/payments.png' alt='' style='width: 200px;')
+                            // sga-payments-wrap
+                    // class="container"
+                // class="sec-1"
+                footer
+                    span.see-sga-payments.payments
+                        a(href='javascript:void(0);') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;, &pcy;&lcy;&acy;&tcy;&iecy;&zhcy;&icy;
+                    span.dropdown.dropup
+                        a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-expanded='false')
+                            i.fa.fa-language
+                            |  &YAcy;&zcy;&ycy;&kcy;
+                            span.caret
+                        ul.dropdown-menu(role='menu' style='width: 60px; min-width: 80px; font-size: 12px;')
+                            li
+                                a.lang(href='?lang=english' rel='nofollow') English
+                            li
+                                a.lang(href='?lang=arabic' rel='nofollow') Arabic
+                            li
+                                a.lang(href='?lang=dutch' rel='nofollow') Dutch
+                            li
+                                a.lang(href='?lang=french' rel='nofollow') French
+                            li
+                                a.lang(href='?lang=german' rel='nofollow') German
+                            li
+                                a.lang(href='?lang=italian' rel='nofollow') Italian
+                            li
+                                a.lang(href='?lang=portuguese' rel='nofollow') Portuguese
+                            li
+                                a.lang(href='?lang=russian' rel='nofollow') Russian
+                            li
+                                a.lang(href='?lang=spanish' rel='nofollow') Spanish
+                            li
+                                a.lang(href='?lang=turkish' rel='nofollow') Turkish
+                    span.copyright
+                        | LinkForPeople &copy; 2018

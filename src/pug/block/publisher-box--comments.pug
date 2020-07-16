@@ -1,0 +1,45 @@
+.comments__publisher-wrap
+    img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+    form#publisher-box-form.publisher-box.post.comments__publisher
+        a.comments__quote(href="")
+          .comments__user(href="") Валерий Миронов
+          .comments__text-wrap
+            p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное...
+          .fal.fa-times-circle.comments__quote-remove.pointer
+        #post-textarea.publisher-box__header
+            textarea.publisher.postText(name="postText" cols="10" rows="3" placeholder="Написать комментарий..." dir="auto" autocomplete="off" onclick="showPublisherBoxComments(this);" style="height:42px;" data-emojiable="true")
+            // textarea.comments__textarea(onclick="showPublisherBoxComments(this);")
+
+
+        .publisher-box__hide-form.parent-container--js#publisher-box__file-form(data-caller="publisher-box__file-button").hide
+            .inner-addon.left-addon.publisher-box__hidden-options
+                input.form-control(type="text" placeholder="Имя файла")
+                i.glyphicon.fa.fa-file-alt
+            .publisher-box__choose.pull-right
+                .publisher-box__choose-item
+                    i.fa.fa-file
+                    span Выбрать
+                    input(type="file" onchange='addFileName(this);')
+        .publisher-box__hide-form.parent-container--js#publisher-box__photo-form(data-caller="publisher-box__photo-button").hide
+            .inner-addon.left-addon.publisher-box__hidden-options
+                input.form-control(type="text" placeholder="Имя файла")
+                i.glyphicon.fa.fa-camera
+            .publisher-box__choose.pull-right
+                .publisher-box__choose-item
+                    i.fa.fa-camera
+                    span Выбрать
+                    input(type="file" onchange='addFileName(this);')
+
+
+        .publisher-box__footer.hide
+            ul.publisher-box__footer-list
+                li.publisher-box__footer-list-item
+                    span#publisher-box__file-button(onclick="showPublisherBoxForm(this)")
+                        i.fal.fa-paperclip.icon-grey
+                li.publisher-box__footer-list-item
+                    span#publisher-box__photo-button(onclick="showPublisherBoxForm(this)")
+                        i.fas.fa-camera.icon-grey
+                li.publisher-box__footer-list-item
+                    span#publisher-box__smile-button.publisher-box__smile-button
+            button(type='submit').btn-invite
+                span Отправить

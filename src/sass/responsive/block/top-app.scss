@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+  /* top-app */
+  .top-app {
+    height: 45px;
+
+    &__img {
+      width: 80px;
+      height: auto;
+    }
+
+    &__close-icon {
+      font-size: 18px;
+    }
+
+    &__list-item {
+      display: inline-flex;
+    }
+
+    &__close {
+      display: inline-flex;
+    }
+  }
+}

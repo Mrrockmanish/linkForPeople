@@ -1,0 +1,81 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    | Мои созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-xs.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade.in.active#myCreatedCourses
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        span Математика 1 класс
+                                .courses-created-container.courses-inner-container
+                                    .title Курс “Математика 1 класс”
+                                    .courses-created
+                                        .actions
+                                            a(href="javascript:void(0)").btn-invite
+                                                i.fal.fa-clock
+                                                span.hidden-xs Расписание занятий
+                                            a(href="javascript:void(0)").btn-invite
+                                                i.fa.fa-reply
+                                                span.hidden-xs Опубликовать курс
+                                            a(href="javascript:void(0)").btn-invite
+                                                i.fa.fa-pencil-alt
+                                                span.hidden-xs Редактировать
+                                            a(href="javascript:void(0)").btn-red
+                                                i.fal.fa-trash-alt
+                                                span.hidden-xs Удалить
+                                        .custom-table.custom-table--bordered
+                                            .custom-table-row
+                                                .custom-table-cell Предмет курса
+                                                .custom-table-cell Математика
+                                            .custom-table-row
+                                                .custom-table-cell Название курса
+                                                .custom-table-cell Математика 1 класс
+                                            .custom-table-row
+                                                .custom-table-cell Описание курса
+                                                .custom-table-cell Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                            .custom-table-row
+                                                .custom-table-cell Тип курса
+                                                .custom-table-cell Индивидуальный
+                                            .custom-table-row
+                                                .custom-table-cell Статус курса
+                                                .custom-table-cell Не опубликован
+                                            .custom-table-row
+                                                .custom-table-cell Цена
+                                                .custom-table-cell 6 700 руб.
+                                        .time-zone Временная зона: Asia/Riyadh(UTC +03:00)
+                                        a(href="javascript:void(0);").btn-blue Начать занятие
+                            .tab-pane.fade#checkTest

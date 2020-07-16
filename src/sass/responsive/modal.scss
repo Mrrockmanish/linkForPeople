@@ -1,0 +1,302 @@
+@media (max-width: $screen-sm-max) {
+	.modal {
+		padding-left: 15px !important;
+	}
+
+	#createText {
+		padding: 12px !important;
+
+		.modal-header {
+			padding: 30px 0 8px;
+		}
+
+		.modal-header h4 {
+			color: #0b1a31;
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 14.23px;
+			margin: 0;
+		}
+
+		.modal {
+			&__textarea-modes-item {
+				margin-right: 23px;
+				color: #0b1a31;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 25px;
+			}
+
+			&__textarea-btn {
+				margin-top: 14px;
+			}
+
+			&__textarea-modes {
+				margin-bottom: 12px;
+			}
+		}
+
+		.modal-body {
+			padding: 0 12px 18px;
+		}
+	}
+
+	#courseStudents {
+		padding: 25px 10px !important;
+
+		.modal-body {
+			padding: 0 10px;
+		}
+	}
+
+	.lightbox {
+		.modal {
+			&-dialog {
+
+				.user-post {
+					flex-direction: column;
+					height: auto !important;
+					.img-container {
+						min-height: 275px;
+					}
+
+					.close-modal {
+						position: fixed;
+						right: 10px;
+						top: -15px;
+						color: white;
+					}
+
+					.comment-container {
+						flex: 1 1 auto;
+						.likes {
+							padding: 10px 5px 10px 10px;
+							display: block;
+							& > * {
+								display: inline-block;
+							}
+							& > *:not(:last-child) {
+								margin-right: 5px;
+							}
+							.comment-icon {
+								display: inline-block;
+								float: right;
+							}
+						}
+
+						.input-icon {
+							position: relative;
+						}
+
+						.user-post {
+							&__header-avatar {
+								display: none;
+							}
+
+						}
+					}
+				}
+			}
+		}
+
+		&--zoom {
+			.modal-dialog .user-post {
+				height: 100%!important;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.modal-course {
+		.modal-header {
+			border-top: none;
+			padding: 0 15px;
+			.close-modal {
+				text-align: right;
+				float: right;
+			}
+		}
+		.modal-body {
+			padding: 15px;
+		}
+		.input-wrapper-photo {
+			button {
+				margin-left: 15px;
+				padding: 5px 11px !important;
+				width: auto;
+			}
+		}
+		.flex-group {
+			display: block;
+			.form-group--absolute {
+				left: 160px;
+			}
+			.form-group {
+				margin-bottom: 15px;
+			}
+			fieldset {
+				.input-wrapper {
+					margin-right: 10px;
+				}
+			}
+			.btn-container {
+				text-align: center;
+			}
+			button {
+				padding: 8px 25px;
+				width: auto;
+			}
+		}
+	}
+	.modal-group-chat {
+		.form-group {
+			fieldset {
+				label {
+					margin-right: 10px;
+				}
+			}
+		}
+		.modal-footer {
+			padding: 0 15px 15px;
+			button {
+				padding: 10px 30px;
+			}
+		}
+	}
+	.modal-channel-edit {
+		.form-group {
+			fieldset {
+				label {
+					margin-right: 10px;
+				}
+			}
+		}
+		.modal-body {
+			.tab-content {
+				padding: 15px 0 0 0;
+			}
+			.channel-user-list {
+				&__item {
+					padding: 0 0 8px;
+					margin-bottom: 8px;
+					.avatar-circle_xl img {
+						width: 35px;
+						height: 35px;
+						margin-right: 8px;
+					}
+					.user-name a {
+						font-size: 13px;
+					}
+				}
+			}
+			.form {
+				padding-right: 0;
+			}
+		}
+		.modal-footer {
+			padding: 0 15px 15px;
+			button {
+				padding: 10px 30px;
+			}
+		}
+	}
+	.modal-datepicker {
+		.modal-header {
+			h4 {
+				text-align: center;
+			}
+		}
+	}
+	.calendar-schedule {
+		flex-direction: column;
+		.calendar-datepicker-container {
+			margin-right: 0;
+		}
+		.lesson-schedule {
+			border-top: 1px solid #ebeef4;
+			&-container {
+				padding-right: 0;
+			}
+		}
+		.schedule-item {
+			&__header {
+				.time {
+					font-size: 12px;
+					font-weight: normal;
+				}
+			}
+			&__body {
+				.title {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	.lightbox--zoom {
+		padding: 0 !important;
+
+		.modal-dialog {
+			transform: translateY(-50%) !important;
+    	top: 50%;
+			padding: 44px 12px;
+		}
+
+		.img-container {
+			min-height: 0 !important;
+		}
+
+		.modal-dialog,
+		.modal-content,
+		.modal-body,
+		.user-post,
+		.img-container,
+		.item,
+		.carousel,
+		.carousel-inner {
+			height: auto !important;
+		}
+
+		.lightbox {
+			&__zoom-plus,
+			&__zoom-minus {
+				width: 22px;
+				height: 22px;
+				margin-bottom: 3px;
+				border-radius: 4px;
+				border: 1px solid #e9edf4;
+			}
+
+			&__zoom-icon {
+				font-size: 12px;
+			}
+
+			&__close {
+		    top: 18px;
+    		right: 10px;
+				width: 20px;
+				height: 20px;
+			}
+
+			&__close-icon {
+				font-size: 20px;
+			}
+
+			&__zoom {
+				top: auto;
+				bottom: 5px;
+				right: 5px;
+			}
+
+			&__arrow {
+				font-size: 20px;
+			}
+		}
+
+		.carousel-control {
+			width: 50px;
+			height: 50px;
+		}
+	}
+}

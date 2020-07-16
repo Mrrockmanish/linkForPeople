@@ -1,0 +1,144 @@
+include modal-image
+header.header-container
+    .header-container__nav.navbar.navbar-default.navbar-fixed-top
+        .nav.container-1000
+            .container-fluid
+
+                .header-container__brand
+                    a(href="/").header-brand
+                        span.header-brand__title.desktop-logo Link
+                            span.red-letter  for
+                            |  People
+
+                        span.header-brand__title.mobile-logo L
+                            span.red-letter f
+                            | P
+
+                        span.header-brand__desc Образовательный портал
+
+                //.header-container__form.hidden-xs
+                //    form.search(data-toggle="dropdown")#navbar-searchbox
+                //        input.form-control.search__input(placeholder="Поиск" type="text")
+                //    ul.dropdown-menu(style="margin-left:7px;")
+                //        .search__container
+                //            .recent-search
+                //                span.clock-icon
+                //                    i.fa.fa-clock
+                //                    | Последние поисковые запросы
+                //                .clear-search-results
+                //                    span.pointer(onclick="clearSearchResults();") Очистить
+                //            ul.search-list
+                //                li.search-list__item
+                //                    a(href="javascript:void(0);").link-to-user
+                //                        .user-avatar-sm.pull-left
+                //                            img(src="./assets/img/default-avatar.png")
+                //                        span.user-name Тестовый ползьователь
+                //                    .user-post-date
+                //                        span.post-time Был(а) 10 дн. назад
+                //            li.search__advanced-container
+                //                a(href="/test/advanced-search.html" data-ajax="javascript:void(0)") Расширенный поиск
+
+                ul.header-container__menu
+                    li
+                        a(href="javascript:void(0);")
+                            i.far.fa-search
+                    li.call
+                        a(href="javascript:void(0);")
+                            i.fa.fa-phone(data-toggle="tooltip" title="" data-placement="bottom" data-original-title="+7-495-1111-1111 ПН-ВС:10.00-19.00")
+                    li
+                        a(href="/test/profile-main.html")
+                            i.far.fa-home
+                    li
+                        a(href="javascript:void(0);")
+                            i.far.fa-newspaper
+                    li#header-chat-toggle(onclick="AllChatsToggle(this.id);")
+                        a(href="javascript:void(0);" onclick="return false;")
+                            i.far.fa-comments.text-muted
+                    li#header-chat-mobile
+                        a(href="messages.html")
+                            i.far.fa-comments
+                    li.dropdown.notification-container
+                        span.new-update-alert.hidden(style="display: none;")
+                        a(href="javascript:void(0);" onclick="notifToggle(this);")
+                            i.far.fa-bell
+
+                        .notif
+                            .notif__close
+                                i.far.fa-times-circle.notif__close-icon
+                            .notif__header.bline
+                                a.bline__item.bline__item--active(href="") Уведомления
+                                a.bline__item(href="") Комментарии
+                            .notif__body
+                                ul.nitif__list
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+                                    li.notif__list-item
+                                        img.notif__avatar(src="assets/img/default-avatar.png", alt="")
+                                        .notif__content-wrap
+                                            .notif__content-text Сообщество #[a.notif__link(href="") Куда Москва] опубликовало новый эпизод подкаста: #[a.notif__link(href="") Сезонная депрессия и как с ней бороться]
+                                            .notif__date 2 часа назад
+
+
+
+
+
+
+                    li.dropdown.header-container__avatar
+                        a(href="javascript:void(0);" data-toggle="dropdown").dropdown-toggle
+                            .hamburger.hamburger_mobile
+                                span.hamburger__line
+                                span.hamburger__line
+                                span.hamburger__line
+                        ul.dropdown-menu.dropdown-menu-right
+                            li
+                                a(href="javascript:void(0)" data-ajax="javascript:void(0)") Пункт меню 1
+                            li
+                                a(href="javascript:void(0)" data-ajax="javascript:void(0)") Пункт меню 2
+                            li
+                                a(href="javascript:void(0)" data-ajax="javascript:void(0)") Пункт меню 3
+                            li
+                                hr
+                            li
+                                a(href="javascript:void(0)" data-ajax="javascript:void(0)") Пункт меню 1
+                            li
+                                a(href="javascript:void(0)" data-ajax="javascript:void(0)") Пункт меню 2
+                            li
+                                a(href="javascript:void(0)" data-ajax="javascript:void(0)") Пункт меню 3

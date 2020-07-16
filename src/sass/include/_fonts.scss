@@ -1,0 +1,56 @@
+/** Roboto **/
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light'), local('Roboto-Light'),
+  url('../fonts/Roboto/Robotolight.woff2') format('woff2'), url('../fonts/Roboto/Robotolight.woff') format('woff'), url('../fonts/Roboto/Robotolight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'),
+  url('../fonts/Roboto/Roboto.woff2') format('woff2'), url('../fonts/Roboto/Roboto.woff') format('woff'), url('../fonts/Roboto/Roboto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+  url('../fonts/Roboto/Robotomedium.woff2') format('woff2'), url('../fonts/Roboto/Robotomedium.woff') format('woff'), url('../fonts/Roboto/Robotomedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+  url('../fonts/Roboto/Robotobold.woff2') format('woff2'), url('../fonts/Roboto/Robotobold.woff') format('woff'), url('../fonts/Roboto/Robotobold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/** Partua **/
+@font-face {
+  font-family: 'Patua One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/patua-one/patua-one-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Patua One'), local('PatuaOne-Regular'),
+  url('../fonts/patua-one/patua-one-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/patua-one/patua-one-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/patua-one/patua-one-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/patua-one/patua-one-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/patua-one/patua-one-v7-latin-regular.svg#PatuaOne') format('svg'); /* Legacy iOS */
+}
+
+/** KiddyKitty **/
+@font-face {
+  font-family: 'KiddyKitty';
+  font-style: normal;
+  font-weight: 400;
+  src: local('KiddyKitty'),
+  url('../fonts/KiddyKitty/Kiddy-Kitty.woff') format('woff')
+}
+
+$font-partua: "Patua One";
+$font-roboto: "Roboto";
+$font-kiddy: "KiddyKitty";

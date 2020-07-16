@@ -1,0 +1,57 @@
+.user-card.user-card-js
+    .user-card__screen
+        form.profile-cover-changer
+            .input-group.when-notedit(style="display: none;")
+                span.input-group-btn
+                    span.btn.btn-upload-image.btn-file
+                        i.fa.fa-camera
+                        input(type="file")
+            .input-group.when-notedit(style="display: none;")
+                span.input-group-btn
+                    span.btn.btn-upload-image.btn-file
+                        i.fa.fa-pencil-alt(onclick="profileCoverEdit() ;")
+            .input-group.when-edit(style="display: none;")
+                span.input-group-btn
+                    span.btn.btn-upload-image.btn-file
+                        i.fa.fa-check
+            .input-group.when-edit(style="display: none;")
+                span.input-group-btn
+                    span.btn.btn-upload-image.btn-file
+                        i.fa.fa-times
+        img(src="./assets/img/backscreen.jpg" alt="" data-target="#ProfileCoverImageModal" data-toggle="modal")
+    .user-card__person-action
+        a(href="javascript:void(0)").avatar_square
+            img(src="./assets/img/default-avatar.png" alt="")
+            .user-card__avatar-circle
+                i.fas.fa-graduation-cap.user-card__avatar-circle-icon
+        form.profile-avatar-changer
+            .input-group
+                span.input-group-btn
+                    span.btn.btn-upload-image.btn-file
+                        i.fa.fa-camera
+                        input(type="file")
+
+        a(href="javascript:void(0)").user-name
+            span.name Константин
+            span.surname Калиновский
+        .actions
+            a(href="javascript:void(0);").btn-white
+                i.fas.fa-rss
+                | Подписаться
+            a(href="javascript:void(0);").btn-white
+                i.far.fa-comment
+                | Сообщение
+            span.btn-circle.pointer
+                .dropdown-toggle(data-toggle="dropdown")
+                    i.far.fa-ellipsis-h
+                ul.dropdown-menu.dropdown-menu-right
+                    li
+                        a(href='javascript:void:0')
+                            i.fa.fa-flag
+                            | Пожаловаться
+                    li
+                        a(href='javascript:void:0')
+                            i.fa.fa-link
+                            | Открыть в новой вкладке
+        .custom-dropdown-menu
+    .user-card__shadow

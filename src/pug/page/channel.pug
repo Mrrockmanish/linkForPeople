@@ -1,0 +1,35 @@
+extends ../layout/layout
+
+block title
+    | Каналы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+
+                .panel.panel-white.panel-channel
+                    .panel-channel__header
+                        ul.channel-menu
+                            li.active
+                                a(href="#myChannels" data-toggle='tab')
+                                    i.fa.fa-users
+                                    | Мои Каналы
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-search
+                                span.hidden-xs.hidden-sm Найти канал
+                            a(href="javascript:void(0)" data-target="#CreateChannelModal" data-toggle="modal").btn-invite
+                                i.fa.fa-plus-circle
+                                span.hidden-xs.hidden-sm Создать канал
+                    .panel-channel__body
+                        .tab-content
+                            .tab-pane.fade.in.active#myChannels
+                                .channel-list
+                                    include ../partials/channel-mini-card
+                                    include ../partials/channel-mini-card
+                                    include ../partials/channel-mini-card
+                                    include ../partials/channel-mini-card

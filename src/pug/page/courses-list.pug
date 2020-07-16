@@ -1,0 +1,113 @@
+extends ../layout/layout
+
+block title
+    | Список курсов
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses.panel-courses-list
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade#myCreatedCourses
+                            .tab-pane.fade.in.active#checkTest
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        span Название раздела
+                                .courses-list-container.courses-inner-container
+                                    .title Название раздела
+                                    .courses-list
+                                        .courses-list-item.panel.panel-white
+                                            .title Name
+                                            .info
+                                                .custom-table
+                                                    .custom-table-row.custom-table-thead
+                                                        .custom-table-cell.hidden-sm.hidden-xs Предмет
+                                                        .custom-table-cell.hidden-sm.hidden-xs Место
+                                                        .custom-table-cell.hidden-sm.hidden-xs Дата и время
+                                                        .custom-table-cell.hidden-sm.hidden-xs Цена
+                                                    .custom-table-row
+                                                        .custom-table-cell
+                                                            span Английский язык Английский язык
+                                                            .note.hidden-md.hidden-lg Занятия у ученика
+                                                        .custom-table-cell.hidden-sm.hidden-xs
+                                                            span Занятия у ученика
+                                                        .custom-table-cell
+                                                            p
+                                                                span.hidden-sm.hidden-xs 11:27&nbsp;
+                                                                | 03.02.2018
+                                                            .note.hidden-md.hidden-lg 11:27
+                                                        .custom-table-cell
+                                                            p
+                                                                | 850 - 4500
+                                                                span.hidden-sm.hidden-xs &nbsp;руб/ч
+                                                            .note.hidden-md.hidden-lg руб/ч
+                                                a(href="javascript:void(0)").btn-invite
+                                                    span Связаться
+                                            span.show-more.pointer(onclick='showCourseText(this); return false;')
+                                                i.fal.fa-angle-down
+                                            .wrapper
+                                                span.hidden-xs Информация:
+                                                .text lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet
+
+                                        .courses-list-item.panel.panel-white
+                                            .title Name
+                                            .info
+                                                .custom-table
+                                                    .custom-table-row.custom-table-thead
+                                                        .custom-table-cell.hidden-sm.hidden-xs Предмет
+                                                        .custom-table-cell.hidden-sm.hidden-xs Место
+                                                        .custom-table-cell.hidden-sm.hidden-xs Дата и время
+                                                        .custom-table-cell.hidden-sm.hidden-xs Цена
+                                                    .custom-table-row
+                                                        .custom-table-cell
+                                                            span Английский язык Английский язык
+                                                            .note.hidden-md.hidden-lg Занятия у ученика
+                                                        .custom-table-cell.hidden-sm.hidden-xs
+                                                            span Занятия у ученика
+                                                        .custom-table-cell
+                                                            p
+                                                                span.hidden-sm.hidden-xs 11:27&nbsp;
+                                                                | 03.02.2018
+                                                            .note.hidden-md.hidden-lg 11:27
+                                                        .custom-table-cell
+                                                            p
+                                                                | 850 - 4500
+                                                                span.hidden-sm.hidden-xs &nbsp;руб/ч
+                                                            .note.hidden-md.hidden-lg руб/ч
+                                                a(href="javascript:void(0)").btn-invite
+                                                    span Связаться
+                                            span.show-more.pointer(onclick='showCourseText(this); return false;')
+                                                i.fal.fa-angle-down
+                                            .wrapper
+                                                span.hidden-xs Информация:
+                                                .text lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet

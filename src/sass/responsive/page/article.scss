@@ -1,0 +1,18 @@
+@media (max-width: $screen-sm-max) {
+  .article {
+    margin-right: -15px;
+    margin-left: -15px;
+    &__header{
+      position: relative;
+      .views{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .article-info{
+        display: block;
+        padding-top: 10px;
+      }
+    }
+  }
+}

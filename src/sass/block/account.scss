@@ -1,0 +1,115 @@
+.account {
+	color: #0b1a31;
+	padding: 30px;
+	.common-list, .type-list, .about-list{
+		&__item:last-child{
+			.text{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__common, &__type, &__about {
+		padding-bottom: 30px;
+		position: relative;
+		padding-right: 210px;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -20px;
+			right: -20px;
+			height: 1px;
+			display: block;
+			background-color: #ebeff4;
+		}
+		.title {
+			font-weight: 500;
+			position: absolute;
+			left: 0;
+			max-width: 150px;
+			font-size: 16px;
+			line-height: 1.06;
+		}
+		.text {
+			position: relative;
+			font-size: 17px;
+			padding-left: 160px;
+			margin-bottom: 25px;
+			line-height: 1;
+			.fa-check{
+				font-size: 16px;
+				margin-left: 10px;
+				vertical-align: top;
+			}
+		}
+		.user-type{
+			font-size: 19px;
+			font-weight: 500;
+			line-height: 0.89;
+		}
+		.two-lines{
+			height: 2em;
+			display: flex;
+			align-items: flex-end;
+		}
+		.images{
+			margin-bottom: 0;
+		}
+		.about-self{
+			line-height: 1.5;
+		}
+	}
+	&__type, &__about{
+		position: relative;
+		padding-top: 30px;
+		&:after{
+			display: none;
+		}
+	}
+
+	&__about{
+		padding-bottom: 0;
+	}
+
+	.doc-images {
+		display: flex;
+		&__item {
+			margin-right: 15px;
+			img {
+				max-width: 196px;
+				max-height: 135px;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.price-container {
+	position: absolute;
+	right: 0;
+	top: 30px;
+	.lesson-price {
+		color: $textDarkColor;
+		&__item {
+			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			p {
+				margin-bottom: 0;
+			}
+			.cost {
+				font-size: 18px;
+				line-height: 1.1;
+				span {
+					color: $blueColor;
+					font-size: 19px;
+				}
+			}
+			.type{
+				font-size: 13px;
+			}
+		}
+	}
+}

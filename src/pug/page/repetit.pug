@@ -1,0 +1,61 @@
+extends ../layout/layout-repetit
+
+block title
+    | Статичная страница
+
+block content
+    .content-container.content-container_1160
+        .content
+            .page.page_full
+                .page-info.panel.panel-white
+                    .breadcrumbs
+                        .breadcrumbs__item
+                            a(href="javascript:void(0);") Репетиторы
+                        .breadcrumbs__item
+                            a(href="javascript:void(0);") Поиск репетитора по математике
+                        .breadcrumbs__item
+                            a(href="javascript:void(0);") Алгебра 7 класс
+                        .breadcrumbs__item
+                            span Онлайн занятия
+
+
+
+                    span.search-educator.pointer
+                        .hamburger-filter.pointer.hidden-lg.hidden-md.hidden-sm
+                            i.fas.fa-sliders-h
+                        a(href="javascript:void(0);" data-target="#SearchEducator" data-toggle="modal").btn-gradient Подобрать репетитора
+
+                    h2.main-title Репетиторы по математике
+
+                    .popular-themes
+                        span.popular-themes__title Популярное:
+                        a(href="javascript:void(0);").btn-white.popular-themes__item Групповые занятия
+                        a(href="javascript:void(0);").btn-white.popular-themes__item Репетиторы
+                        a(href="javascript:void(0);").btn-white.popular-themes__item Математика
+
+
+                    span.subtitle Анкеты популярных репетиторов по математике
+
+                include ../block/repetit-banner
+
+                .page-body
+                    include ../block/repetit-sidebar
+                    .resume
+
+                        .sorter.panel.panel-white
+                            span.sorter__title Сортировать по:
+                            ul.sorter__list
+                                li.sorter__item
+                                    a(href="javascript:void(0);")
+                                        span.icon-span Цена инд. занятия
+                                            i.fa.fa-arrow-down
+                                li.sorter__item
+                                    a(href="javascript:void(0);")
+                                        span.icon-span Цена группового занятия
+                                            i.fa.fa-arrow-down
+                                li.sorter__item
+                                    a(href="javascript:void(0);")
+                                        span.icon-span Стаж
+                                            i.fa.fa-arrow-down
+                        include ../block/repetit-resume-item
+                        include ../block/repetit-resume-item

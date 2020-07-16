@@ -1,0 +1,29 @@
+.audio-player-container
+    .audio-player__header
+        .audio-player__name Название
+        span.dropdown.pointer
+            .dropdown-toggle(data-toggle="dropdown")
+                i.fa.fa-ellipsis-h.icon-grey
+            ul.dropdown-menu.dropdown-menu-right
+                li
+                    a(href='javascript:void:0')
+                        i.fa.fa-flag
+                        | Пожаловаться
+                li
+                    a(href='javascript:void:0')
+                        i.fa.fa-link
+                        | Открыть в новой вкладке
+    .audio-player__body
+        .audio-player__button
+            .btn-play.audio-play
+                i.fa.fa-play
+                i.fa.fa-pause
+        .audio-player__time
+            span.time-start 0:00
+            span.time-end 0:00
+        .audio-player__seekbar
+            span.outer
+                span.inner
+        .audio-player__volume
+            .volume-controller
+    audio(src="./audio/Benny.mp3")

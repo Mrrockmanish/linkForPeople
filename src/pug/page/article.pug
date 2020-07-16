@@ -1,0 +1,53 @@
+extends ../layout/layout
+
+block title
+    | Статья
+
+block content
+    .content-container.container
+        .content.article
+            .article__header
+                .user-avatar
+                    img(src="./assets/img/default-avatar.png")
+                    include ../partials/user-name
+                .article-info
+                    span.posted-date Опубликовано 10 дней назад в
+                    a(href="javascript:void(0)").article-category Наука
+                .views.pull-right
+                    span 10 просмотров
+            .article__socials
+                <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script src="//yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,qzone,viber,whatsapp,skype,telegram"></div>
+            .article__body
+                h2 Название статьи
+                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                .article-tags Теги:
+                    a(href="javascript:void(0);") Теги
+                .comment-list
+                    .comment-list__item#comment78
+                        a(href="javascript:void(0)").link-to-user.pull-left
+                            img(src="./assets/img/default-avatar.png")
+                        .comment-list__item-body.clearfix
+                            .comment-list__item-detail.pull-left
+                                include ../partials/user-name
+                                span.post-time 1 день назад
+                                p.user-post__comment-text Текст
+                            .pull-right
+                                span.pointer.edit-icon(onclick="editComment(post32, comment78);")
+                                    i.fa.fa-pen
+                                span.pointer.delete-icon
+                                    i.fa.fa-trash
+                                span.pointer.reply-icon
+                                    i.fa.fa-reply(onclick="toggleReply(post32);")
+                            textarea.comment-list__item-edit.form-control(placeholder="Редактировать комментарий").hide
+                            textarea.comment-list__item-reply.form-control(placeholder="Ответить на комментарий").hide
+                    .input-icon
+                        textarea.form-control(placeholder="Напишите комментарий и нажмите клавишу ВВОД" rows="1")
+                        ul.input-icon__list
+                            li.input-icon__item.pointer
+                                i.fa.fa-microphone-alt
+                                input(type="file")
+                            li.input-icon__item.pointer
+                                i.far.fa-image
+                                input(type="file")

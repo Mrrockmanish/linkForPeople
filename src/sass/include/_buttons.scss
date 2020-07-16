@@ -1,0 +1,54 @@
+.btn-upload-image{
+  background-color: transparent;
+  opacity: 1;
+  color: #fff;
+  transition: all 0.2s;
+  text-shadow: #555 0 0 1px;
+  &:hover{
+    text-shadow: #444 0 0 3px;
+  }
+}
+
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  opacity: 0;
+  outline: none;
+  background: #fff;
+  cursor: inherit;
+  display: block;
+}
+
+.btn.filter{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  transition: all .4s;
+}
+
+.btn-group-vertical > .btn:not(:last-child):hover, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn:hover, .btn-group > .btn:not(:first-child):not(:last-child):hover {
+  border-bottom: 2px solid #039ddd !important;
+  transition: all .4s;
+}
+
+.btn.filter:hover, .btn.filter:active {
+  border-bottom: 2px solid #039ddd !important;
+  transition: all .4s;
+}
+
+.btn-main {
+  color: #4a76a8 !important;
+  border: none !important;
+  background-color: #fff !important;
+  text-transform: uppercase !important;
+  border-bottom: 2px solid #fff !important;
+}

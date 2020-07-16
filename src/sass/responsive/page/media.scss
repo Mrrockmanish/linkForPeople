@@ -1,0 +1,137 @@
+@media (max-width: 768px) {
+	.panel-media {
+		.btn-invite {
+			padding: 0;
+			width: 25px;
+			height: 25px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 5px;
+			span {
+				display: none;
+			}
+			i {
+				margin-right: 0;
+				font-size: 16px;
+			}
+		}
+		&__body {
+			padding: 15px 15px 35px 15px;
+			&--photo {
+				padding-bottom: 15px;
+			}
+
+			.form-group {
+				.input-wrapper-named-file {
+					input[type="text"] {
+						padding: 8px 50px 8px 30px;
+					}
+					.input-file-container i {
+						font-size: 18px;
+					}
+
+				}
+			}
+			.media-album, .media-photo {
+
+				&__list {
+
+					&-item {
+						width: calc(100% * (1 / 2) - 20px - 1px);
+						img {
+							height: 190px;
+						}
+					}
+				}
+			}
+			.media-video {
+
+				&__list {
+
+					&-item {
+						width: calc(100% * (1 / 2) - 20px - 1px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.panel-media {
+		&__body {
+			.media-album, .media-photo {
+				&__list {
+					margin: 0 -5px 0 -5px;
+					&-item {
+						margin: 0 5px 5px;
+						width: calc(100% * (1 / 2) - 10px - 1px);
+						img {
+							height: 120px;
+							margin-bottom: 0;
+						}
+						.name {
+							font-size: 13px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.media-menu {
+		li {
+			a {
+				font-size: 12px;
+				padding: 8px 20px;
+				text-align: center;
+				i {
+					margin-right: 0;
+					display: block;
+				}
+			}
+			&.active {
+				&:before {
+					border-color: transparent;
+					border-bottom-color: #6bbeed;
+					border-width: 6px;
+					margin-left: -7px;
+				}
+				&:after {
+					border-color: transparent;
+					border-bottom-color: white;
+					border-width: 5px;
+					margin-left: -6px;
+					bottom: -1px;
+				}
+			}
+		}
+	}
+	.photo-hover {
+		&__container {
+			.plus {
+				font-size: 32px;
+			}
+			.dropdown {
+				&-menu {
+					min-width: 120px;
+					max-width: 120px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.panel-media {
+		&__body {
+			.media-video {
+				&__list {
+					&-item {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.comments
+  a.comments__more(href="") Показать все комментарии 123 #[i.fas.fa-chevron-down.comments__more-icon]
+  ul.comments__list
+
+    li.comments__item
+      img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+      .comments__body
+        a.comments__user(href="") Валерий Миронов
+        .comments__text-wrap
+          p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+        .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+        .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+        .comments__footer
+          a.comments__date(href="#", title="2 часа назад") 2 часа назад
+          a.comments__answer-btn(href="#", title="Ответить") Ответить
+      .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+      .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+
+    li.comments__item
+      img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+      .comments__body
+        a.comments__user(href="") Валерий Миронов
+        a.comments__quote(href="")
+          .comments__user(href="") Валерий Миронов
+          .comments__text-wrap
+            p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное...
+          .fal.fa-times-circle.comments__quote-remove.pointer
+        .comments__text-wrap
+          p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+        .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+        .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+        .comments__footer
+          a.comments__date(href="#", title="2 часа назад") 2 часа назад
+          a.comments__answer-btn(href="#", title="Ответить") Ответить
+      .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+      .comments__like.pointer #[i.fas.fa-heart.comments__like-icon.comments__like-icon--active] 15
+
+    li.comments__item
+      img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+      .comments__body
+        a.comments__user(href="") Валерий Миронов
+        a.comments__quote(href="")
+          .comments__user(href="") Валерий Миронов
+          .comments__text-wrap
+            p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное...
+          .fal.fa-times-circle.comments__quote-remove.pointer
+        .comments__text-wrap
+          p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+        .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+        .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+        .comments__footer
+          a.comments__date(href="#", title="2 часа назад") 2 часа назад
+          a.comments__answer-btn(href="#", title="Ответить") Ответить
+      .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+      .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+
+  include ../block/publisher-box--comments

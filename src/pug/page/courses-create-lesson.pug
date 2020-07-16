@@ -1,0 +1,61 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__body.courses-inner-container
+                        .title Создать урок
+                        form.courses-create
+                            .form-group
+                                .input-label Название
+                                .input-wrapper
+                                    input(type="text")
+                            .form-group
+                                .input-label Описание курса
+                                .input-wrapper
+                                    textarea.editor-area
+                            .form-group_flex
+                                .form-group
+                                    .input-label Начало
+                                    .input-wrapper-datepicker
+                                        .prepend-icon
+                                            i.fa.fa-calendar-alt
+                                        .prepend-remove
+                                            i.fa.fa-times
+                                        input(type="text")
+                                .form-group
+                                    .input-label Конец
+                                    .input-wrapper-datepicker
+                                        .prepend-icon
+                                            i.fa.fa-calendar-alt
+                                        .prepend-remove
+                                            i.fa.fa-times
+                                        input(type="text")
+                            .form-group
+                                .time-zone Временная зона: Asia/Riyadh(UTC +03:00)
+                            .form-group
+                                i.fal.fa-question-circle.blue-color.i-quest(data-bstooltip="tooltip" data-original-title="Проверенный пользователь проверка \n <b>tooltip</b> на ширину")
+                            .form-group
+                                .input-wrapper-styled-radio
+                                    input(type="radio" id="radio_individual" name='radio_type' checked="true")
+                                    label(for="radio_individual") Индивидуальный
+                                .input-wrapper-styled-radio
+                                    input(type="radio" id="radio_groups" name='radio_type' disabled)
+                                    label(for="radio_groups") Групповой
+                                .input-wrapper-styled-radio.success
+                                    input(type="radio" id="radio_independent" name='radio_type')
+                                    label(for="radio_independent") Самостоятельный
+                                .input-wrapper-styled-radio.danger
+                                    input(type="radio" id="radio_olympic" name='radio_type')
+                                    label(for="radio_olympic") Олимпиада
+                        .video-frame.form-group
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        .btn-form-container
+                            button(type="submit").btn-invite Сохранить

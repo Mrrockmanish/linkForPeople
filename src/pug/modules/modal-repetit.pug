@@ -1,0 +1,188 @@
+.modal.modal--xs.modal-repetit.fade#SearchEducator(tabindex="-1" role="dialog" aria-labelledby="SearchEducator")
+    .modal-dialog
+        .modal-content
+            form.educator-form
+                .modal-header
+                    .pointer.close-modal.pull-right(data-dismiss="modal")
+                        i.fa.fa-times
+                    h4 Подобрать репетитора
+                .modal-body
+                    .row
+                        .col-md-12
+                            .input-wrapper.input-wrapper_icon
+                                input(type="text" placeholder="Ваше имя")
+                                span.glyphicon.glyphicon-user
+                        .col-md-6.pr5
+                            .input-wrapper.input-wrapper_icon
+                                input(type="text" placeholder="E-mail")
+                                span.glyphicon.glyphicon-envelope
+                        .col-md-6.pl5
+                            .input-wrapper.input-wrapper_icon
+                                input(type="text" placeholder="Номер телефона")
+                                span.glyphicon.glyphicon-earphone
+
+                    .input-wrapper.input-wrapper-select
+                        select
+                            option(disabled="true" hidden="true" selected="true") Выберите предмет
+                            option Математика
+                            option Русский
+                    .input-wrapper.input-wrapper-select
+                        select
+                            option(disabled="true" hidden="true" selected="true") Выберите формат обучения
+                            option любой
+                            option у ученика
+                            option у учителя
+                            option дистанционно
+                            option онлайн (индивидуально)
+                            option онлайн (в мини группах)
+
+                    .filter-block.filter-block_no-border#priceModal
+                        .filter-block__header
+                            span.title Цена:
+                        .filter-block__body
+                            .ui-slider-container.ui-slider-container--double.price-container
+                                .slider-filters
+                                    .slider-input.min-value-js
+                                        span От
+                                        input(type="text")
+                                    .slider-input.max-value-js
+                                        span До
+                                        input(type="text")
+                                    span руб
+                                .ui-slider-item-js--double(data-min="0" data-max="5000" data-step="50" data-current-min="400" data-current-max="2000")
+                    .input-wrapper
+                        textarea(rows=2 placeholder="Ваши пожелания" style="resize: none;")
+                    .input-wrapper-checkbox
+                        input(type="checkbox")
+                        label.checkbox-label Даю свое согласие на обработкутку персональных данных. С
+                            a(href="#")  Политикой конфиденциальности
+                            |  ознакомился
+                            span.checkmark
+
+                .modal-footer
+                    .educator-form__submit
+                        button.btn-gradient(type="submit") Разместить заявку
+
+
+.modal.modal--xs.modal-repetit.fade#Registration(tabindex="-1" role="dialog" aria-labelledby="Registration")
+    .modal-dialog
+        .modal-content
+            form.registration-form
+                .modal-header
+                    .pointer.close-modal.pull-right(data-dismiss="modal")
+                        i.fa.fa-times
+                    h4 Регистрация
+                .modal-body
+                    ul.nav.nav-tabs.custom-tabs
+                        li.active
+                            a(href="#regUser" data-toggle="tab") Пользователь
+                        li
+                            a(href="#regEducator" data-toggle="tab") Преподаватель
+                    .tab-content
+                        #regUser.tab-pane.fade.in.active
+                            .row
+                                .col-md-12
+                                    .input-wrapper.input-wrapper_icon.has-error
+                                        input(type="text" placeholder="Логин")
+                                        span.glyphicon.glyphicon-font
+                                .col-md-6.pr5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Ваше имя")
+                                        span.glyphicon.glyphicon-user
+                                .col-md-6.pl5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Фамилия")
+                                        span.glyphicon.glyphicon-user
+                                .col-md-12
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Email")
+                                        span.glyphicon.glyphicon-envelope
+                                .col-md-6.pr5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="password" placeholder="Пароль")
+                                        span.glyphicon.fa.fa-key
+                                .col-md-6.pl5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="password" placeholder="Подтвердите пароль")
+                                        span.glyphicon.fa.fa-key
+                                .col-md-12
+                                    .input-wrapper-checkbox
+                                        input(type="checkbox")
+                                        label.checkbox-label Даю свое согласие на обработкутку персональных данных. С
+                                            a(href="#")  Политикой конфиденциальности
+                                            |  ознакомился
+                                            span.checkmark
+
+                        #regEducator.tab-pane.fade
+                            .row
+                                .col-md-12
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Логин")
+                                        span.glyphicon.glyphicon-font
+                                .col-md-6.pr5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Ваше имя")
+                                        span.glyphicon.glyphicon-user
+                                .col-md-6.pl5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Фамилия")
+                                        span.glyphicon.glyphicon-user
+                                .col-md-12
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="text" placeholder="Email")
+                                        span.glyphicon.glyphicon-envelope
+                                .col-md-6.pr5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="password" placeholder="Пароль")
+                                        span.glyphicon.fa.fa-key
+                                .col-md-6.pl5
+                                    .input-wrapper.input-wrapper_icon
+                                        input(type="password" placeholder="Подтвердите пароль")
+                                        span.glyphicon.fa.fa-key
+                                .col-md-12
+                                    .input-wrapper
+                                        textarea(rows="2" placeholder="Образование" style="resize: none;")
+                                .col-md-12
+                                    .input-wrapper.input-digit
+                                        input(type="text" placeholder="Опыт преподавания")
+                                .col-md-12
+                                    .input-wrapper
+                                        textarea(rows="2" placeholder="Расскажите о себе" style="resize: none;")
+                                .col-md-12
+                                    .input-wrapper.input-wrapper_icon.input-digit
+                                        input(type="text" placeholder="Цена индивидуального занятия за час (руб)")
+                                        span.glyphicon.glyphicon-rub
+                                .col-md-12
+                                    .input-wrapper.input-wrapper_icon.input-digit
+                                        input(type="text" placeholder="Цена группового занятия за час (руб)")
+                                        span.glyphicon.glyphicon-rub
+                                .col-md-12
+                                    .input-wrapper.input-wrapper-select
+                                        select
+                                            option(disabled="true" hidden="true" selected="true") Выберите предмет
+                                            option Математика
+                                            option Русский
+                                .col-md-12
+                                    .input-wrapper.input-wrapper-select
+                                        select
+                                            option(disabled="true" hidden="true" selected="true") Выберите формат обучения
+                                            option любой
+                                            option у ученика
+                                            option у учителя
+                                            option дистанционно
+                                            option онлайн (индивидуально)
+                                            option онлайн (в мини группах)
+                                .col-md-12
+                                    .input-wrapper
+                                        label(style='margin-bottom: 5px;') Документы
+                                        input(type="file")
+                                .col-md-12
+                                    .input-wrapper-checkbox
+                                        input(type="checkbox")
+                                        label.checkbox-label Даю свое согласие на обработкутку персональных данных. С
+                                            a(href="#")  Политикой конфиденциальности
+                                            |  ознакомился
+                                            span.checkmark
+                .modal-footer
+                    .educator-form__submit
+                        button.btn-gradient(type="submit") Зарегистрироваться

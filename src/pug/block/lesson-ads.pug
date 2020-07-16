@@ -1,0 +1,105 @@
+.lesson-qa.lesson-qa--inner.lesson-qa--ads
+    .lesson-qa__list-wrap.comments
+        .lesson-qa__list-title-wrap
+            .lesson-qa__list-title Список объявлений
+            a.btn-invite.lesson-qa__ask-q-btn(href="#", title="Задать вопрос", data-target="#askQuest", data-toggle="modal")
+                i.far.fa-comment-alt-lines
+                | Создать объявление
+        .comments__list.lesson-qa__list
+            .comments__item.lesson-qa__comment.lesson-qa__comment--ads
+                .comments__inner
+                    img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                    .comments__body
+                        .comments__body-top
+                            a.comments__user(href="#", title="") Валерий Миронов
+                            a.comments__date(href="#", title="") 2 часа назад
+                        .comments__text-wrap
+                            p.comments__text Математика — это не только про то, как складывать и умножать, как находить площадь, периметр, скорость. Математика — вокруг нас, и она прежде всего призвана учить мыслить. Она может быть увлекательной, необычной, красивой, живой, загадочной и даже волшебной.
+                            p.comments__text Иногда она позволяет творить настоящие чудеса. Во всем этом нам предстоит убедиться.
+                            p.comments__text Математика — это не только про то, как складывать и умножать, как находить площадь, периметр, скорость. Математика — вокруг нас, и она прежде всего призвана учить мыслить. Она может быть увлекательной, необычной, красивой, живой, загадочной и даже волшебной.
+                            p.comments__text Иногда она позволяет творить настоящие чудеса. Во всем этом нам предстоит убедиться.
+                        .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                        .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                        .comments__comments-toggle.comments__comments-toggle--open(onclick="commentsToggle(this);")
+                            | комментарии (2)
+                            i.fas.fa-chevron-up.comments__comments-toggle-icon
+                        .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+
+                .comments.lesson-qa__inner-comments
+                    ul.comments__list
+                        li.comments__item
+                            img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                            .comments__body
+                                a.comments__user(href="") Валерий Миронов
+                                .comments__text-wrap
+                                    p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                                .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                                .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                                .comments__footer
+                                    a.comments__date(href="#", title="2 часа назад") 2 часа назад
+                                    a.comments__answer-btn(href="#", title="Ответить") Ответить
+                            .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+                            .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+                        li.comments__item
+                            img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                            .comments__body
+                                a.comments__user(href="") Валерий Миронов
+                                .comments__text-wrap
+                                    p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                                .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                                .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                                .comments__footer
+                                    a.comments__date(href="#", title="2 часа назад") 2 часа назад
+                                    a.comments__answer-btn(href="#", title="Ответить") Ответить
+                            .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+                            .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+                    include ../block/publisher-box--comments-qa
+
+            .comments__item.lesson-qa__comment.lesson-qa__comment--ads
+                .comments__inner
+                    img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                    .comments__body
+                        .comments__body-top
+                            a.comments__user(href="#", title="") Валерий Миронов
+                            a.comments__date(href="#", title="") 2 часа назад
+                        .comments__text-wrap
+                            p.comments__text Математика — это не только про то, как складывать и умножать, как находить площадь, периметр, скорость. Математика — вокруг нас, и она прежде всего призвана учить мыслить. Она может быть увлекательной, необычной, красивой, живой, загадочной и даже волшебной.
+                            p.comments__text Иногда она позволяет творить настоящие чудеса. Во всем этом нам предстоит убедиться.
+                            p.comments__text Математика — это не только про то, как складывать и умножать, как находить площадь, периметр, скорость. Математика — вокруг нас, и она прежде всего призвана учить мыслить. Она может быть увлекательной, необычной, красивой, живой, загадочной и даже волшебной.
+                            p.comments__text Иногда она позволяет творить настоящие чудеса. Во всем этом нам предстоит убедиться.
+                        .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                        .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                        .comments__comments-toggle.comments__comments-toggle--open(onclick="commentsToggle(this);")
+                            | комментарии (2)
+                            i.fas.fa-chevron-up.comments__comments-toggle-icon
+                        .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+
+                .comments.lesson-qa__inner-comments
+                    ul.comments__list
+                        li.comments__item
+                            img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                            .comments__body
+                                a.comments__user(href="") Валерий Миронов
+                                .comments__text-wrap
+                                    p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                                .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                                .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                                .comments__footer
+                                    a.comments__date(href="#", title="2 часа назад") 2 часа назад
+                                    a.comments__answer-btn(href="#", title="Ответить") Ответить
+                            .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+                            .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+                        li.comments__item
+                            img.comments__avatar(src="assets/img/default-avatar.png", alt="avatar")
+                            .comments__body
+                                a.comments__user(href="") Валерий Миронов
+                                .comments__text-wrap
+                                    p.comments__text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                                .comments__more-btn.comments__more-btn--more.pointer(onclick="moreBtn(this);") Читать далее...
+                                .comments__more-btn.comments__more-btn--less.pointer(onclick="moreBtn(this);") Свернуть
+                                .comments__footer
+                                    a.comments__date(href="#", title="2 часа назад") 2 часа назад
+                                    a.comments__answer-btn(href="#", title="Ответить") Ответить
+                            .comments__delete.pointer #[i.far.fa-trash-alt.comments__delete-icon]
+                            .comments__like.pointer #[i.fas.fa-heart.comments__like-icon] 15
+                    include ../block/publisher-box--comments-qa

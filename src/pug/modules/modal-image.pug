@@ -1,0 +1,1219 @@
+.modal.fade.image-modal#ProfileCoverImageModal(tabindex="-1" role="dialog" aria-labelledby="ProfileCoverImageModal")
+    .modal-dialog
+        .modal-content
+            .modal-body
+                img.img-responsive(src="./assets/img/backscreen.jpg")
+
+.modal.fade#CreateChatModal(tabindex="-1" role="dialog" aria-labelledby="CreateChatModal")
+    .modal-dialog.modal-xs
+        .modal-content
+            form
+                .modal-header
+                    .create-new-chat.pull-left
+                        i.fa.fa-users
+                        span Создать новый чат
+                    span.file-input-icon.pull-right.pointer
+                        i.fa.fa-camera
+                        input(type="file")
+                .modal-body
+                    input.form-control(type="text" placeholder="Название")
+                    .chat-invite
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                        .user-avatar
+                            .check-input
+                                input(type="checkbox")
+                                span.checkmark
+                            img(src="./assets/img/default-avatar.png")
+                            .user-name Тестовый Пользователь
+                .modal-footer
+                    button.btn(type="submit") Создать
+                    button.btn(type="button" data-dismiss="modal" aria-label="Close") Отмена
+
+
+
+
+.modal.fade#mediaModal(tabindex="-1" role="dialog" aria-labelledby="mediaModal").lightbox.lightbox--zoom
+    .modal-dialog
+        .modal-content
+            .modal-body
+                .user-post#post65
+                    .img-container
+                        .carousel.slide(data-interval="false")
+                            .carousel-inner
+                                .item.active
+            .lightbox__zoom
+                .lightbox__zoom-plus(onclick="zoomPlus(this);")
+                    .fal.fa-plus.lightbox__zoom-icon
+                .lightbox__zoom-minus(onclick="zoomMinus(this);")
+                    .fal.fa-minus.lightbox__zoom-icon
+    a.left.carousel-control(role="button" data-slide="prev")
+        i.far.fa-chevron-left.lightbox__arrow
+    a.right.carousel-control(role="button" data-slide="next")
+        i.far.fa-chevron-right.lightbox__arrow
+    .close-modal.lightbox__close
+        i.fal.fa-times.lightbox__close-icon
+
+// Cоздать новый курс/статью
+
+.modal.fade.modal-course.modal-md#CourseAdd(tabindex="-1" role="dialog" aria-labelledby="CourseAdd" data-backdrop="static")
+    .modal-dialog
+        .modal-content
+            .modal-header
+                .pointer.close-modal
+                    i.fa.fa-times
+                h4 Создать новую статью
+            .modal-body
+                form.form
+                    .form-group
+                        .input-wrapper
+                            input(type="text" placeholder="Заголовок")
+                    .form-group
+                        .input-wrapper.input-wrapper-select
+                            select
+                                option(hidden selected disabled) Не выбрано
+                                option Наука
+                                option Интересное
+                    .form-group
+                        .input-wrapper
+                            textarea(name="ckeditorArea" placeholder="Содержание").editor-area#modal_editor
+                    .form-group
+                        .input-wrapper
+                            input(type="text" placeholder="Теги")
+                    .flex-group
+                        .form-group
+                            .input-wrapper.input-wrapper-photo
+                                p Загрузить фото
+                                i.fal.fa-camera-alt
+                                img(src="#")
+                                input(type="file" onchange="readURL(this)")
+                                button.btn-blue(type="button") Загрузить
+                        .form-group.form-group--absolute
+                            label Видимость
+                            fieldset#visible
+                                .input-wrapper.input-wrapper-radioIcon(data-toggle="tooltip" data-placement="top" title="Все")
+                                    input(type="radio" value="" name="visible" checked)
+                                    i.fa.fa-globe-asia
+                                .input-wrapper.input-wrapper-radioIcon(data-toggle="tooltip" data-placement="top" title="Только мне")
+                                    input(type="radio" value="" name="visible")
+                                    i.fa.fa-lock
+                                .input-wrapper.input-wrapper-radioIcon(data-toggle="tooltip" data-placement="top" title="Кто у меня в друзьях")
+                                    input(type="radio" value="" name="visible")
+                                    i.fa.fa-users
+                                .input-wrapper.input-wrapper-radioIcon(data-toggle="tooltip" data-placement="top" title="На кого я подписан")
+                                    input(type="radio" value="" name="visible")
+                                    i.fa.fa-user-edit
+                        .btn-container
+                            button.btn-gradient(type="submit") Создать
+
+.modal.fade.modal-course#CloseConfirm(tabindex="-1" role="dialog" aria-labelledby="#CloseConfirm" data-backdrop="false")
+    .modal-dialog
+        .modal-content
+            .modal-body
+                p Вы уверены, что хотите закрыть окно? Все несохраненные данные будут утеряны!
+                button.btn-invite.confirm-close ОК
+                button.btn-blue.cancel-close(data-dismiss="modal" style="font-size: 13px") Отмена
+
+// Создать новый курс/статью конец \\
+
+.modal.fade.modal-md#DatePickerModal(tabindex="-1" role="dialog" aria-labelledby="DatePickerModal")
+    .modal-dialog
+        .modal-content.modal-datepicker
+            .modal-header
+                .pointer.close-modal(data-dismiss="modal" aria-label="Close")
+                    i.fa.fa-times
+                h4 Календарь занятий
+            .modal-body
+                //.calendar-schedule.faded
+                .calendar-schedule
+                    //.loader
+                        i.fa.fa-spinner.fa-spin
+                    .calendar-datepicker-container
+                        .calendar-datepicker
+                        .calendar-time
+                            span.free-time Свободные часы
+                            span.busy-time Занятые часы
+                            .time-zone Временная зона: Asia/Riyadh(UTC +03:00)
+                    .lesson-schedule-container
+                        .lesson-schedule
+                            .schedule-item.is-busy
+                                .schedule-item__header
+                                    span.time 9.00 - 10.00
+                                    a(href="javascript:void(0)").btn.btn-invite Открыть
+                                    a(href="javascript:void(0)").btn.btn-blue.btn-disabled Записаться
+                                .schedule-item__body
+                                    span.title Курс лекций по английскому языку
+                            .schedule-item.is-free
+                                .schedule-item__header
+                                    span.time 9.00 - 10.00
+                                    a(href="javascript:void(0)").btn.btn-invite Открыть
+                                    a(href="javascript:void(0)").btn.btn-blue Записаться
+                                .schedule-item__body
+                                    span.title Курс лекций по английскому языку
+                            .schedule-item.is-free
+                                .schedule-item__header
+                                    span.time 9.00 - 10.00
+                                    a(href="javascript:void(0)").btn.btn-invite Открыть
+                                    a(href="javascript:void(0)").btn.btn-blue Записаться
+                                .schedule-item__body
+                                    span.title Курс лекций по английскому языку
+                            .schedule-item.is-busy
+                                .schedule-item__header
+                                    span.time 9.00 - 10.00
+                                    a(href="javascript:void(0)").btn.btn-invite Открыть
+                                    a(href="javascript:void(0)").btn.btn-blue.btn-disabled Записаться
+                                .schedule-item__body
+                                    span.title Курс лекций по английскому языку
+                            .schedule-item.is-busy
+                                .schedule-item__header
+                                    span.time 9.00 - 10.00
+                                    a(href="javascript:void(0)").btn.btn-invite Открыть
+                                    a(href="javascript:void(0)").btn.btn-blue.btn-disabled Записаться
+                                .schedule-item__body
+                                    span.title Курс лекций по английскому языку
+
+
+.modal.fade.modal-sm#CreateChannelModal(tabindex="-1" role="dialog" aria-labelledby="CreateChannelModal")
+    .modal-dialog
+        .modal-content.modal-group-chat
+            .modal-header
+                .pointer.close-modal(data-dismiss="modal" aria-label="Close")
+                    i.fa.fa-times
+                h4 Создать канал
+            .modal-body
+                form.form
+                    .form-group
+                        .input-wrapper
+                            input(type="text" placeholder="Название канала")
+                    .form-group
+                        .input-wrapper
+                            input(type="text" placeholder="URL канала")
+                    .form-group
+                        label Верификация
+                        .input-wrapper.input-wrapper-radio
+                            fieldset(id="radio_group_1")
+                                input(type="radio" id="radio_yes" name='radio_verification')
+                                label(for="radio_yes") Подтвержден
+                                input(type="radio" id="radio_no" name='radio_verification')
+                                label(for="radio_no") Не подтвержден
+                    .form-group
+                        .input-wrapper.input-wrapper-select
+                            select
+                                option(disabled="true" selected="true") Выбрать категорию
+                                option Категория 1
+                                option Категория 2
+                    .form-group.form-group_flex
+                        .input-wrapper
+                            textarea(rows="3" placeholder="Описание канала")
+            .modal-footer
+                button.btn-gradient(type="submit") Создать
+                button.btn-white(type="button" data-dismiss="modal" aria-label="Close") Отмена
+
+.modal.fade.modal-sm#EditChannelModal(tabindex="-1" role="dialog" aria-labelledby="EditChannelModal")
+    .modal-dialog
+        .modal-content.modal-channel-edit
+            .modal-header
+                .pointer.close-modal(data-dismiss="modal" aria-label="Close")
+                    i.fa.fa-times
+                h4 Редактировать канал
+            .modal-body
+                ul.modal-channel-edit__menu
+                    li.active
+                        a(href="#channelUsers" data-toggle='tab') Пользователи
+                    li
+                        a(href="#channelSettings" data-toggle='tab') Настройки
+                .tab-content
+                    #channelUsers.tab-pane.fade.in.active
+                        .channel-user-list
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                            .channel-user-list__item
+                                a(href="javascript:void(0)").avatar-circle_xl
+                                    img(src="./assets/img/default-avatar.png")
+                                .user-name
+                                    a(href="javascript:void(0)") Константин Калиновский
+                                .user-remove
+                                    i.fal.fa-trash-alt.icon-grey
+                    #channelSettings.tab-pane.fade
+                        form.form
+                            .form-group
+                                .input-wrapper
+                                    input(type="text" placeholder="Название канала")
+                            .form-group
+                                .input-wrapper
+                                    input(type="text" placeholder="URL канала")
+                            .form-group
+                                label Тип канала
+                                .input-wrapper.input-wrapper-radio
+                                    fieldset(id="radio_group_1")
+                                        input(type="radio" id="radio_yes" name='radio_verification')
+                                        label(for="radio_yes") Подтвержден
+                                        input(type="radio" id="radio_no" name='radio_verification')
+                                        label(for="radio_no") Не подтвержден
+                            .form-group
+                                .input-wrapper.input-wrapper-select
+                                    select
+                                        option(disabled="true" selected="true") Выбрать категорию
+                                        option Категория 1
+                                        option Категория 2
+                            .form-group.form-group_flex
+                                .input-wrapper
+                                    textarea(rows="3" placeholder="Описание канала")
+                            .form-group.form-group_photo
+                                .input-wrapper.input-wrapper-photo
+                                    p Загрузить документ
+                                    i.fal.fa-camera-alt
+                                    img(src="#")
+                                    input(type="file" onchange="readURL(this)")
+                                .input-wrapper.input-wrapper-photo
+                                    p Загрузить документ
+                                    i.fal.fa-image
+                                    img(src="#")
+                                    input(type="file" onchange="readURL(this)")
+                            .form-group
+                                label Удалить канал
+                                .input-wrapper.inptut-wrapper-btn
+                                    input(type="password" placeholder="Введите пароль")
+                                    .input-button-container
+                                        span.hidden-xs Удалить
+                                        span.hidden-lg.hidden-sm.hidden-md
+                                            i.fal.fa-trash-alt
+            .modal-footer
+                button.btn-gradient(type="submit") Создать
+                button.btn-white(type="button" data-dismiss="modal" aria-label="Close") Отмена
+
+.modal.fade.modal-sign#SignupModal(tabindex="-1" role="dialog")
+    .modal-dialog
+        .register-wrap--modal
+            form#login.login.sga-main-page(method='post')
+                span.hid-desctop.sga-close
+                    i.fa.fa-times
+                .title
+                    a.enter(href='javascript:void(0);') Вход
+                    a.registr(href='javascript:void(0);') Зарегестрироваться
+                .input-wrapper.has-error
+                    input(type="text" placeholder="Телефон").input-phone
+                .input-wrapper.input-wrapper_icon
+                    input(type="password" placeholder="Пароль")
+                    span.glyphicon.fa.fa-key
+                a.forgot-passw(href='javascript:void(0);') Забыли пароль?
+                .text-center.border
+                button(type='submit')
+                    i.spinner
+                    span.state
+                        i.fa.fa-sign-in
+                        |  &Vcy;&khcy;&ocy;&dcy;
+            form#register.login.hid-form.sga-main-page(method='post')
+                span.hid-desctop.sga-close--modal(data-dismiss="modal" aria-label="Close")
+                    i.fa.fa-times
+                .title
+                    a.enter(href='javascript:void(0);') Вход
+                    a.registr(href='javascript:void(0);') Зарегистрироваться
+                .tab-content
+                    #user-register.tab-pane.fade.in.active
+                        .input-wrapper.input-wrapper_icon
+                            input(type="text" placeholder="Ваше имя")
+                            span.glyphicon.glyphicon-user
+                        .input-wrapper.input-wrapper_icon
+                            input(type="text" placeholder="Фамилия")
+                            span.glyphicon.glyphicon-user
+                        .input-wrapper.input-wrapper_icon
+                            input(type="text" placeholder="Email")
+                            span.glyphicon.glyphicon-envelope
+                        .input-wrapper.input-wrapper_icon
+                            input(type="password" placeholder="Пароль")
+                            span.glyphicon.fa.fa-key
+
+                        .input-wrapper-checkbox
+                            input(type="checkbox")
+                            label.checkbox-label Согласен с
+                                a.see-sga-terms(href='#')  условиями
+                                span.checkmark
+                button#signin(disabled='disabled')
+                    i.spinner
+                    span.state
+                        i.fa.fa-sign-in
+                        | Зарегестрироваться!
+            form#forgot-form.login.hid-form.sga-main-page(method='post')
+                span.hid-desctop.sga-close--modal(data-dismiss="modal" aria-label="Close")
+                    i.fa.fa-times
+                .title
+                    a.forgot(href='#') &Zcy;&acy;&bcy;&ycy;&lcy;&icy; &pcy;&acy;&rcy;&ocy;&lcy;&softcy;?
+                    a.enter2(href='#') &Vcy;&khcy;&ocy;&dcy;
+                input#recoveremail(name='recoveremail' type='text' placeholder='E-mail адрес' autofocus='')
+                i.fa.fa-envelope-o
+                button
+                    i.spinner
+                    span.state
+                        i.fa.fa-repeat
+                        |  &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+
+.modal.fade#SearchModal
+    .modal-dialog
+        form.modal-content.modal-search.search-form
+            .modal-header
+                .pointer.close-modal(data-dismiss="modal" aria-label="Close")
+                    i.fa.fa-times
+                .title Дополнительные параметры
+            .modal-body
+                .extra
+                    .params
+                        .params-col
+                            .select-tree
+                                input(type="hidden" value="value-node-1-1")
+                                .pseudo-input
+                                    .pseudo-item(data-value="value-node-1-1")
+                                        span Маникюр классический
+                                        i.fa.fa-times
+                                .select-tree-options
+                                    ul.select-tree-box
+                                        .grouped-category.two-level.open
+                                            li.select-tree-node
+                                                .input-wrapper-styled-checkbox.parent-item
+                                                    input(type="checkbox" value="value-node-1" data-text="Маникюр")
+                                                    label Маникюр
+                                                ul
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-1-1" data-text="Маникюр классический" checked)
+                                                            label Классический
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-1-2" data-text="Маникюр французский")
+                                                            label Французский
+                                        .grouped-category.two-level.open
+                                            li.select-tree-node
+                                                .input-wrapper-styled-checkbox.parent-item
+                                                    input(type="checkbox" value="value-node-2" data-text="Парикмахерские услуги")
+                                                    label Парикмахерские услуги
+                                                ul
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-2-1" data-text="Стрижка № 1")
+                                                            label Стрижка № 1
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-2-2" data-text="Стрижка № 2")
+                                                            label Стрижка № 2
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-2-3" data-text="Стрижка № 3")
+                                                            label Стрижка № 3
+                        .params-col
+                            .select-tree
+                                input(type="hidden" value="value-node-1-1")
+                                .pseudo-input
+                                    .pseudo-item(data-value="value-node-1-1")
+                                        span Маникюр классический
+                                        i.fa.fa-times
+                                .select-tree-options
+                                    ul.select-tree-box
+                                        .grouped-category.open
+                                            .grouped-title
+                                                .icon
+                                                span Категория
+                                            li.select-tree-node
+                                                .input-wrapper-styled-checkbox.parent-item
+                                                    input(type="checkbox" value="value-node-1" data-text="Маникюр")
+                                                    label Маникюр
+                                                ul
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-1-1" data-text="Маникюр классический" checked)
+                                                            label Классический
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-1-2" data-text="Маникюр французский")
+                                                            label Французский
+                                        .grouped-category
+                                            .grouped-title
+                                                .icon
+                                                span Категория
+                                            li.select-tree-node
+                                                .input-wrapper-styled-checkbox.parent-item
+                                                    input(type="checkbox" value="value-node-2" data-text="Парикмахерские услуги")
+                                                    label Парикмахерские услуги
+                                                ul
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-2-1" data-text="Стрижка № 1")
+                                                            label Стрижка № 1
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-2-2" data-text="Стрижка № 2")
+                                                            label Стрижка № 2
+                                                    li.select-tree-item
+                                                        .input-wrapper-styled-checkbox.child-item
+                                                            input(type="checkbox" value="value-node-2-3" data-text="Стрижка № 3")
+                                                            label Стрижка № 3
+                        .params-col
+                            span.title Цена:
+                            .ui-slider-container.ui-slider-container--double
+                                span.slider-min-value 0
+                                span.slider-max-value 5000
+                                .slider-filters
+                                    .slider-input.min-value-js
+                                        input(type="text")
+                                    .slider-input.max-value-js
+                                        input(type="text")
+                                .ui-slider-item-js--double(data-min="0" data-max="5000" data-step="50" data-current-min="400" data-current-max="2000")
+                        .params-col
+                            span.title Цена:
+                            .ui-slider-container.ui-slider-container--double
+                                span.slider-min-value 0
+                                span.slider-max-value 5000
+                                .slider-filters
+                                    .slider-input.min-value-js
+                                        input(type="text")
+                                    .slider-input.max-value-js
+                                        input(type="text")
+                                .ui-slider-item-js--double(data-min="0" data-max="5000" data-step="50" data-current-min="400" data-current-max="2000")
+                        .params-col
+                            span.title Пол
+                            .gender-check.flex-list
+                                .input-wrapper-styled-checkbox
+                                    input(type="checkbox" name="gender")
+                                    label Мужской
+                                .input-wrapper-styled-checkbox
+                                    input(type="checkbox" name="gender")
+                                    label Женский
+                        .params-col
+                            .additional-options.flex-list
+                                .input-wrapper-styled-checkbox
+                                    input(type="checkbox" name="photo")
+                                    label Фото
+                                .input-wrapper-styled-checkbox
+                                    input(type="checkbox" name="promo")
+                                    label Акции
+            .modal-footer
+                .btn-container
+                    button(type="submit").btn-blue Поиск
+
+
+// Создание / Редактирование текста
+.modal.fade.modal-course.modal-md#createText(tabindex="-1" role="dialog" aria-labelledby="#createText" data-backdrop="static")
+    .modal-dialog
+        .modal-content
+            .modal-header
+                .pointer.close-modal
+                    i.fa.fa-times
+                h4 Создание / Редактирование текста
+            .modal-body
+                .modal__textarea-modes
+                    .modal__textarea-modes-item.modal__textarea-modes-item--text.modal__textarea-modes-item--active(onclick="textareaModes(this);") Текстовое поле
+                    .modal__textarea-modes-item.modal__textarea-modes-item--editor(onclick="textareaModes(this);") Редактор
+                textarea.modal__textarea.modal__textarea--text(disabled) This is my textarea to be replaced with CKEditor.
+                textarea.editor-area.modal__textarea.modal__textarea--editor This is my textarea to be replaced with CKEditor.
+                button(type='submit').btn-invite.modal__textarea-btn Сохранить
+
+
+// Создание/редактирование вопроса
+.modal.fade.modal-course.modal-md.ce-quest__modal#ceQuest(tabindex="-1" role="dialog" aria-labelledby="#ceQuest" data-backdrop="static")
+    .modal-dialog
+        .modal-content
+            .modal-header
+                .pointer.close-modal
+                    i.fa.fa-times
+                h4 Создать пост
+            .modal-body
+                ul.courses-menu.ce-quest__modal-tabs
+                    li.active
+                        a(href="#ceMedia" data-toggle='tab') Медиа
+                    li
+                        a(href="#ceArticles" data-toggle='tab') Статьи
+
+                .tab-content.ce-quest__modal-tabs-content
+                    .tab-pane.fade.in.active#ceMedia
+                        .ce-quest__inner-tab
+                            form#publisher-box-form.publisher-box.post.ce-quest__form
+                                .ce-quest__textarea-wrap
+                                    #post-textarea.publisher-box__header.ce-quest__publisher
+                                        textarea.publisher.postText(name="postText" cols="10" rows="3" placeholder="Введите текст поста" dir="auto" autocomplete="off" data-emojiable="true")
+
+                                    .publisher-box__footer
+                                        ul.publisher-box__footer-list
+                                            li.publisher-box__footer-list-item
+                                                span#publisher-box__smile-button.publisher-box__smile-button
+
+                                .ce-quest__media-btns
+                                    .ce-quest__media-btn.ce-quest__media-btn--plus
+                                        input.ce-quest__media-btn-input(type="file", readonly)
+                                        .ce-quest__media-btn-body #[i.far.fa-plus-circle.ce-quest__media-btn-body-icon]
+                                    label.ce-quest__media-btn.ce-quest__media-btn--photo
+                                        input#id_file_photos_from_block_create_post.ce-quest__media-btn-input(type="file", accept="image/*", onchange="ceqAdd(this, 'photo');", multiple)
+                                        .ce-quest__media-btn-body Фото
+                                    label.ce-quest__media-btn.ce-quest__media-btn--audio
+                                        input#id_file_audio_from_block_create_post.ce-quest__media-btn-input(type="file", accept="audio/*", onchange="ceqAdd(this, 'audio');", multiple)
+                                        .ce-quest__media-btn-body Аудио
+                                    label.ce-quest__media-btn.ce-quest__media-btn--video
+                                        input#id_file_video_from_block_create_post.ce-quest__media-btn-input(type="file", accept="video/*", onchange="ceqAdd(this, 'video');")
+                                        .ce-quest__media-btn-body Видео
+                                    label.ce-quest__media-btn.ce-quest__media-btn--files
+                                        input#id_file_file_from_block_create_post.ce-quest__media-btn-input(type="file", onchange="ceqAdd(this, 'files');", multiple)
+                                        .ce-quest__media-btn-body Файлы
+
+                                .ce-quest__remaining Осталось #[span#id_left_size_files_for_block_create_post 100] Мб
+
+                                .ce-quest__media-block-wrap
+
+                                .ce-quest__form-btns
+                                    button.btn-invite.ce-quest__send-btn опубликовать
+                                    a.close-modal.ce-quest__close-btn(href="", title="") отмена
+
+
+                    .tab-pane.fade#ceArticles
+                        .ce-quest__inner-tab
+                            form.ce-quest__form.ce-quest__form--articles
+                                input.ce-quest__input(type="text" placeholder="Заголовок")
+                                select.lesson-qa__select.ce-quest__select
+                                    option Категория статьи
+                                    option Категория статьи 2
+                                textarea.editor-area.ce-quest__editor This is my textarea to be replaced with CKEditor.
+                                select.select.select--tags.lesson-qa__select.ce-quest__select.ce-quest__select--multiple(multiple, data-placeholder="Тэги")
+                                    option Тэг 1
+                                    option Тэг 2
+                                .ce-quest__load-photo-wrap
+                                    .input-wrapper.input-wrapper-photo
+                                        p Загрузить документ
+                                        i.fal.fa-camera-alt
+                                        img(src="#")
+                                        input(type="file" onchange="readURL(this)")
+                                        .far.fa-times.ce-quest__load-photo-close(onclick="delURL(this);")
+                                    .input-prompt.ce-quest__load-photo-desc Максимальный размер <br> загрузки: 10mb
+                                .ce-quest__form-btns
+                                    button.btn-invite.ce-quest__send-btn опубликовать
+                                    a.close-modal.ce-quest__close-btn(href="", title="") отмена
+
+
+// Ученики курса
+.modal.fade.modal-course.modal-md#courseStudents(tabindex="-1" role="dialog" aria-labelledby="#courseStudents" data-backdrop="static")
+    .modal-dialog
+        .modal-content
+            .modal-header
+                .pointer.close-modal
+                    i.fa.fa-times
+                h4 Ученики курса
+            .modal-body
+                .courseStudents
+                    ul.courseStudents__list
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn(href="#", title="Открыть доступ")
+                                span Открыть доступ
+                                i.far.fa-unlock
+                        li.courseStudents__item
+                            .courseStudents__avatar(style="background-image: url(assets/img/default-avatar.png);")
+                            .courseStudents__user-info
+                                a.courseStudents__username(href="#", title="Мария Ливанова") Мария Ливанова
+                                .courseStudents__time Был(а): 27 дн. назад
+                            a.btn-invite.courseStudents__btn.courseStudents__btn--close(href="#", title="Закрыть доступ")
+                                span Закрыть доступ
+                                i.far.fa-lock

@@ -1,0 +1,170 @@
+//@media only screen and (max-width: 370px) {
+//  .mobile-chat {
+//    max-height: 480px !important;
+//  }
+//}
+//
+//@media only screen and (max-width: 330px) {
+//  .mobile-chat {
+//    max-height: 370px !important;
+//  }
+//}
+
+@media (max-width: $screen-sm-max) {
+	.all-chats {
+		display: none;
+	}
+
+	.chat-go-bottom {
+		position: fixed;
+		right: 0;
+		bottom: 60px;
+		z-index: 999;
+		background-color: rgba(255, 255, 255, .3);
+		border: 1px solid #ededed;
+		border-right: none;
+		border-bottom-left-radius: 10px;
+		border-top-left-radius: 10px;
+		opacity: 0;
+		transition: all .3s ease;
+		i {
+			padding: 10px;
+		}
+	}
+
+	.chat-go-bottom.visible {
+		opacity: 1;
+		transition: all .3s ease;
+	}
+
+	.body-message {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		min-height: auto !important;
+		background-color: #fafafa;
+
+		.message-wrapper {
+			min-height: 100%;
+		}
+
+		.header-container__nav {
+			position: static;
+			margin-bottom: 0;
+		}
+
+		.mobile-chat {
+			position: static;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			max-width: none;
+			background-color: #fff;
+			.chat {
+				//header
+				&__header {
+					display: flex;
+					justify-content: space-around;
+					cursor: default;
+					height: 35px;
+				}
+
+				//body
+				&__body {
+					padding: 5px 5px 0;
+					flex: 1;
+					height: 100%;
+				}
+
+				//footer
+				&__footer {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+
+			&.contacts-chat {
+				display: flex;
+				flex-direction: column;
+				height: auto !important;
+				min-height: 0;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				top: 45px;
+				left: 0;
+			}
+
+			&.personal-chat {
+				display: flex;
+				flex-direction: column;
+				height: auto !important;
+				min-height: 0;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				top: 0;
+				left: 0;
+				.chat__header {
+					flex-shrink: 0;
+					cursor: default;
+					.chat__header-actions {
+						a {
+							color: #fff;
+							margin-right: 20px;
+							margin-left: 5px;
+							i {
+								vertical-align: middle;
+							}
+						}
+					}
+
+					.user-avatar {
+						img {
+							margin-right: 10px;
+						}
+						.user-info {
+							span {
+								display: block;
+								line-height: 1.2;
+								font-size: 14px;
+							}
+							.last-activity {
+								font-size: 9px;
+							}
+						}
+					}
+				}
+
+				.chat__body {
+					padding-top: 5px;
+					padding-bottom: 5px;
+					flex-grow: 1;
+					height: 1px;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.chat__footer {
+					flex-shrink: 0;
+					display: block;
+					position: static;
+					.input-icon{
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-sm-max) {
+	.mobile-chat {
+		display: none;
+	}
+}

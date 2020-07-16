@@ -1,0 +1,155 @@
+extends ../layout/layout
+
+block title
+    | Наука
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+
+                .panel.panel-white.panel-science
+                    .panel-science__header
+                        ul.science-menu
+                            li
+                                a(href="#scienceAll" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    | Все подписки
+                            li.active
+                                a(href="#scienceMy" data-toggle='tab')
+                                    i.fal.fa-file-alt
+                                    | Мои подписки
+                            li
+                                a(href="#scienceBoard" data-toggle='tab')
+                                    i.fal.fa-clipboard-list
+                                    | Доски
+                            li
+                                a(href="javascript:void(0)" data-target="#DatePickerModal" data-toggle="modal")
+                                    i.fal.fa-calendar-alt
+                                    | Календарь
+                                    span.hidden-sm.hidden-xs занятий
+                            li.hidden-sm.hidden-xs
+                                a(href="javascript:void(0)" data-toggle='tab')
+                                    i.fal.fa-search
+                                    | Найти курс
+                    .panel-science__body
+                        .tab-content
+                            .tab-pane.fade.in.active#scienceMy
+                                .science-post-inner
+                                    ul.breadcrumbs.hidden-sm.hidden-xs
+                                        li
+                                            a(href="javascript:void(0)") Курсы
+                                        li
+                                            span Групповые занятия на 16 уроков по подготовке к ЕГЭ
+                                    .back-to-page.hidden-lg.hidden-md
+                                        a(href="javascript:void(0)")
+                                            i.far.fa-angle-left
+                                            | Назад
+                                    .science-post-inner__header
+                                        img(src='./assets/img/vertical.jpg')
+                                        h2.title Курс “Групповые занятия на 16 уроков по подготовке к ЕГЭ"
+                                        .course-price
+                                            span.price 6000 руб.
+                                            span.price-per-hour 250 руб/ч
+                                            span.start-date 20 сентября
+                                    .science-post-inner__body
+                                        .pseudo-table
+                                            .pseudo-table-row.hidden-lg.hidden-md
+                                                p.row-inner
+                                                    span.title Начало
+                                                    span.text 20 сентября
+                                            .pseudo-table-row
+                                                p.row-inner
+                                                    span.title Предмет курса
+                                                    span.text Русский язык
+                                            .pseudo-table-row
+                                                p.row-inner
+                                                    span.title Тип курса
+                                                    span.text Групповой
+                                            .pseudo-table-row
+                                                p.row-inner
+                                                    span.title Статус курса
+                                                    span.text Опубликован
+                                            .pseudo-table-row
+                                                p.row-inner
+                                                    span.title Описание курса
+                                                    span.text Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                            .tab-pane.fade#scienceBoard
+                                .science-board
+                                    .science-board__header.form-parent-js
+                                        .line
+                                            h4.title Доска
+                                            .actions
+                                                button(type="button").btn-invite.btn-find-js
+                                                    i.fa.fa-search
+                                                    span.hidden-xs.hidden-sm Найти доску
+                                                button(type="button").btn-invite.btn-create-js
+                                                    i.fa.fa-plus-circle
+                                                    span.hidden-xs.hidden-sm Создать доску
+                                        form.form-find#find-board.hide
+                                            .form-group
+                                                .input-wrapper-with-submit
+                                                    input(type="text" value="" placeholder="Введите название")
+                                                    button(type="submit") Старт
+                                            button(type="button").btn-white.btn-find-cancel-js Отмена
+                                        form.form#create-board.hide
+                                            .form-group
+                                                .input-wrapper
+                                                    input(type="text" value="" placeholder="Введите название")
+                                            button(type="submit").btn-blue Создать
+                                            button(type="button").btn-white.btn-create-cancel-js Отмена
+                .panel.panel-white.science-test
+                    .science-test__header
+                        .title Уроки курса
+                        a(href="javascript:void(0)").btn.btn-gradient
+                            span.hidden-sm.hidden-xs Пройти
+                            | финальный тест
+                    .science-test__body
+                        .custom-table
+                            .custom-table-row.custom-table-thead
+                                .custom-table-cell №
+                                .custom-table-cell Название
+                                .custom-table-cell Время
+                                .custom-table-cell Тест
+                            .custom-table-row
+                                .custom-table-cell 1
+                                .custom-table-cell
+                                    a(href="javascript:void(0)") Грамматика. Синтаксис (нормы построения словосочетаний и предложений)
+                                    span.start-date.hidden-lg.hidden-md 29.02.2018
+                                    span.start-time.hidden-lg.hidden-md 9:00 - 10:30
+                                .custom-table-cell 09.10.2018 <br> 09:00 -10:30
+                                .custom-table-cell
+                                    a(href="javascript:void(0)").btn-invite Пройти тест
+                            .custom-table-row
+                                .custom-table-cell 2
+                                .custom-table-cell
+                                    a(href="javascript:void(0)") Информационная обработка текстов
+                                    span.start-date.hidden-lg.hidden-md 29.02.2018
+                                    span.start-time.hidden-lg.hidden-md 9:00 - 10:30
+                                .custom-table-cell 09.10.2018 <br> 09:00 -10:30
+                                .custom-table-cell
+                                    a(href="javascript:void(0)").btn-invite Пройти тест
+                            .custom-table-row
+                                .custom-table-cell 3
+                                .custom-table-cell
+                                    a(href="javascript:void(0)") Знаки препинания в простом осложненном предложении (однородные члены предложения) и в сложносочиненном предложении
+                                .custom-table-cell 09.10.2018 <br> 09:00 -10:30
+                                .custom-table-cell
+                                    a(href="javascript:void(0)").btn-invite Пройти тест
+                            .custom-table-row
+                                .custom-table-cell 4
+                                .custom-table-cell
+                                    a(href="javascript:void(0)") Знаки препинания в простом осложненном предложении (однородные члены предложения) и в сложносочиненном предложении
+                                .custom-table-cell 09.10.2018 <br> 09:00 -10:30
+                                .custom-table-cell
+                                    a(href="javascript:void(0)").btn-blue Пройти тест
+                .all-science-posts
+                    include ../block/user-post-science
+                    include ../block/user-post-science
+                    include ../block/user-post-science
+                .my-science-posts.hide
+                    include ../block/user-post-science
+                    include ../block/user-post-science

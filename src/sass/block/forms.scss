@@ -1,0 +1,71 @@
+// Бегунки начало
+.ui-slider-container{
+  .ui-slider{
+    position: relative;
+    margin: 0 8px;
+    &-handle{
+      position: absolute;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      background-color: #6bbeed;
+      cursor: pointer;
+      border-radius: 50%;
+      border: none;
+      top: -5px;
+      box-shadow: 0 0 3px 0 #9ca6b6;
+      &:before{
+        content: '';
+        position: absolute;
+        background-color: #f3f5f9;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-3px, -3px, 0);
+      }
+    }
+    &-horizontal{
+      height: 5px;
+      border: none;
+    }
+  }
+
+  .ui-widget{
+    &-header{
+      background-color: #6bbeed;
+    }
+    &-content{
+      background-color: #ededed;
+    }
+  }
+}
+
+.slider-filters{
+  display: flex;
+  margin-bottom: 10px;
+  span{
+    color: #000;
+  }
+  .slider-input{
+    position: relative;
+    flex: 1 1 50%;
+    border-bottom: 2px solid #ededed;
+    margin-right: 5px;
+    max-width: 70px;
+    &:first-child{
+      margin-right: 15px;
+    }
+    span{
+      position: absolute;
+      top: 1px;
+    }
+    input{
+      width: 100%;
+      border: none;
+      padding-left: 25px;
+    }
+  }
+}
+// Бегунки конец

@@ -1,0 +1,11 @@
+@media (max-width: $screen-sm-max) {
+  .profile {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .content-container{
+    padding-top: 40px;
+  }
+}

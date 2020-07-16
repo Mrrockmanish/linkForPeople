@@ -1,0 +1,148 @@
+.panel.panel-white.panel-settings
+    .panel-settings__header
+        h2.title Стать преподавателем
+        .menu-icon.pointer
+            i.fas.fa-th
+    .panel-settings__body
+        .become-educator-info
+            .form-group_flex
+                label Состояние:
+                p.text Регистрация
+            .form-group_flex--top
+                label Правила и условия:
+                .wrapper
+                    span.show-more.pointer(onclick='openWrapper(this)')
+                        i.fal.fa-angle-down
+                    p.text Дорогой Учитель, для Вас разработана платформа, в которой можно преподавать любые предметы школьной и ВУЗовсвкой программы, специализированные направления, проводить мастер-классы, олимпиады, групповые занятия и многое другое. При регистрации учитывается Ваш опыт и занятость таким образом, что для Вас будут подобраны наиболее оптимальные ученики. Дорогой Учитель, для Вас разработана платформа, в которой можно преподавать любые предметы школьной и ВУЗовсвкой программы, специализированные направления, проводить мастер-классы, олимпиады, групповые занятия и многое другое. При регистрации учитывается Ваш опыт и занятость таким образом, что для Вас будут подобраны наиболее оптимальные ученики. Дорогой Учитель, для Вас разработана платформа, в которой можно преподавать любые предметы школьной и ВУЗовсвкой программы, специализированные направления, проводить мастер-классы, олимпиады, групповые занятия и многое другое. При регистрации учитывается Ваш опыт и занятость таким образом, что для Вас будут подобраны наиболее оптимальные ученики.
+            .btn-wrap
+                a(href="javascript:void(0)").btn-white--lg Посмотреть обучение
+        form.form
+            .form-group.form-group_flex
+                label.educator-label Образование
+                .input-wrapper
+                    textarea(rows="2")
+            .form-group.form-group_flex
+                label.educator-label Опыт преподавания
+                .ui-slider-container
+                    .label-values
+                        .min-label 0
+                        .current-value-js
+                            span.current-title Значние:
+                            span.value
+                        .max-label 5000
+                    input(type="hidden" value="").max-value-js
+                    .ui-slider-item-js--single(data-min="0" data-max="5000" data-step="50" data-current="1200")
+            .form-group.form-group_flex
+                label.educator-label Расскажите о себе
+                .input-wrapper
+                    textarea(rows="2")
+            .form-group.form-group_flex--top
+                label.educator-label Документы о стаже
+                .input-wrapper.input-wrapper-photo
+                    p Загрузить документ
+                    i.fal.fa-camera-alt
+                    img(src="#")
+                    input(type="file" onchange="readURL(this)")
+                    .far.fa-times.ce-quest__load-photo-close(onclick="delURL(this);")
+                .input-prompt Максимальный размер <br> загрузки: 10mb
+            .form-group.form-group_flex
+                label Цена индивидуального занятия за час (руб)
+                .ui-slider-container
+                    .label-values
+                        .min-label 0
+                        .current-value-js
+                            span.current-title Значние:
+                            span.value
+                        .max-label 5000
+                    input(type="hidden" value="").max-value-js
+                    .ui-slider-item-js--single(data-min="0" data-max="5000" data-step="50" data-current="200")
+            .form-group.form-group_flex
+                label Цена группового занятия за час (руб)
+                .ui-slider-container
+                    .label-values
+                        .min-label 0
+                        .current-value-js
+                            span.current-title Значние:
+                            span.value
+                        .max-label 5000
+                    input(type="hidden" value="").max-value-js
+                    .ui-slider-item-js--single(data-min="0" data-max="5000" data-step="50" data-current="2200")
+            .form-group.form-group_flex
+                label Предмет
+                .input-wrapper.input-wrapper-select
+                    select.js-example-basic-multiple(multiple="multiple")
+                        option Математика
+                        option Русский
+                        option Литература
+                        option Физика
+                        option Англ
+                        option История
+                        option Химия
+                        option География
+                        option Обществознание
+            .form-group.form-group_flex
+                label Предмет
+                .select-tree
+                    input(type="hidden" value="value-node-1-1")
+                    .pseudo-input
+                        .pseudo-item(data-value="value-node-1-1")
+                            span Маникюр классический
+                            i.fa.fa-times
+                    .select-tree-options
+                        ul.select-tree-box
+                            .grouped-category.open
+                                .grouped-title
+                                    .icon
+                                    span Категория
+                                li.select-tree-node
+                                    .input-wrapper-styled-checkbox.parent-item
+                                        input(type="checkbox" value="value-node-1" data-text="Маникюр")
+                                        label Маникюр
+                                    ul
+                                        li.select-tree-item
+                                            .input-wrapper-styled-checkbox.child-item
+                                                input(type="checkbox" value="value-node-1-1" data-text="Маникюр классический" checked)
+                                                label Классический
+                                        li.select-tree-item
+                                            .input-wrapper-styled-checkbox.child-item
+                                                input(type="checkbox" value="value-node-1-2" data-text="Маникюр французский")
+                                                label Французский
+                            .grouped-category
+                                .grouped-title
+                                    .icon
+                                    span Категория
+                                li.select-tree-node
+                                    .input-wrapper-styled-checkbox.parent-item
+                                        input(type="checkbox" value="value-node-2" data-text="Парикмахерские услуги")
+                                        label Парикмахерские услуги
+                                    ul
+                                        li.select-tree-item
+                                            .input-wrapper-styled-checkbox.child-item
+                                                input(type="checkbox" value="value-node-2-1" data-text="Стрижка № 1")
+                                                label Стрижка № 1
+                                        li.select-tree-item
+                                            .input-wrapper-styled-checkbox.child-item
+                                                input(type="checkbox" value="value-node-2-2" data-text="Стрижка № 2")
+                                                label Стрижка № 2
+                                        li.select-tree-item
+                                            .input-wrapper-styled-checkbox.child-item
+                                                input(type="checkbox" value="value-node-2-3" data-text="Стрижка № 3")
+                                                label Стрижка № 3
+            .form-group.form-group_flex
+                label Кому хотите преподавать(Прим. школьники 9-11 класс)
+                .input-wrapper
+                    textarea(rows="2")
+            .form-group.form-group_flex
+                label Формат занятия
+                .input-wrapper.input-wrapper-select
+                    select
+                        option(selected="true" disabled="true") Выберите формат занятия
+                        option Индивидуальное
+            .form-group.form-group_flex
+                label.educator-label С условиями согласен
+                .input-wrapper.input-wrapper-checkbox
+                    input(type="checkbox")
+                    label.checkbox-label
+                        span.checkmark
+        .panel-settings__footer
+            button(type="submit").btn-blue--lg Сохранить

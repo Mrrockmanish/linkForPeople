@@ -1,0 +1,154 @@
+$container-lg: 980px;
+
+@import "./stylesheets/bootstrap-custom";
+@import "fontawesome/scss/fontawesome";
+@import "fontawesome/scss/fa-solid";
+@import "fontawesome/scss/fa-regular";
+@import "fontawesome/scss/fa-light";
+
+
+@import "include/default";
+@import "responsive/default";
+
+@import "section/modal";
+@import "responsive/modal";
+
+@import "block/forms";
+
+//chat
+@import 'block/chat';
+@import 'responsive/block/chat';
+
+//partials
+@import 'partials/user-post-date';
+
+
+//header
+@import 'section/header_new';
+@import 'responsive/header_new';
+//@import 'responsive/header';
+//@import "block/search";
+
+
+//profile-main
+@import "page/profile_main";
+@import "responsive/page/profile_main";
+
+@import "block/user-card";
+@import "responsive/block/user-card";
+
+@import "block/user-navigation";
+@import "responsive/block/user-navigation";
+
+@import "block/publisher-box";
+@import "responsive/block/publisher-box";
+
+@import "block/user-post";
+@import "responsive/block/user-post";
+
+@import "page/article";
+@import "responsive/page/article";
+
+@import "page/advanced-search";
+@import "responsive/page/advanced-search";
+
+//account && settings
+@import "block/account";
+@import "responsive/block/account";
+
+@import "block/settings";
+@import "responsive/block/settings";
+
+@import "partials/user-mini-card";
+
+//error
+@import "page/error";
+
+//support
+@import "page/support";
+
+//friends
+@import "page/friends";
+@import "responsive/page/friends";
+
+//media
+@import "page/media";
+@import "responsive/page/media";
+
+//science
+@import "page/science";
+@import "responsive/page/science";
+
+//courses
+@import "page/courses";
+@import "responsive/page/courses";
+
+//channel
+@import "page/channel";
+@import "responsive/page/channel";
+
+//register
+@import "page/register";
+
+//banner
+@import "page/banner-2";
+
+//search
+@import "page/search";
+
+@import "block/news-header.scss";
+@import "block/bline.scss";
+@import "block/comments.scss";
+@import "block/course.scss";
+@import "block/rating.scss";
+@import "block/courses.scss";
+@import "block/teacher.scss";
+@import "block/general-info.scss";
+@import "block/notif.scss";
+@import "block/top-app.scss";
+@import "block/course-header.scss";
+@import "block/course-lessons.scss";
+@import "block/lesson-header.scss";
+@import "block/lesson-qa.scss";
+@import "block/lesson-lecture.scss";
+@import "block/lesson-test.scss";
+@import "block/ce-quest.scss";
+@import "block/tooltips.scss";
+@import "block/courseStudents.scss";
+
+
+//repetit
+@import "page/repetit";
+@import "block/repetit-banner";
+@import "block/repetit-resume-item";
+@import "block/repetit-sidebar";
+@import "section/modal-repetit";
+@import "section/header-repetit";
+@import "responsive/block/repetit-sidebar";
+@import "responsive/block/repetit-resume-item";
+@import "responsive/page/repetit";
+@import "responsive/header-repetit";
+@import "responsive/modal-repetit";
+
+@import "block/request-item";
+@import "responsive/block/request-item";
+
+/* responsive */
+@import "responsive/block/news-header.scss";
+@import "responsive/block/bline.scss";
+@import "responsive/block/comments.scss";
+@import "responsive/block/courses.scss";
+@import "responsive/block/course.scss";
+@import "responsive/block/rating.scss";
+@import "responsive/block/teacher.scss";
+@import "responsive/block/general-info.scss";
+@import "responsive/block/notif.scss";
+@import "responsive/block/top-app.scss";
+@import "responsive/block/course-header.scss";
+@import "responsive/block/course-lessons.scss";
+@import "responsive/block/lesson-header.scss";
+@import "responsive/block/lesson-qa.scss";
+@import "responsive/block/lesson-lecture.scss";
+@import "responsive/block/lesson-test.scss";
+@import "responsive/block/ce-quest.scss";
+@import "responsive/block/courseStudents.scss";

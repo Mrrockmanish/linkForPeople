@@ -1,0 +1,118 @@
+.modal-repetit {
+	&.modal {
+
+		&--xs {
+			.modal-dialog {
+				max-width: 440px;
+			}
+		}
+
+		&--sm {
+			.modal-dialog {
+				max-width: 360px;
+			}
+		}
+
+		.modal-header {
+			text-align: center;
+			border-bottom: none;
+		}
+
+		.modal-body {
+			padding: 0 30px;
+		}
+
+		.modal-footer {
+			border-top: none;
+		}
+
+		.price-container{
+			position: static;
+		}
+
+		.submenu__body {
+			position: relative;
+			.dropdown-items {
+				position: absolute;
+				z-index: 10;
+				left: 0;
+				right: 0;
+				background-color: #fff;
+				box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+				top: 34px;
+				p {
+					padding: 10px;
+					margin: 0;
+					color: $subTextColor;
+					&:hover {
+						background-color: #ededed;
+					}
+				}
+			}
+		}
+	}
+}
+
+.educator-form {
+	&__submit {
+		text-align: center;
+	}
+
+	.filter-block {
+		margin-bottom: 10px;
+		&__header {
+			.title {
+				padding: 3px 0;
+			}
+		}
+	}
+
+	.ui-slider-container {
+		padding: 0 0 20px;
+	}
+}
+
+.input-wrapper {
+	margin-bottom: 10px;
+}
+
+.custom-tabs {
+	border-bottom: none;
+	margin-bottom: 10px;
+	text-align: center;
+	li {
+		float: none;
+		display: inline-block;
+		margin-bottom: 0;
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+		a {
+			border: none;
+			padding: 4px 0;
+			color: #555;
+			font-weight: bold;
+			transition: all .3s ease;
+			border-bottom: 3px solid transparent;
+		}
+		a:hover, a:focus, a:active {
+			border: none;
+			background-color: inherit;
+			border-bottom: 3px solid #46bafc;
+			transition: all .3s ease;
+		}
+		&.active {
+			a {
+				border: none;
+				background-color: inherit;
+				border-bottom: 3px solid #46bafc;
+				&:hover, &:focus, &:active {
+					border: none;
+					border-bottom: 3px solid #46bafc;
+					background-color: inherit;
+				}
+			}
+
+		}
+	}
+}

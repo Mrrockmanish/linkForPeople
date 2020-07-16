@@ -1,0 +1,151 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade.in.active#coursesCreate
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        span Создать курсы
+                                ul.breadcrumbs--mobile.hidden-md.hidden-lg
+                                    li
+                                        a(href="javascript:void(0)") Математика
+                                form.courses-create
+                                    .title Создать курс
+                                    .form-group
+                                        .input-label Тип курса
+                                        .input-wrapper.input-wrapper-radio
+                                            fieldset(id="radio_group")
+                                                .radio-wrap.input-wrapper-styled-radio
+                                                    input(type="radio" id="radio_individual" name='radio_type')
+                                                    label(for="radio_individual") Индивидуальный
+                                                .radio-wrap.input-wrapper-styled-radio
+                                                    input(type="radio" id="radio_groups" name='radio_type')
+                                                    label(for="radio_groups") Групповой
+                                                .radio-wrap.input-wrapper-styled-radio
+                                                    input(type="radio" id="radio_independent" name='radio_type')
+                                                    label(for="radio_independent") Самостоятельный
+                                                .radio-wrap.input-wrapper-styled-radio
+                                                    input(type="radio" id="radio_olympic" name='radio_type')
+                                                    label(for="radio_olympic") Олимпиада
+                                    .form-group
+                                        .input-wrapper.input-wrapper-checkbox
+                                            input(type="checkbox" id="course-type")
+                                            label(for="course-type").checkbox-label Закрытый курс (ссылка)
+                                                span.checkmark
+                                    .form-group
+                                        .input-label Предмет курса
+                                        .input-wrapper.input-wrapper-select
+                                            select
+                                                option(selected="true" disabled="true") Выберите предмет
+                                                option Математика
+                                                option Литература
+                                    .form-group
+                                        .input-label Название курса
+                                        .input-wrapper
+                                            input(type="text")
+                                    .form-group
+                                        .input-label Описание курса
+                                        .input-wrapper
+                                            textarea(rows="3")
+                                    .row
+                                        .col-md-5
+                                            .form-group
+                                                .input-label Цена курса, руб.
+                                                .input-wrapper
+                                                    input(type="text")
+                                    .row
+                                        .col-md-5
+                                            .form-group
+                                                .input-label Максимальное количество подписчиков
+                                                .input-wrapper
+                                                    input(type="text")
+                                    .form-group
+                                        .input-label Аватар курса
+                                        .input-wrapper.input-wrapper-photo
+                                            p Загрузить документ
+                                            i.fal.fa-camera-alt
+                                            img(src="#")
+                                            input(type="file" onchange="readURL(this)")
+                                    .btn-form-container
+                                        button(type="submit").btn-invite Сохранить
+                            .tab-pane.fade#scienceBoard
+                            .tab-pane.fade#checkTest
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        span Проверить тесты
+                                .check-test-container.courses-inner-container
+                                    .title Проверка тестов
+                                    .custom-table.custom-table--bordered
+                                        .custom-table-row.custom-table-thead
+                                            .custom-table-cell Подписчик
+                                            .custom-table-cell Число не проверенных вопросов
+                                            .custom-table-cell Время последнего теста
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                            .custom-table-cell 10
+                                            .custom-table-cell 21.11.2018
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                            .custom-table-cell 10
+                                            .custom-table-cell 21.11.2018
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                            .custom-table-cell 10
+                                            .custom-table-cell 21.11.2018
+                                        .custom-table-row
+                                            .custom-table-cell
+                                                a(href="javascript:void(0)").user
+                                                    .avatar-circle_md
+                                                        img(src="./assets/img/default-avatar.png")
+                                                    .user-name Константин Коляновский
+                                            .custom-table-cell 10
+                                            .custom-table-cell 21.11.2018

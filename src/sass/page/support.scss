@@ -1,0 +1,16 @@
+.support{
+	@include make-md-column(12);
+	padding-right: 30px;
+	padding-left: 30px;
+	.panel-settings__body{
+		width: 75%;
+	}
+}
+
+@media (max-width: 768px) {
+	.support{
+		.panel-settings__body{
+			width: 100%;
+		}
+	}
+}

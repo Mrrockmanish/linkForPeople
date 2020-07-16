@@ -1,0 +1,120 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__body.courses-test-question-container
+                        .courses-test-question__header
+                            .title Контрольный тест по математике ( урок 1 )
+                            a(href="javascript:void(0)").btn-invite.pull-right Проверить
+                        #timer.timer
+                            span.hours 00
+                            span.devider :
+                            span.minutes 00
+                            span.devider :
+                            span.seconds 00
+                        .courses-test-question
+                            .switcher
+                                .switch-prev.switcher-btn.switch-disabled
+                                    i.far.fa-angle-left
+                                p.switch-body Вопрос &nbsp;
+                                    span.current-count 1
+                                    | &nbsp;из&nbsp;
+                                    span.total-count 20
+                                .switch-next.switcher-btn.switch-active
+                                    i.far.fa-angle-right
+                            .test-question.active(data-question="1")
+                                .question Вопрос 1:&nbsp;
+                                    span.value Одна рыба стоит один рубль и еще полрыбы. Сколько рублей стоят 5 рыб?
+                                .answer-list
+                                    .title Ответ:
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.border-red
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.border-green
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.border-blue
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.border-red
+                                            input(type="checkbox" disabled)
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.border-green
+                                            input(type="checkbox" disabled)
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.border-blue
+                                            input(type="checkbox" disabled)
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-red
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-green
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-blue
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-red
+                                            input(type="checkbox" disabled)
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-green
+                                            input(type="checkbox" disabled)
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-blue
+                                            input(type="checkbox" disabled)
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-red.border-blue
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-green.border-red
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox.bg-blue.border-green
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper
+                                            textarea(rows="3")
+                            .test-question(data-question="2")
+                                .question Вопрос 2:&nbsp;
+                                    span.value Одна рыба стоит один рубль и еще полрыбы. Сколько рублей стоят 5 рыб?
+                                .answer-list
+                                    .title Ответ:
+                                    .form-group
+                                        .input-wrapper-styled-checkbox
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper-styled-checkbox
+                                            input(type="checkbox")
+                                            label Основной вопрос
+                                    .form-group
+                                        .input-wrapper
+                                            textarea(rows="3")

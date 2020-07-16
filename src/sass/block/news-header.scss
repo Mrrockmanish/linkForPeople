@@ -1,0 +1,40 @@
+/* news-header */
+.news-header {
+  position: sticky;
+  top: 50px;
+  z-index: 999;
+  @include default-transition;
+  
+  &.animateOut {
+    transform: translateY(-100%);
+  }
+
+  &__item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 65px 0 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__item-icon {
+    font-size: 20px;
+    margin-right: 6px;
+  }
+
+  &__item-title {
+    color: #0b1a31;
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
+    padding: 20px 31px 13px 31px;
+  }
+}

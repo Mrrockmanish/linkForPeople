@@ -1,0 +1,7 @@
+.icon-home{
+  @include fa-icon;
+  @extend .far;
+  &::before{
+    content: fa-content($fa-var-home);
+  }
+}

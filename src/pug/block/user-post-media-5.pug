@@ -1,0 +1,122 @@
+.user-post#post309
+    .panel.panel-white.post-panel
+        .user-post__header
+            .user-post__header-avatar
+                a(href="javascript:void(0)").avatar-circle_xl
+                    img(src="./assets/img/default-avatar.png")
+                .who-when
+                    .user-name
+                        a(href="javascript:void(0)") Константин Калиновский
+                    .user-post-date
+                        include ../partials/user-post-date
+            .user-post__header-actions
+                span.dropdown.pointer
+                    .dropdown-toggle(data-toggle="dropdown")
+                        i.fa.fa-ellipsis-h.icon-grey
+                    ul.dropdown-menu.dropdown-menu-right
+                        li
+                            a(href='javascript:void:0')
+                                i.fa.fa-flag
+                                | Пожаловаться
+                        li
+                            a(href='javascript:void:0')
+                                i.fa.fa-link
+                                | Открыть в новой вкладке
+        .user-post__content
+            .post-media
+                p.post-media__text Всем привет!
+                .post-media__container_5.clearfix.hidden-sm.hidden-xs
+                    .post-media__item(onclick="showLightBox(post309, 0);")
+                        a(href="javascript:void(0)" data-slide-to="0" data-href="./assets/img/backscreen.jpg")
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/arl2HtakufM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    .post-media__item(onclick="showLightBox(post309, 1);")
+                        a(href="javascript:void(0)" data-slide-to="1" data-href="./assets/img/backscreen.jpg")
+                            img(src="./assets/img/backscreen.jpg")
+                    .post-media__item(onclick="showLightBox(post309, 2);")
+                        a(href="javascript:void(0)" data-slide-to="2" data-href="./assets/img/backscreen.jpg")
+                            img(src="./assets/img/backscreen.jpg")
+                    .post-media__item(onclick="showLightBox(post309, 3);")
+                        a(href="javascript:void(0)" data-slide-to="3" data-href="./assets/img/backscreen.jpg")
+                            img(src="./assets/img/backscreen.jpg")
+                    .post-media__item(onclick="showLightBox(post309, 4);")
+                        a(href="javascript:void(0)" data-slide-to="4" data-href="./assets/img/backscreen.jpg")
+                            img(src="./assets/img/backscreen.jpg")
+                .swiper.swiper-media-post.hidden-lg.hidden-md
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide(onclick="showLightBox(post309, 1);")
+                                a(href="javascript:void(0)" data-slide-to="0" data-href="./assets/img/backscreen.jpg")
+                                    .swiper-media-post-img(style="background-image: url(./assets/img/backscreen.jpg);")
+                            .swiper-slide(onclick="showLightBox(post309, 2);")
+                                a(href="javascript:void(0)" data-slide-to="1" data-href="./assets/img/backscreen.jpg")
+                                    .swiper-media-post-img(style="background-image: url(./assets/img/lama.png);")
+                            .swiper-slide(onclick="showLightBox(post309, 3);")
+                                a(href="javascript:void(0)" data-slide-to="2" data-href="./assets/img/backscreen.jpg")
+                                    .swiper-media-post-img(style="background-image: url(./assets/img/backscreen.jpg);")
+                            .swiper-slide(onclick="showLightBox(post309, 4);")
+                                a(href="javascript:void(0)" data-slide-to="3" data-href="./assets/img/backscreen.jpg")
+                                    .swiper-media-post-img(style="background-image: url(./assets/img/lama.png);")
+                        .swiper-pagination
+        .user-post__footer
+            .left-actions
+                span.pointer.like-icon
+                    i.fas.fa-heart.icon-blue.light-blue
+                    |  1
+                span.pointer.comment-icon(onclick="showComments(post309);")
+                    i.far.fa-comment.icon-blue
+                    |  1
+                span.pointer.share-icon(onclick="showShares(post309);")
+                    i.far.fa-share-alt.icon-blue
+        .share-container.hide
+            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,qzone,viber,whatsapp,skype,telegram"></div>
+
+
+        .user-post__comment.hide
+            .load-comments-container
+                span.pointer.load-comments(onclick="loadComments(post309);") Показать все комментарии
+                    i.fal.fa-angle-down.show-more
+                i.fa.fa-spinner.animated-spin.hide
+            .user-post__comment-list.comment-list
+                .comment-list__item#comment610
+                    a(href="javascript:void(0)").avatar-circle_lg
+                        img(src="./assets/img/default-avatar.png")
+        
+                    .comment-list__item-body.clearfix
+                        .user-name
+                            a(href="javascript:void(0)") Константин Калиновский
+                        .pull-right
+                            span.post-time.hidden-sm.hidden-md.hidden-lg 1д. назад
+                            //span.pointer.edit-icon(onclick="editComment(post309, comment610);")
+                            //    i.fa.fa-pen
+                            //span.pointer.delete-icon
+                            //    i.fa.fa-trash
+                            //span.pointer.reply-icon
+                            //    i.fa.fa-reply(onclick="toggleReply(post309);")
+                        p.text А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование? А вы хотите, чтобы ваш ребенок освоил интересную и, главное, полезную профессию - программирование?
+                        .bottoms
+                            span.post-time.hidden-xs 1 день назад
+                            a(href="javascript:void(0)").btn-white Ответить
+                        textarea.comment-list__item-edit.form-control(placeholder="Редактировать комментарий").hide
+                        textarea.comment-list__item-reply.form-control(placeholder="Ответить на комментарий").hide
+            form.input-icon(onclick="openCommentBottom(this);")
+                textarea.form-control.comment-textarea(placeholder="Напишите комментарий и нажмите клавишу ВВОД" rows="1" data-emojiable="true")
+                .avatar-circle_lg
+                    img(src="./assets/img/default-avatar.png")
+                .input-icon__list.hide
+                    .left-icons
+                        li.input-icon__item.pointer.icon-grey
+                            //smile there
+                        li.input-icon__item.pointer.icon-grey
+                            i.fal.fa-camera-alt
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.far.fa-film
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.fas.fa-music
+                            input(type="file")
+                        li.input-icon__item.pointer.icon-grey
+                            i.far.fa-file
+                            input(type="file")
+                    .right-btn
+                        button(type="submit").btn-blue Отправить

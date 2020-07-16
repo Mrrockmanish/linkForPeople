@@ -1,0 +1,33 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__body.courses-inner-container
+                        .title Урок 1
+                        .courses-lesson
+                            .actions
+                                a(href="javascript:void(0)").btn-invite
+                                    i.fal.fa-redo
+                                    span.hidden-xs Обновить
+                                a(href="javascript:void(0)").btn-invite
+                                    i.fal.fa-file-edit
+                                    span.hidden-xs Тест
+                                a(href="javascript:void(0)").btn-red
+                                    i.fal.fa-trash-alt
+                                    span.hidden-xs Удалить
+                            p.lesson-start Заняитие начнется:&nbsp;
+                                span.hidden-xs 02 февраля 2019, 9:30
+                                span.hidden-sm.hidden-md.hidden-lg 02.02.2019
+                            .open-schedule
+                                a(href="javascript:void(0);").btn-blue Открыть доску
+                            .text
+                                p Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование
+                                p Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование. Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.

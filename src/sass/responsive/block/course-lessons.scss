@@ -1,0 +1,144 @@
+@media (max-width: 992px) {
+  .course-lessons {
+    &__progress {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .course-lessons {
+    padding: 0;
+
+    &__title {
+      color: #0b1a31;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 20.74px;
+    }
+
+    &__table {
+      margin-top: 12px;
+    }
+
+    &__tr {
+      &:last-of-type {
+        .course-lessons {
+          &__td {
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+
+    &__th {
+      color: #0b1a31;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 31px;
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    &__td {
+      font-size: 14px;
+      line-height: 17.77px;
+      padding-bottom: 10px;
+
+      &:first-of-type {
+        width: 40px;
+        padding-left: 9px;
+      }
+
+      &:nth-child(2) {
+        .course-lessons {
+          &__table-date-wrap {
+            display: flex;
+            padding-top: 5px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    &__table-title-wrap {
+      padding: 10px 20px 0 0;
+    }
+
+    &__table-title {
+      font-size: 14px;
+      line-height: 17.77px;
+      letter-spacing: 0
+    }
+
+    &__table-title-time {
+      display: none;
+    }
+
+    &__table-date {
+      margin-right: 6px;
+      color: #0b1a31;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+
+    &__table-date-time {
+      color: #727d8d;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+
+    &__create-btn,
+    &__lessons-btn {
+      min-width: 64px;
+      height: 30px;
+      padding: 0;
+      color: #327ae5;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+
+    &__create-btn-icon {
+      display: inline-block;
+      font-size: 14px !important;
+      margin-right: 2px !important;
+      color: #327ae5;
+    }
+
+    &__create-btn-create {
+      display: none;
+    }
+    
+    &__title-wrap {
+      padding: 17px 10px 0;
+    }
+
+    &__progress {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
+      padding: 10px 0;
+    }
+
+    &__progress-title {
+      margin-right: 0;
+      margin-bottom: 5px;
+      color: #0b1a31;
+      font-size: 16px;
+    }
+
+    &__progress-list-item {
+      width: 12px;
+    }
+  }
+}

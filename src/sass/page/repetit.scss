@@ -1,0 +1,133 @@
+//.content-container {
+//	padding-top: 50px;
+//	max-width: 1000px;
+//	width: 100%;
+//	margin: 0 auto;
+//}
+
+.content-container_1160 {
+	max-width: 1160px;
+	padding-top: 50px;
+	width: 100%;
+	margin: 0 auto;
+
+	.page {
+		padding-right: 15px;
+	}
+
+	.page_full {
+		padding-right: 0;
+	}
+
+	.panel-white {
+		background-color: #fff;
+		border: none;
+	}
+
+	//Хлебные крошки
+	.breadcrumbs {
+		display: flex;
+		&__item {
+			&:not(:first-child) {
+				position: relative;
+				padding-left: 30px;
+				&:before {
+					content: '>';
+					position: absolute;
+					left: 10px;
+				}
+			}
+		}
+	}
+
+	.page-body {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	///// анкеты начало /////
+	.resume {
+		flex: 1 1 auto;
+	}
+
+	.sorter {
+		display: flex;
+		align-items: center;
+		padding: 0 30px;
+		margin-bottom: 10px;
+		&__title {
+			margin-right: 40px;
+			color: #a1a5ac;
+		}
+		&__list {
+			display: flex;
+			flex: 1 1 auto;
+			justify-content: space-between;
+		}
+		li a {
+			padding-top: 7px;
+			padding-bottom: 7px;
+			display: inline-block;
+			span {
+				color: $grayText;
+			}
+		}
+		&__item {
+			i {
+				transform: rotate(0);
+			}
+			&.is-up {
+				i {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+}
+
+///// анкеты конец /////
+
+///// верхняя панель начало /////
+.page-info {
+	padding: 20px 30px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	position: relative;
+	.breadcrumbs {
+		margin-bottom: 30px;
+	}
+
+	.main-title {
+		margin-bottom: 20px;
+		margin-top: 0;
+		line-height: 1;
+	}
+
+	.search-educator {
+		position: absolute;
+		right: 30px;
+		top: 20px;
+		display: inline-block;
+		a {
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+
+	.subtitle {
+		font-weight: normal;
+		font-size: 20px;
+	}
+	.popular-themes {
+		color: $grayText;
+		margin-bottom: 20px;
+		&__title {
+			margin-right: 20px;
+		}
+		&__item {
+			margin-right: 10px;
+		}
+
+	}
+}
+///// верхняя панель конец /////

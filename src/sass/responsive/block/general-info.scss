@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+  .general-info {
+    padding: 12px 2px 0 12px;
+
+    &__td {
+      padding: 0 0 8px;
+
+      &:first-of-type {
+        width: 107px;
+        padding-right: 8px;
+        font-size: 12px;
+        line-height: 17.77px;
+      }
+
+      &:nth-child(2) {
+        font-size: 13px;
+        line-height: 17.77px;
+      }
+
+      .user-post__content .post-article__body:before,
+      .user-post__content .wrapper:after {
+        content: none;
+      }
+
+      .teacher__price {
+        position: static;
+        margin-top: 9px;
+      }
+
+      .teacher__price-individual {
+        margin-right: 20px;
+      }
+
+      .teacher__price-val {
+        font-size: 14px;
+      }
+    }
+
+    &__link {
+      font-size: 13px;
+      line-height: 17.77px;
+    }
+  }
+}

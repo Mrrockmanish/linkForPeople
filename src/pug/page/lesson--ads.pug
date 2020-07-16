@@ -1,0 +1,26 @@
+extends ../layout/layout
+
+block title
+    | Урок - Объявления
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                .panel.panel-white.panel-courses
+                    .panel-courses__header.panel-courses__header--lesson
+                        include ../block/lesson-header
+                    .panel-courses__body.panel-courses__body--lesson
+                        .tab-content
+                            .tab-pane.fade#lessonLecture
+                            .tab-pane.fade.in.active#lessonQA
+                                include ../block/lesson-ads
+                            .tab-pane.fade#lessonTest
+                            .tab-pane.fade#lessonBookmarks
+                            .tab-pane.fade#lessonAds
+
+
+
+
+

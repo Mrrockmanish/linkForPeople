@@ -1,0 +1,95 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade.in.active#myCreatedCourses
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        a(href="javascript:void(0)") Математика
+                                    li
+                                        span Создание расписания для индивидуальных занятий
+                                ul.breadcrumbs--mobile.hidden-md.hidden-lg
+                                    li
+                                        a(href="javascript:void(0)") Математика
+                                .courses-schedule-container.courses-inner-container
+                                    .title Создание расписания для индивидуальных занятий
+                                    .row
+                                        .col-sm-4
+                                            .calendar-datepicker
+                                            .time-zone Временная зона: Asia/Riyadh(UTC +03:00)
+                                        .col-sm-8
+                                            .courses-schedule
+                                                .title Формат 1-го занятия
+                                                .actions
+                                                    a(href="javascript:void(0)").btn-invite 30 мин
+                                                    a(href="javascript:void(0)").btn-invite.selected 1 час
+                                                    a(href="javascript:void(0)").btn-invite 1.5 часа
+                                                    a(href="javascript:void(0)").btn-invite 2 часа
+                                                .title Выберите рабочие часы
+                                                .time-list
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                                    include ../block/time-list-item
+                                    .btn-form-container
+                                        button.btn-invite Далее
+                            .tab-pane.fade#checkTest

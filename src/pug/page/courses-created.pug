@@ -1,0 +1,105 @@
+extends ../layout/layout
+
+block title
+    | Курсы
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+
+                .panel.panel-white.panel-courses
+                    .panel-courses__header
+                        ul.courses-menu
+                            li
+                                a(href="#coursesCreate" data-toggle='tab')
+                                    i.fal.fa-plus-square
+                                    | Создать курс
+                            li.active
+                                a(href="#myCreatedCourses" data-toggle='tab')
+                                    i.fal.fa-copy
+                                    span.hidden-xs Мои созданные курсы
+                                    span.hidden-sm.hidden-md.hidden-lg Созданые курсы
+                            li
+                                a(href="#checkTest" data-toggle='tab')
+                                    i.fal.fa-check-square
+                                    | Проверить тесты
+                            li
+                                a(href="#studentRequest" data-toggle='tab')
+                                    i.fal.fa-exclamation-square
+                                    | Заявки учеников
+                        .actions
+                            a(href="javascript:void(0)").btn-invite
+                                i.fa.fa-exchange
+                                span.hidden-sm Вывод средств
+                    .panel-courses__body
+                        .tab-content
+                            .tab-pane.fade#coursesCreate
+                            .tab-pane.fade.in.active#myCreatedCourses
+                                ul.breadcrumbs.hidden-sm.hidden-xs
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                    li
+                                        span Математика 1 класс
+                                ul.breadcrumbs--mobile.hidden-md.hidden-lg
+                                    li
+                                        a(href="javascript:void(0)") Курсы
+                                .courses-created-container.courses-inner-container
+                                    .title Курс “Математика 1 класс”
+                                        .pic
+                                            img(src="./pictures/back.jpg")
+                                    .courses-created
+                                        .actions.actions-circle-sm
+                                            a(href="javascript:void(0)").btn-invite
+                                                i.fal.fa-clock
+                                                span.hidden-xs Расписание занятий
+                                            a(href="javascript:void(0)").btn-invite
+                                                i.fa.fa-reply
+                                                span.hidden-xs Опубликовать курс
+                                            a(href="javascript:void(0)" data-target="#createText" data-toggle="modal").btn-invite
+                                                i.fa.fa-pencil-alt
+                                                span.hidden-xs Редактировать
+                                            a(href="javascript:void(0)").btn-red
+                                                i.fal.fa-trash-alt
+                                                span.hidden-xs Удалить
+                                        .custom-table.custom-table--bordered
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Предмет курса
+                                                    .hidden-sm.hidden-md.hidden-lg Предмет курса:&nbsp;
+                                                        span Математика
+                                                .custom-table-cell.hidden-xs Математика
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Название курса
+                                                    .hidden-sm.hidden-md.hidden-lg Название курса:&nbsp;
+                                                        span Математика 1 класс
+                                                .custom-table-cell.hidden-xs Математика 1 класс
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Описание курса
+                                                    .hidden-sm.hidden-md.hidden-lg Описание курса:&nbsp;
+                                                        span Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                                .custom-table-cell.hidden-xs Занятия проходят в группах до 8 человек. Продолжительность одного урока 90 минут. После каждого урока ученик сдает тест, который позволяет перейти к следующему уроку. Для успешного завершения курса необходимо сдать ИТОГОВОЕ тестирование.
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Тип курса
+                                                    .hidden-sm.hidden-md.hidden-lg Тип курса:&nbsp;
+                                                        span Индивидуальный
+                                                .custom-table-cell.hidden-xs Индивидуальный
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Статус курса
+                                                    .hidden-sm.hidden-md.hidden-lg Статус курса:&nbsp;
+                                                        span Не опубликован
+                                                .custom-table-cell.hidden-xs Не опубликован
+                                            .custom-table-row
+                                                .custom-table-cell
+                                                    .hidden-xs Цена
+                                                    .hidden-sm.hidden-md.hidden-lg Цена:&nbsp;
+                                                        span 6 700 руб.
+                                                .custom-table-cell.hidden-xs 6 700 руб.
+                                        .time-zone Временная зона: Asia/Riyadh(UTC +03:00)
+                                        a(href="javascript:void(0);").btn-blue Начать занятие
+                            .tab-pane.fade#checkTest

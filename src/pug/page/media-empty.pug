@@ -1,0 +1,45 @@
+extends ../layout/layout
+
+block title
+    | Новости
+
+block content
+    include ../block/chat
+    .content-container.container
+        .content
+            .row.profile.page-margin
+                include ../block/user-card
+                include ../block/user-navigation
+
+                .panel.panel-white.panel-media
+                    .panel-media__header
+                        ul.media-menu
+                            li.active
+                                a(href="#mediaPhoto" data-toggle='tab')
+                                    i.fa.fa-camera-alt
+                                    | Фото
+                            li
+                                a(href="#mediaAudio" data-toggle='tab')
+                                    i.fa.fa-play
+                                    | Аудио
+                            li
+                                a(href="#mediaVideo" data-toggle='tab')
+                                    i.fa.fa-video
+                                    | Видео
+                    .panel-media__body
+                        .tab-content
+                            .tab-pane.fade.in.active#mediaPhoto
+                                .list-empty
+                                    .list-empty__title
+                                        i.far.fa-cog
+                                        span.text Текст для отображения
+                            .tab-pane.fade#mediaAudio
+                                .list-empty
+                                    .list-empty__title
+                                        i.far.fa-cog
+                                        span.text Текст для отображения
+                            .tab-pane.fade#mediaVideo
+                                .list-empty
+                                    .list-empty__title
+                                        i.far.fa-cog
+                                        span.text Текст для отображения
