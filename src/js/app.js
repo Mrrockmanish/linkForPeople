@@ -8,6 +8,7 @@
 @@include('./partials/timer.js');
 @@include('./partials/rating.js');
 @@include('./partials/ce-quest.js');
+@@include('./partials/profession.js');
 
 $(function () {
 

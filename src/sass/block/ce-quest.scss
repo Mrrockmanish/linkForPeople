@@ -105,7 +105,8 @@
     margin-top: 20px;
 
     &--video,
-    &--photo {
+    &--photo,
+    &--docs {
       .ce-quest {
         &__media-block-item {
           width: 223px;
@@ -128,7 +129,8 @@
       }
     }
 
-    &--photo {
+    &--photo,
+    &--docs {
       .swiper-container {
         width: 100%;
         height: 141px;

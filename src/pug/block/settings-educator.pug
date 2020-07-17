@@ -36,15 +36,268 @@
                 label.educator-label Расскажите о себе
                 .input-wrapper
                     textarea(rows="2")
-            .form-group.form-group_flex--top
-                label.educator-label Документы о стаже
-                .input-wrapper.input-wrapper-photo
-                    p Загрузить документ
-                    i.fal.fa-camera-alt
-                    img(src="#")
-                    input(type="file" onchange="readURL(this)")
-                    .far.fa-times.ce-quest__load-photo-close(onclick="delURL(this);")
-                .input-prompt Максимальный размер <br> загрузки: 10mb
+            div(style="margin-bottom: 20px")
+                .ce-quest__inner-wrap
+                    .publisher-box.post.ce-quest__form
+                        label(style="display: flex; flex-wrap: wrap;")
+                            div(style="padding-right: 70px; margin-right: 10px; max-width: 170px; font-weight: 500; font-size: 15px; line-height: 1.13") Документы о стаже
+                            .input-wrapper.input-wrapper-photo(style="cursor: pointer")
+                                p Загрузить документ
+                                i.fal.fa-camera-alt
+                                img(src="#")
+                                input#id_file_docs_from_block_settings.ce-quest__media-btn-input(type="file", accept="image/*",  multiple)
+                            .input-prompt Максимальный размер <br> загрузки: 10mb
+                        .ce-quest__remaining Осталось #[span#id_left_size_files_for_block_settings 100] Мб
+                        #id_memory_limit_for_block_settings.hide(style="color:red") превышен допустимый размер файлов
+                        .ce-quest__media-block-wrap
+            .btn-wrap(style="text-align: center; margin-bottom: 20px")
+                .btn-white--lg Добавть услугу
+            .form-group.form-group_flex
+                .profession
+                    .profession__head.row
+                        .profession__kind.col-xs-8
+                            .profession__name Репетитор по истории
+                            .profession__category Репетиторы и обучение
+                        .profession__head-right.col-xs-4
+                            .profession__edit
+                                .profession__edit-inner
+                                    .profession__pen
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="18" height="18" viewBox="0 0 24 24">
+                                        <path fill="#327ae5" d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"/>
+                                        </svg>
+                                    .profession__edit-text Редактировать
+                            .profession__chevron
+                                <svg width="20" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.437 407.437">
+                                <polygon fill="#727d8d" points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                                </svg>
+                    .profession__content
+                        .profession__props
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Опыт
+                                    .profession__props-value Школьники старших
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Длительность занятия
+                                    .profession__props-value Занятия онлайн
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Педагогическое образование
+                                    .profession__props-value Да
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Кто занимается
+                                    .profession__props-value Школьник
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Место занятий
+                                    .profession__props-value Дистанционно
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Скрытая
+                                    .profession__props-value опция
+                            .profession__props-more Показать еще
+                                .profession__props-more-count
+                        .profession__pricing
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Скрытая
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Скрытая
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-more
+                                .profession__pricing-more-inner
+                                    .profession__pricing-more-text Показать ещё&nbsp; <span class="profession__pricing__more-count"></span>
+                                    .profession__pricing-more-chevron
+                                        <svg width="20" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.437 407.437">
+                                        <polygon fill="#727d8d" points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                                        </svg>
+            .form-group.form-group_flex
+                .profession
+                    .profession__head.row
+                        .profession__kind.col-xs-8
+                            .profession__name Репетитор по истории
+                            .profession__category Репетиторы и обучение
+                        .profession__head-right.col-xs-4
+                            .profession__edit
+                                .profession__edit-inner
+                                    .profession__pen
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="18" height="18" viewBox="0 0 24 24">
+                                        <path fill="#327ae5" d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"/>
+                                        </svg>
+                                    .profession__edit-text Редактировать
+                            .profession__chevron
+                                <svg width="20" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.437 407.437">
+                                <polygon fill="#727d8d" points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                                </svg>
+                    .profession__content
+                        .profession__props
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Опыт
+                                    .profession__props-value Школьники старших
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Длительность занятия
+                                    .profession__props-value Занятия онлайн
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Педагогическое образование
+                                    .profession__props-value Да
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Кто занимается
+                                    .profession__props-value Школьник
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Место занятий
+                                    .profession__props-value Дистанционно
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Скрытая
+                                    .profession__props-value опция
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Скрытая
+                                    .profession__props-value опция
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Скрытая
+                                    .profession__props-value опция
+                            .profession__props-more Показать еще
+                                .profession__props-more-count
+                        .profession__pricing
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Скрытая
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Скрытая
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Скрытая
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-more
+                                .profession__pricing-more-inner
+                                    .profession__pricing-more-text Показать ещё&nbsp; <span class="profession__pricing__more-count"></span>
+                                    .profession__pricing-more-chevron
+                                        <svg width="20" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.437 407.437">
+                                        <polygon fill="#727d8d" points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                                        </svg>
+            .form-group.form-group_flex
+                .profession
+                    .profession__head.row
+                        .profession__kind.col-xs-8
+                            .profession__name Репетитор по истории
+                            .profession__category Репетиторы и обучение
+                        .profession__head-right.col-xs-4
+                            .profession__edit
+                                .profession__edit-inner
+                                    .profession__pen
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="18" height="18" viewBox="0 0 24 24">
+                                        <path fill="#327ae5" d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"/>
+                                        </svg>
+                                    .profession__edit-text Редактировать
+                            .profession__chevron
+                                <svg width="20" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.437 407.437">
+                                <polygon fill="#727d8d" points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                                </svg>
+                    .profession__content
+                        .profession__props
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Опыт
+                                    .profession__props-value Школьники старших
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Длительность занятия
+                                    .profession__props-value Занятия онлайн
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Педагогическое образование
+                                    .profession__props-value Да
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Кто занимается
+                                    .profession__props-value Школьник
+                            .profession__props-item
+                                .profession__props-item-inner
+                                    .profession__props-key Место занятий
+                                    .profession__props-value Дистанционно
+                            .profession__props-more Показать еще
+                                .profession__props-more-count
+                        .profession__pricing
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-item
+                                .profession__pricing-item-inner
+                                    .profession__pricing-name Подготовка к ЕГЭ по истории
+                                    .profession__pricing-price 800 руб./час
+                            .profession__pricing-more
+                                .profession__pricing-more-inner
+                                    .profession__pricing-more-text Показать ещё&nbsp; <span class="profession__pricing__more-count"></span>
+                                    .profession__pricing-more-chevron
+                                        <svg width="20" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.437 407.437">
+                                        <polygon fill="#727d8d" points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 "/>
+                                        </svg>
             .form-group.form-group_flex
                 label Цена индивидуального занятия за час (руб)
                 .ui-slider-container
